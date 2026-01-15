@@ -1,3 +1,26 @@
+.skip-link {
+    background-color: #F6C01B;
+    border: 1px solid rgba(0, 0, 0, .6);
+    color: #0F172A;
+    font-weight: 500;
+    z-index: 1;
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    padding: 12px;
+    border-radius: 16px;
+    text-decoration: none;
+    transform: translateY(-150%);
+    transition: 0.2s;
+}
+
+.skip-link:focus-visible {
+    background-color: rgba(255, 208, 0);
+    border: 1px solid #F6C01B;
+    outline: none;
+    transform: translateY(0);
+}
+
 :host {
     display: flex;
     flex-direction: column;

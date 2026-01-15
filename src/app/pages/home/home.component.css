@@ -1,0 +1,390 @@
+/* Estilos compartilhados */
+/* main {
+    color: #0F172A
+} */
+
+p {
+    color: rgba(15, 23, 42, .7);
+}
+
+/* Seção produto */
+.secao-produto>h1 {
+    font-weight: 400;
+}
+
+.secao-produto__span {
+    font-weight: bold;
+    color: #0F172A;
+}
+
+/* Seção produto botões */
+.secao-produto__botoes {
+    /* outline: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.secao-produto__fazer-cadastro,
+.secao-produto__acessar-painel {
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+}
+
+.secao-produto__fazer-cadastro {
+    /* outline: 1px solid red; */
+    background-color: #E10811;
+    border: 1px solid rgba(0, 0, 0, .6);
+    color: #fff;
+}
+
+.secao-produto__fazer-cadastro:hover,
+.secao-produto__fazer-cadastro:focus-visible {
+    background-color: #E11D2E;
+    border: 1px solid rgba(0, 0, 0, .6);
+    box-shadow: 0 5px 10px 0 rgba(225, 29, 46, .3);
+}
+
+.secao-produto__acessar-painel {
+    background-color: #F6C01B;
+    border: 1px solid rgba(0, 0, 0, .3);
+}
+
+.secao-produto__acessar-painel:hover,
+.secao-produto__acessar-painel:focus-visible {
+    background-color: rgba(255, 208, 0);
+    border: 1px solid #F6C01B;
+}
+
+@media (width >=576px) {
+    .secao-produto__botoes {
+        flex-direction: row;
+    }
+}
+
+/* Seção produto article */
+.secao-produto__article {
+    /* outline: 1px solid red; */
+    background-color: #fff;
+    border: 1px solid rgba(15, 23, 42, .12);
+    border-radius: 16px;
+    padding: 12px;
+    text-align: center;
+    /* outline: 1px solid red; */
+}
+
+.secao-produto__article h3 {
+    font-size: 1.1rem;
+}
+
+@media (width >=576px) {
+    .secao-produto__article-container {
+        /* outline: 1px solid red; */
+        display: flex;
+        gap: 16px;
+        /* outline: 1px solid red; */
+    }
+
+    .secao-produto__article {
+        /* outline: 1px solid red; */
+        display: flex;
+        flex-direction: column;
+        /* outline: 1px solid red; */
+    }
+
+    .secao-produto__article p {
+        margin-top: auto;
+    }
+}
+
+@media (width >=1200px) {
+    .secao-produto__article p {
+        margin-top: unset;
+    }
+}
+
+/* Seção produto pílulas */
+.list-group {
+    /* flex-direction: column; */
+    gap: 32px;
+    /* outline: 1px solid red; */
+    padding: 16px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.list-group-item {
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    /* max-width: 300px; */
+}
+
+.list-group-item span {
+    /* outline: 1px solid red; */
+    padding: 8px 16px;
+}
+
+.list-group-item__acesso,
+.list-group-item__interface,
+.list-group-item__informacoes {
+    color: #0F172A;
+    font-weight: bold;
+    /* font-size: 0.9rem; */
+    border-radius: 12px;
+}
+
+.list-group-item__acesso {
+    background-color: rgba(21, 128, 61, .5);
+    outline: 1px solid rgba(22, 163, 74, .22);
+}
+
+.list-group-item__interface {
+    background-color: rgba(3, 105, 161, .5);
+    outline: 1px solid rgba(14, 165, 233, .2);
+}
+
+.list-group-item__informacoes {
+    background-color: rgba(154, 161, 171, .5);
+    outline: 1px solid rgba(15, 23, 42, .16);
+}
+
+@media (width >=768px) {
+    .list-group {
+        /* flex-direction: column; */
+        gap: 15px;
+        /* outline: 1px solid red; */
+        padding: 0;
+        /* flex-direction: row; */
+        /* flex-wrap: wrap; */
+        /* justify-content: center; */
+    }
+
+    .list-group-item {
+        /* outline: 1px solid red; */
+        width: 28%;
+        display: flex;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+    }
+
+    .list-group-item-informacoes {
+        width: 37%;
+    }
+
+    .list-group-item__acesso,
+    .list-group-item__interface,
+    .list-group-item__informacoes {
+        /* outline: 1px solid red; */
+        width: 100%;
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (width >=992px) {
+    .carro {
+        /* outline: 1px solid red; */
+        display: flex;
+        align-items: center;
+    }
+
+    .carro figure {
+        margin: 0;
+    }
+}
+
+/* Seção visão rápida */
+.section-visao {
+    background-color: #fff;
+    padding: 12px 12px 20px;
+    outline: 1px solid rgba(15, 23, 42, .12);
+    border-radius: 12px;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .15);
+}
+
+.section-visao__borda-topo {
+    background: linear-gradient(90deg, #E01E37, #FFD000, #7FD7FF);
+    background-color: black;
+    height: 5px;
+    border-radius: 12px 12px 0 0;
+}
+
+.section-visao__header h2 {
+    margin: 0;
+    font-weight: bold;
+}
+
+.section-visao__header span {
+    /* outline: 1px solid red; */
+    background-color: rgba(255, 208, 0, .22);
+    border: 1px solid #F6C01B;
+    color: #78350F;
+    font-weight: bold;
+    border-radius: 12px;
+    display: inline-block;
+    margin-top: 8px;
+    padding: 4px 12px;
+}
+
+@media (width >=400px) {
+    .section-visao__header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .section-visao__header span {
+        margin-top: 0;
+    }
+}
+
+/* Seção visão rápida article */
+.section-visao__article {
+    background-color: rgba(49, 165, 231, .02);
+    outline: 1px solid rgba(49, 165, 231, .22);
+    border-radius: 16px;
+    box-shadow: 0 4px 4px 0 rgb(49, 165, 231, .25);
+    padding: 12px 0;
+    text-align: center;
+}
+
+.section-visao__article h3 {
+    color: rgb(15, 23, 42, .7);
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+.section-visao__article p {
+    color: #0F172A;
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* Seção visão rápida ol */
+.section-visao__article-ol {
+    background-color: rgba(49, 165, 231, .02);
+    outline: 1px solid rgba(49, 165, 231, .22);
+    border-radius: 16px;
+    box-shadow: 0 4px 4px 0 rgb(49, 165, 231, .25);
+    padding: 12px;
+    /* outline: 1px solid red; */
+}
+
+.section-visao__article-ol h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.section-visao__ol {
+    padding-left: 0;
+    color: #0F172A;
+    font-weight: 500;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.section-visao__li {
+    border-bottom: 1px solid rgba(49, 165, 231, .22);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 8px;
+}
+
+.section-visao__li:last-child {
+    border-bottom: none;
+}
+
+.section-visao__li span {
+    background-color: rgba(255, 208, 0, .22);
+    border: 1px solid #F6C01B;
+    color: #78350F;
+    font-weight: bold;
+    border-radius: 12px;
+    padding: 4px 12px;
+}
+
+/* Seção controle de confiança */
+.section-controle {
+    background-color: #fff;
+    padding: 12px 12px 20px;
+    outline: 1px solid rgba(15, 23, 42, .12);
+    border-radius: 12px;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .15);
+}
+
+.section-controle__borda-topo {
+    background: linear-gradient(90deg, #E01E37, #FFD000, #7FD7FF);
+    background-color: black;
+    height: 5px;
+    border-radius: 12px 12px 0 0;
+}
+
+.section-controle__h2 {
+    font-weight: bold;
+}
+
+.section-controle__botoes {
+    /* outline: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.section-controle__botao-criar,
+.section-controle__botao-acessar {
+    border-radius: 12px;
+    padding: 8px 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.section-controle__botao-criar {
+    background-color: #E10811;
+    border: 1px solid rgba(0, 0, 0, .6);
+    color: #fff;
+}
+
+.section-controle__botao-criar:hover,
+.section-controle__botao-criar:focus-visible {
+    background-color: #E11D2E;
+    border: 1px solid rgba(0, 0, 0, .6);
+    box-shadow: 0 5px 10px 0 rgba(225, 29, 46, .3);
+}
+
+.section-controle__botao-acessar {
+    background-color: transparent;
+    border: 1px solid rgba(15, 23, 42, .12);
+    color: #0F172A;
+}
+
+.section-controle__botao-acessar:hover,
+.section-controle__botao-acessar:focus-visible {
+    background-color: rgba(49,165,231,.10);
+    border: 1px solid rgba(49,165,231,.35);
+    box-shadow: 0 5px 5px rgba(49,165,231,.18);
+    /* color: #0F172A; */
+}
+
+.section-controle__article {
+    outline: 1px solid rgba(15, 23, 42, .12);
+    border-radius: 16px;
+    padding: 12px;
+}
+
+.section-controle__article h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.section-controle__article p {
+    margin: 0;
+}
