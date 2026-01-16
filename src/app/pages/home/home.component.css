@@ -210,7 +210,6 @@ p {
 
 .section-visao__borda-topo {
     background: linear-gradient(90deg, #E01E37, #FFD000, #7FD7FF);
-    background-color: black;
     height: 5px;
     border-radius: 12px 12px 0 0;
 }
