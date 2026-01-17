@@ -1,0 +1,20 @@
+:host {
+    outline: 5px solid red;
+    display: flex;
+    /* flex-direction: column; */
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    background-color: #E9EEF3;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (width >= 992px) {
+    .main-content {
+        margin-left: 250px;
+        padding: 20px;
+    }
+}
