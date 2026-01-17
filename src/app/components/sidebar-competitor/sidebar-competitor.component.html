@@ -1,0 +1,66 @@
+<button class="menu-hamburguer" (click)="mostraEscondeSidebar()">
+    <img src="assets/img/img_navbar/img_menu_hamburguer.png" alt="">
+</button>
+
+<aside class="menu-lateral" [class.menu-lateral__aberto]="mostraSidebar">
+    <div class="mt-2">
+        <div class="menu-lateral__figure">
+            <figure>
+                <a routerLink="/competitor/available-cups">
+                    <img src="assets/img/img_logo/img_logo.png" alt="logo central copa pistão">
+                </a>
+            </figure>
+        </div>
+
+        <div class="menu-lateral__divisao"></div>
+
+        <div class="menu-lateral__equipe">
+            <article class="menu-lateral__article">
+                <h3>Equipe</h3>
+                <p>Relâmpago Marquinhos</p>
+                <span class="menu-lateral__span-ativo"><i class="bi bi-check-circle"></i> Ativo</span>
+                <span class="menu-lateral__span-pontuacao ms-2"><i class="bi bi-trophy"></i> 120 pts</span>
+            </article>
+        </div>
+
+        <div class="menu-lateral__divisao"></div>
+        <!-- <div class="menu-lateral__divisao-container">
+        </div> -->
+
+        <nav class="menu-lateral__navegacao">
+            <ul class="menu-lateral__ul">
+                <li>
+                    <a routerLinkActive="active" routerLink="/competitor/available-cups"><i
+                            class="me-1 bi bi-calendar-event"></i> Copas Disponíveis</a>
+                </li>
+                <li>
+                    <a routerLinkActive="active" routerLink="/competitor/my-team"><i
+                            class="me-1 bi bi-car-front-fill"></i> Minha Equipe</a>
+                </li>
+                <li>
+                    <a routerLinkActive="active" routerLink="/competitor/my-account"><i
+                            class="me-1 bi bi-person-fill-gear"></i> Minha Conta</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+
+    <div class="menu-lateral__select">
+        <label for="" class="form-label"><i class="bi bi-person-circle mb-0 me-1"></i></label>
+        
+        <select class="menu-lateral__form-select" aria-label="Default select example">
+            <option selected hidden>Relâmpago Marquinhos</option>
+            <option value="1">
+                <button>&larr;Sair</button>
+            </option>
+        </select>
+
+        <!-- <button class="menu-lateral__botao-rodape">
+            <i class="bi bi-person-circle me-1"></i> Relâmpago Marquinhos
+        </button> -->
+
+        <!-- <i class="bi bi-arrow-up"></i> -->
+    </div>
+</aside>
