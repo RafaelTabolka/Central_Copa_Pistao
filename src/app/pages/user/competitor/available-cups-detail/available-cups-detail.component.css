@@ -198,27 +198,25 @@
     color: #15803D;
 }
 
-.section-cards__buttons {
-    display: flex;
-    flex-direction: column;
-    margin-top: auto;
-    gap: 12px;
+.section-cards__buttom {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* margin-top: auto;
+    gap: 12px; */
 }
 
-.section-cards__btn-inscrever,
-.section-cards__btn-detalhes {
+.section-cards__btn-inscrever {
     color: #0F172A;
     font-weight: bold;
     font-size: 1.2rem;
     transition: .2s;
-}
-
-.section-cards__btn-inscrever {
+    width: 100%;
     background-color: rgba(49, 165, 231, .2);
     border: 1px solid #31A5E7;
 }
 
-.section-cards__btn-inscrever:hover {
+.section-cards__btn-inscrever:hover,
+.section-cards__btn-inscrever:focus-visible {
     background-color: rgba(49, 165, 231, .30);
     border-color: rgba(49, 165, 231, .75);
     box-shadow: 0 8px 18px rgba(49, 165, 231, .18);

@@ -1,0 +1,339 @@
+.container-fluid {
+    margin-top: 60px;
+}
+
+.container-fluid h1,
+.container-fluid h2 {
+    color: #0F172A;
+    font-weight: bold;
+}
+
+.container-fluid p {
+    color: rgba(15, 23, 42, .7);
+}
+
+.container-fluid__header {
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.container-fluid__header p {
+    margin-bottom: 12px;
+}
+
+.container-fluid__buttons {
+    /* outline: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.container-fluid__button-editar,
+.container-fluid__button-desativar {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.container-fluid__button-editar {
+    border: 1px solid rgba(15, 23, 42, .12);
+    color: #0F172A;
+}
+
+.container-fluid__button-editar:hover,
+.container-fluid__button-editar:focus-visible {
+    background-color: rgba(49, 165, 231, .10);
+    border-color: rgba(49, 165, 231, .75);
+    box-shadow: 0 4px 13px rgba(49, 165, 231, .18);
+}
+
+.container-fluid__button-desativar {
+    background-color: rgba(246, 192, 27, .16);
+    border: 1px solid rgba(246, 192, 27, .45);
+    color: #0F172A;
+}
+
+.container-fluid__button-desativar:hover,
+.container-fluid__button-desativar:focus-visible {
+    background-color: rgba(246, 192, 27, .26);
+    border-color: rgba(246, 192, 27, .65);
+    box-shadow: 0 10px 18px rgba(246, 192, 27, .18);
+}
+
+
+/* .container-fluid__header a {
+    color: #0F172A;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.container-fluid__header a:hover {
+    text-decoration: underline;
+} */
+
+/* .container-fluid__header span,
+.section-cards__inscricoes span {
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 12px;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.section-cards__span-abertas {
+    background-color: rgba(22, 163, 74, .16);
+    border: 1px solid rgba(22, 163, 74, .22);
+    color: #15803D;
+}
+
+.section-cards__span-andamento {
+    background-color: rgba(14, 165, 233, .16);
+    border: 1px solid rgba(14, 165, 233, .2);
+    color: #0369A1;
+}
+
+.section-cards__span-encerradas {
+    background-color: rgba(225, 29, 72, .14);
+    border: 1px solid rgba(225, 29, 72, .2);
+    color: #BE123C;
+}
+
+.section-cards__span-finalizadas {
+    background-color: rgba(255, 208, 0, .14);
+    border: 1px solid rgba(246, 192, 27, .2);
+    color: #78350F;
+} */
+
+.section-cards {
+    background-color: #fff;
+    border: 1px solid rgba(15, 23, 42, .2);
+    border-radius: 12px;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .15);
+    padding: 20px;
+    max-width: 450px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+@media (width >=768px) {
+    .container-fluid {
+        max-width: 650px;
+    }
+
+    .container-fluid__header {
+        margin: unset;
+        max-width: none;
+    }
+
+    .container-fluid__buttons {
+        flex-direction: row;
+    }
+
+    .container-fluid__button-editar,
+    .container-fluid__button-desativar {
+        width: 150px;
+    }
+
+    /* .container-fluid__inscricoes {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    } */
+
+    .section-cards {
+        max-width: none;
+    }
+}
+
+@media (width >=992px) {
+    .container-fluid {
+        margin-top: 0;
+    }
+}
+
+@media (width >=1400px) {
+    .container-fluid {
+        max-width: 1300px;
+    }
+}
+
+.section-cards__borda-topo {
+    background: linear-gradient(90deg, #E01E37, #FFD000, #7FD7FF);
+    height: 5px;
+    border-radius: 12px 12px 0 0;
+}
+
+/* Section cards dados copa */
+.section-cards__dados-equipe-h3 {
+    background-color: rgba(255, 208, 0, .22);
+    border: 1px solid #F6C01B;
+    color: #78350F;
+    font-weight: bold;
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+}
+
+/* Section visão rápida article */
+.section-visao__article {
+    background-color: rgba(49, 165, 231, .02);
+    outline: 1px solid rgba(49, 165, 231, .22);
+    border-radius: 16px;
+    box-shadow: 0 4px 4px 0 rgb(49, 165, 231, .25);
+    padding: 12px 0;
+    text-align: center;
+}
+
+.section-visao__article h3 {
+    color: rgb(15, 23, 42, .7);
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+.section-visao__article p {
+    color: #0F172A;
+    font-weight: bold;
+    font-size: 2.3rem;
+    margin: 0;
+}
+
+/* Tabela */
+.table {
+    margin: 0;
+}
+
+.table__thead th {
+    color: #0F172A;
+    font-weight: 500;
+}
+
+.table__body td {
+    color: rgba(15, 23, 42, .7);
+}
+
+.table__body span {
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 12px;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 12px;
+    background-color: rgba(22, 163, 74, .16);
+    border: 1px solid rgba(22, 163, 74, .22);
+    color: #15803D;
+}
+
+/* Section cards matrícula */
+.section-cards__article {
+    background-color: rgba(49, 165, 231, .02);
+    outline: 1px solid rgba(49, 165, 231, .22);
+    border-radius: 16px;
+    box-shadow: 0 4px 4px 0 rgb(49, 165, 231, .25);
+    padding: 12px 12px 16px;
+}
+
+.section-cards__inscricoes {
+    /* outline: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    /* justify-content: space-between; */
+    /* flex-direction: column; */
+}
+
+.section-cards__inscricoes span {
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 12px;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 12px;
+    background-color: rgba(22, 163, 74, .16);
+    border: 1px solid rgba(22, 163, 74, .22);
+    color: #15803D;
+}
+
+/* .section-cards__ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.section-cards__ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    border-top: 1px solid rgba(15, 23, 42, .12);
+}
+
+.section-cards__ul span {
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 12px;
+    text-align: center;
+    display: inline-block;
+    margin: 4px 0 12px;
+    background-color: rgba(22, 163, 74, .16);
+    border: 1px solid rgba(22, 163, 74, .22);
+    color: #15803D;
+} */
+
+.section-cards__buttom {
+    /* display: flex; */
+    /* flex-direction: column;
+    margin-top: auto;
+    gap: 12px; */
+}
+
+.section-cards__btn-cancelar-inscricao {
+    color: #0F172A;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: .2s;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid rgba(15, 23, 42, .12);
+}
+
+.section-cards__btn-cancelar-inscricao:hover {
+    background-color: rgba(49, 165, 231, .10);
+    border-color: rgba(49, 165, 231, .75);
+    box-shadow: 0 4px 13px rgba(49, 165, 231, .18);
+}
+
+@media (width >=576px) {
+    .section-cards__ul li {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 0;
+    }
+
+    .section-cards__ul span {
+        margin: 0;
+    }
+}
+
+@media (width >=768px) {
+    .section-cards__inscricoes {
+        /* outline: 1px solid red; */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        /* flex-direction: column; */
+    }
+
+    /* .section-cards__inscricoes {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .section-cards__inscricoes span {
+        margin-bottom: 0;
+    } */
+}
