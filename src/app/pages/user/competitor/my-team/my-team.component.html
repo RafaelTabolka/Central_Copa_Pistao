@@ -1,1 +1,148 @@
-<p>my-team works!</p>
+<div class="container-fluid">
+    <div class="container-fluid__header">
+        <h1>Minha Equipe</h1>
+        <p>Mantenha sua equipe pronta: mantenha sempre as informações de sua equipe atualizadas</p>
+
+        <div class="container-fluid__buttons mb-3 mb-md-2">
+            <button class="btn container-fluid__button-editar" routerLink="/competitor/my-team-edit"><i class="bi bi-pencil"></i> Editar</button>
+            <button class="btn container-fluid__button-desativar"><i class="bi bi-ban"></i> Desativar</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-xxl-6 mb-3">
+            <section class="section-cards">
+                <div class="section-cards__borda-topo"></div>
+
+                <!-- Section cards dados copa -->
+                <div class="section-cards__dados-equipe">
+                    <h2 class="mt-2">Relâmpago Marquinhos</h2>
+
+                    <p>
+                        Equipe ativa - Criada em <time datetime="2026/04/01">01/04/2026</time>
+                    </p>
+
+
+                    <h3 class="section-cards__dados-equipe-h3">Dados</h3>
+
+                    <!-- Section visão rápida article -->
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <article class="section-visao__article mb-3">
+                                <h3>Participantes</h3>
+                                <p>3</p>
+                            </article>
+                        </div>
+
+                        <div class="col-12 col-md-4">
+                            <article class="section-visao__article mb-3">
+                                <h3>Pontuação Total</h3>
+                                <p>120</p>
+                            </article>
+                        </div>
+
+                        <div class="col-12 col-md-4">
+                            <article class="section-visao__article mb-3">
+                                <h3>Inscrições Ativas</h3>
+                                <p>2</p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <h3 class="section-cards__dados-equipe-h3 mt-2 mb-2">Participantes</h3>
+
+                    <!-- <p>
+                        Pontuação fixa e transparente. A tabela abaixo mostra quantos pontos cada colocação vale nesta
+                        copa.
+                    </p> -->
+
+                    <!-- Tabela -->
+                    <table class="table">
+                        <thead class="table__thead align-middle text-center">
+                            <tr>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Função</th>
+                                <th scope="col">Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="table__body align-middle text-center">
+                            <tr>
+                                <td>Relâmpago Marquinhos</td>
+                                <td>Piloto</td>
+                                <td><span>Ativo</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Guido</td>
+                                <td>Equipe de box (pneus)</td>
+                                <td><span>Ativo</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Ramone</td>
+                                <td>Mecânico / Customização</td>
+                                <td><span>Ativo</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+        </div>
+
+        <div class="col-12 col-xxl-6 mb-3">
+            <section class="section-cards">
+                <div class="section-cards__borda-topo"></div>
+
+                <!-- Section cards matrícula -->
+                <div>
+
+                    <h2 class="mt-2">Inscrições Ativas</h2>
+
+                    <article class="section-cards__article mt-3 ">
+                        <div class="section-cards__inscricoes mb-3">
+                            <h3>Copa Radiator Springs</h3>
+
+                            <span class="section-cards__span-abertas"><i class="bi bi-check-circle"></i> Ativo</span>
+                        </div>
+
+                        <div class="section-cards__inscricoes">
+                            <p class="mb-2 mb-md-0">
+                                <i class="bi bi-calendar3 me-2"></i> <time datetime="2026/04/01">01/04/2026</time>
+                            </p>
+
+                            <div class="section-cards__buttom">
+                                <button class="btn section-cards__btn-cancelar-inscricao">
+                                    <i class="bi bi-slash-circle"></i> Cancelar Inscrição
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="section-cards__article mt-3 ">
+                        <div class="section-cards__inscricoes mb-3">
+                            <h3>Copa Radiator Springs</h3>
+
+                            <span class="section-cards__span-abertas"><i class="bi bi-check-circle"></i> Ativo</span>
+                        </div>
+
+                        <div class="section-cards__inscricoes">
+                            <p class="mb-2 mb-md-0">
+                                <i class="bi bi-calendar3 me-2"></i> <time datetime="2026/04/01">01/04/2026</time>
+                            </p>
+
+                            <div class="section-cards__buttom">
+                                <button class="btn section-cards__btn-cancelar-inscricao">
+                                    <i class="bi bi-slash-circle"></i> Cancelar Inscrição
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+            </section>
+        </div>
+    </div>
+
+</div>

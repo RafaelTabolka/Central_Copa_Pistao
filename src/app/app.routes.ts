@@ -49,9 +49,9 @@ export const routes: Routes = [
                 .then((m) => m.MyTeamComponent)
             },
             {
-                path: 'my-team-detail',
-                loadComponent: () => import('./pages/user/competitor/my-team-detail/my-team-detail.component')
-                .then((m) => m.MyTeamDetailComponent)
+                path: 'my-team-edit',
+                loadComponent: () => import('./pages/user/competitor/my-team-edit/my-team-edit.component')
+                .then((m) => m.MyTeamEditComponent)
             },
             {
                 path: 'my-account',
