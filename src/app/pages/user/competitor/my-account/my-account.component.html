@@ -1,1 +1,64 @@
-<p>my-account works!</p>
+<div class="container-fluid">
+    <div class="container-fluid__header">
+        <h1>Minha Conta</h1>
+
+        <div class="container-fluid__data-status">
+            <p>
+                Esteja sempre pronto. Mantenha as informações de sua conta atualizadas
+            </p>
+
+            <!-- <span class="section-cards__span-abertas">Inscrições Abertas</span> -->
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <section class="section-form ">
+                <div class="section-form__borda-topo mb-3"></div>
+
+                <h2>Atualizar Conta</h2>
+                <p>Mantenha as informações de sua conta atualizadas</p>
+
+                <form class="form-atualizar">
+                    <div class="section-form__etapa mt-4 mb-3">
+                        <span>1ª Etapa</span>
+                        <p>Dados da Equipe</p>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-12 col-md-6 mb-3 mb-md-0">
+                            <label for="nome" class="form-label">Nome*</label>
+                            <input type="text" class="form-control" id="nome" name="nome"
+                                placeholder="Mate, igual tomate">
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <label for="email" class="form-label">E-mail*</label>
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="nome@exemplo.com" autocomplete="username">
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-12 col-md-6 mb-3 mb-md-0">
+                            <label for="senha" class="form-label">Senha*</label>
+                            <input type="password" class="form-control" id="senha" name="senha" placeholder="......"
+                                autocomplete="new-password">
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <label for="confirmarSenha" class="form-label">Confirmar Senha*</label>
+                            <input type="password" class="form-control" id="confirmarSenha" name="confirmarSenha"
+                                placeholder="......" autocomplete="new-password">
+                        </div>
+                    </div>
+
+                    <div class="btn-atualizar">                        
+                        <button class="btn mt-4 mb-2"><i class="bi bi-check2-circle"></i> Atualizar</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+
+</div>
