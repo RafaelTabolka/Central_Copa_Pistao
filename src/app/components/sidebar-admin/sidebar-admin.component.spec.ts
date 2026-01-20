@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CupsDetailComponent } from './cups-detail.component';
+import { SidebarAdminComponent } from './sidebar-admin.component';
 
-describe('CupsDetailComponent', () => {
-  let component: CupsDetailComponent;
-  let fixture: ComponentFixture<CupsDetailComponent>;
+describe('SidebarAdminComponent', () => {
+  let component: SidebarAdminComponent;
+  let fixture: ComponentFixture<SidebarAdminComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CupsDetailComponent]
+      imports: [SidebarAdminComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CupsDetailComponent);
+    fixture = TestBed.createComponent(SidebarAdminComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

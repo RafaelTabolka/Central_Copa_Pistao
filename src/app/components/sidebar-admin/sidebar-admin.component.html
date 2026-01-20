@@ -16,10 +16,8 @@
 
         <div class="menu-lateral__equipe">
             <article class="menu-lateral__article">
-                <h3>Equipe</h3>
-                <p>Relâmpago Marquinhos</p>
-                <span class="menu-lateral__span-ativo"><i class="bi bi-check-circle"></i> Ativo</span>
-                <span class="menu-lateral__span-pontuacao ms-2"><i class="bi bi-trophy"></i> 120 pts</span>
+                <h3>Painel Admin</h3>
+                <p>Gerencie copas, equipes e resultados</p>
             </article>
         </div>
 
@@ -28,16 +26,15 @@
         <nav class="menu-lateral__navegacao">
             <ul class="menu-lateral__ul">
                 <li>
-                    <a routerLinkActive="active" routerLink="/competitor/available-cups"><i
-                            class="me-1 bi bi-calendar-event"></i> Copas Disponíveis</a>
+                    <a routerLinkActive="active" routerLink="/admin/cups">
+                        <i class="bi bi-trophy"></i> Copas
+                    </a>
                 </li>
+
                 <li>
-                    <a routerLinkActive="active" routerLink="/competitor/my-team"><i
-                            class="me-1 bi bi-car-front-fill"></i> Minha Equipe</a>
-                </li>
-                <li>
-                    <a routerLinkActive="active" routerLink="/competitor/my-account"><i
-                            class="me-1 bi bi-person-fill-gear"></i> Minha Conta</a>
+                    <a routerLinkActive="active" routerLink="/admin/submit-results">
+                        <i class="bi bi-clipboard-data"></i> Resultados
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -49,7 +46,7 @@
         <label for="" class="form-label"><i class="bi bi-person-circle mb-0 me-1"></i></label>
         
         <select class="menu-lateral__form-select" aria-label="Default select example">
-            <option selected hidden>Relâmpago Marquinhos</option>
+            <option selected hidden>Doc Hudson</option>
             <option value="1">
                 <button>&larr;Sair</button>
             </option>
