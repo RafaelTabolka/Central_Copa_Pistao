@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { CompetitorComponent } from './layout/competitor/competitor.component';
 import { PublicComponent } from './layout/public/public.component';
+import { AdminComponent } from './layout/admin/admin.component';
 
 export const routes: Routes = [
     {
@@ -57,6 +58,32 @@ export const routes: Routes = [
                 path: 'my-account',
                 loadComponent: () => import('./pages/user/competitor/my-account/my-account.component')
                 .then((m) => m.MyAccountComponent)
+            }
+        ]
+    },
+    {
+        path: 'admin',
+        component: AdminComponent,
+        children: [
+            {
+                path: 'cups',
+                loadComponent: () => import('./pages/user/admin/cups/cups.component')
+                .then((m) => m.CupsComponent)
+            },
+            {
+                path: 'cups/:id',
+                loadComponent: () => import('./pages/user/admin/cup-edit/cup-edit.component')
+                .then((m) => m.CupEditComponent)
+            },
+            {
+                path: 'cup-register',
+                loadComponent: () => import('./pages/user/admin/cup-register/cup-register.component')
+                .then((m) => m.CupRegisterComponent)
+            },
+            {
+                path: 'submit-results',
+                loadComponent: () => import('./pages/user/admin/submit-results/submit-results.component')
+                .then((m) => m.SubmitResultsComponent)
             }
         ]
     }
