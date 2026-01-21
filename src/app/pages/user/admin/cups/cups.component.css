@@ -1,0 +1,292 @@
+.container-fluid {
+    margin-top: 60px;
+}
+
+.container-fluid h1,
+.container-fluid h2 {
+    color: #0F172A;
+    font-weight: bold;
+}
+
+.container-fluid p {
+    color: rgba(15, 23, 42, .7);
+}
+
+.container-fluid__header {
+    max-width: 450px;
+    /* outline: 1px solid red; */
+    margin: 0 auto;
+}
+
+.container-fluid__btn-header button {
+    background-color: rgba(49, 165, 231, .6);
+    border: 1px solid #31A5E7;
+    color: #0F172A;
+    font-weight: bold;
+    border-radius: 12px;
+    padding: 4px 12px;
+    transition: .2s;
+}
+
+.container-fluid__btn-header button:hover {
+    background-color: rgba(49, 165, 231, .75);
+    border-color: rgba(49, 165, 231, .55);
+    box-shadow: 0 8px 18px rgba(49, 165, 231, .18);
+}
+
+.row {
+    /* outline: 1px solid red; */
+    /* display: flex;
+    justify-content: center; */
+}
+
+.col-container {
+    /* outline: 1px solid red; */
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.section-cards {
+    background-color: #fff;
+    border: 1px solid rgba(15, 23, 42, .2);
+    border-radius: 12px;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .15);
+    padding: 20px;
+    max-width: 450px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+@media (width >=768px) {
+    .container-fluid__header {
+        margin: unset;
+        max-width: none;
+    }
+
+    .container-fluid__btn-header {
+        /* outline: 1px solid red; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .container-fluid__btn-header p{
+        margin: 0;
+    }
+
+    .section-cards {
+        max-width: none;
+    }
+}
+
+@media (width >=992px) {
+    .container-fluid {
+        margin-top: 0;
+    }
+}
+
+@media (width >=1300px) {
+    .container-fluid {
+        max-width: 1000px;
+    }
+}
+
+/* @media (width >= 992px) {
+    .section-cards {
+        margin: unset;
+    }
+} */
+
+.section-cards__borda-topo {
+    background: linear-gradient(90deg, #E01E37, #FFD000, #7FD7FF);
+    height: 5px;
+    border-radius: 12px 12px 0 0;
+}
+
+.section-cards__figure {
+    /* outline: 1px solid red; */
+    /* width: 60%; */
+    margin: 16px auto;
+    text-align: center;
+}
+
+.section-cards__dados-copa {
+    /* outline: 1px solid red; */
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.section-cards__data-status p {
+    margin-bottom: 12px;
+}
+
+.section-cards__dados-copa span {
+    /* margin-left: 12px; */
+    width: 190px;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.section-cards__span-abertas {
+    background-color: rgba(22, 163, 74, .16);
+    border: 1px solid rgba(22, 163, 74, .22);
+    color: #15803D;
+}
+
+.section-cards__span-andamento {
+    background-color: rgba(14, 165, 233, .16);
+    border: 1px solid rgba(14, 165, 233, .2);
+    color: #0369A1;
+}
+
+.section-cards__span-encerradas {
+    background-color: rgba(225, 29, 72, .14);
+    border: 1px solid rgba(225, 29, 72, .2);
+    color: #BE123C;
+}
+
+.section-cards__span-finalizadas {
+    background-color: rgba(255, 208, 0, .14);
+    border: 1px solid rgba(246, 192, 27, .2);
+    color: #78350F;
+}
+
+
+/* .section-cards__dados-copa h2 {
+    color: #0F172A;
+    font-weight: bold;
+    } */
+
+/* .section-cards__dados-copa p {
+    margin: 0;
+} */
+
+.section-cards__divisor {
+    border-bottom: 1px solid rgba(15, 23, 42, .12);
+    margin: 24px 0 16px;
+}
+
+.section-cards__ul {
+    /* outline: 1px solid red; */
+    padding: 0;
+    list-style: none;
+    margin-bottom: 24px;
+}
+
+.section-cards__ul li {
+    color: #0F172A;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.section-cards__ul span {
+    color: #0F172A;
+    font-weight: normal;
+}
+
+.section-cards__buttons {
+    /* outline: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    /* outline: 1px solid red; */
+    margin-top: auto;
+    gap: 12px;
+}
+
+.btn {
+    color: #0F172A;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: .2s;
+}
+
+.section-cards__btn-editar {
+    background-color: rgba(49, 165, 231, .2);
+    border: 1px solid #31A5E7;
+}
+
+.section-cards__btn-editar:hover {
+    background-color: rgba(49, 165, 231, .30);
+    border-color: rgba(49, 165, 231, .75);
+    box-shadow: 0 8px 18px rgba(49, 165, 231, .18);
+}
+
+.section-cards__btn-encerrar-inscricao {
+    background-color: rgba(190, 18, 60, .14);
+    border: 1px solid rgba(225, 29, 72, .2);
+    color: #BE123C;
+}
+
+.section-cards__btn-encerrar-inscricao:hover {
+    background-color: rgba(190, 18, 60, .20);
+    border-color: rgba(225, 29, 72, .35);
+    color: rgba(190, 18, 60, .95);
+    box-shadow: 0 10px 18px rgba(190, 18, 60, .18);
+}
+
+.section-cards__btn-finalizar-copa {
+    background-color: rgba(255, 208, 0, .7);
+    border: 1px solid #F6C01B;
+}
+
+.section-cards__btn-finalizar-copa:hover {
+    background-color: rgba(255, 208, 0, .85);
+    border-color: rgba(246, 192, 27, .85);
+    box-shadow: 0 10px 18px rgba(246, 192, 27, .20);
+}
+
+.section-cards__btn-iniciar-copa {
+    background-color: rgba(49, 165, 231, .6);
+    border: 1px solid rgba(0, 0, 0, .3);
+}
+
+.section-cards__btn-iniciar-copa:hover {
+    background-color: rgba(49, 165, 231, .75);
+    border-color: #31A5E7;
+    box-shadow: 0 8px 18px rgba(49, 165, 231, .18);
+}
+
+.section-cards__btn-copa-finalizada {
+    background-color: #E5E7EB;
+    border: 1px solid rgba(15, 23, 42, .12);
+    color: rgba(15, 23, 42, .56);
+}
+
+.section-cards__btn-copa-finalizada:hover {
+    cursor: not-allowed;
+}
+
+
+@media (width >=1250px) {
+    .section-cards__data-status {
+        display: flex;
+        align-items: center;
+    }
+
+    .section-cards__data-status p {
+        margin-bottom: 0;
+        margin-right: 16px;
+    }
+
+    .section-cards__dados-copa span {
+        /* outline: 1px solid red; */
+    }
+
+    .section-cards__buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .section-cards__btn-editar {
+        width: 40%;
+    }
+
+    .section-cards__btn-encerrar-inscricao,
+    .section-cards__btn-finalizar-copa,
+    .section-cards__btn-iniciar-copa,
+    .section-cards__btn-copa-finalizada {
+        width: 60%;
+    }
+}

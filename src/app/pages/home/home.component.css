@@ -30,6 +30,7 @@ p {
     font-weight: bold;
     letter-spacing: 1px;
     font-size: 1.1rem;
+    transition: .2s;
 }
 
 .secao-produto__fazer-cadastro {
