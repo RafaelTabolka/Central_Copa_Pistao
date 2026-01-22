@@ -71,12 +71,12 @@
   border-radius: 12px 12px 0 0;
 }
 
-.section-form > h2 {
+.section-form>h2 {
   color: #0F172A;
   font-weight: bold;
 }
 
-.section-form > p {
+.section-form>p {
   color: rgba(15, 23, 42, .7);
 }
 
@@ -144,9 +144,7 @@
 
 .bi-trash:hover {
   filter:
-    drop-shadow(0 10px 16px rgba(225, 8, 17, .22))
-    drop-shadow(0 3px 8px rgba(0, 0, 0, .18))
-    drop-shadow(0 0 10px rgba(225, 8, 17, .18));
+    drop-shadow(0 10px 16px rgba(225, 8, 17, .22)) drop-shadow(0 3px 8px rgba(0, 0, 0, .18)) drop-shadow(0 0 10px rgba(225, 8, 17, .18));
 }
 
 .btn-adicionar-participante {

@@ -1,1 +1,145 @@
-<p>cup-edit works!</p>
+<div class="container-fluid">
+    <div class="container-fluid__header">
+        <a routerLink="/admin/cups"><i class="bi bi-arrow-left"></i> Voltar</a>
+
+        <h1>Editar Copa</h1>
+
+        <div class="container-fluid__data-status">
+            <p>
+                Mantenha as informações das copas sempre atualizadas
+            </p>
+
+            <!-- <span class="section-cards__span-abertas">Inscrições Abertas</span> -->
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <section class="section-form ">
+                <div class="section-form__borda-topo mb-3"></div>
+
+                <h2>Editar Informações</h2>
+                <p>Altere os dados cadastrados</p>
+
+                <form class="form-cadastrar">
+                    <div class="section-form__etapa mt-4 mb-3">
+                        <span>1ª Etapa</span>
+                        <p>Dados da Copa</p>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-md-5 mb-3 mb-md-0">
+                            <label for="nomeCopa" class="form-label">Nome da Copa*</label>
+                            <input type="text" class="form-control" id="nomeCopa" name="nomeCopa"
+                                placeholder="Ex: Catchau do relâmpago">
+                        </div>
+
+                        <div class="col-12 col-md-3 mb-3 mb-md-0">
+                            <label for="status" class="form-label">Status*</label>
+                            <select class="form-select" name="status" id="status" aria-label="Default select example">
+                                <option selected disabled>Selecione...</option>
+                                <option value="inscricoesAbertas">Inscrições Abertas</option>
+                                <option value="emAndamento">Em Andamento</option>
+                                <option value="inscricoesEncerradas">Inscrições Encerradas</option>
+                                <option value="copaFinalizada">Copa Finalizada</option>
+                            </select>
+                        </div>
+
+                        <div class="col-12 col-md-4 campo-logo-copa mb-3">
+                            <label class="form-label">Logo da Copa*</label>
+                            <input type="file" class="form-control logo-copa" id="logoCopa" name="logoCopa" hidden>
+
+                            <div>
+                                <label for="logoCopa" class="label-selecionar-imagem">Selecionar Imagem</label>
+                                <!-- <label>Nenhuma imagem </label> -->
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="dataInicio" class="form-label">Data Início*</label>
+                            <input type="date" class="form-control" id="dataInicio" name="dataInicio">
+                        </div>
+
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="dataTermino" class="form-label">Data Término*</label>
+                            <input type="date" class="form-control" id="dataTermino" name="dataTermino">
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <label for="descricao" class="form-label">Descrição</label>
+                            <textarea class="form-control" id="descricao" name="descricao" placeholder="Descreva a Copa" rows="3"></textarea>
+                        </div>
+
+                    </div>
+
+                    <div class="section-form__etapa mt-4 mb-3">
+                        <span>2ª Etapa</span>
+                        <p>Pré-requisitos</p>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="nomeCopa" class="form-label">Mínimo de Participantes*</label>
+                            <input type="number" class="form-control" id="nomeCopa" name="nomeCopa"
+                                placeholder="Ex: 4">
+                        </div>
+
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="nomeCopa" class="form-label">Pontuação Mínima*</label>
+                            <input type="number" class="form-control" id="nomeCopa" name="nomeCopa"
+                                placeholder="Ex: 200">
+                        </div>
+                    </div>
+
+                    <div class="section-form__etapa mt-4 mb-3">
+                        <span>2ª Etapa</span>
+                        <p>Pré-requisitos</p>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-12 col-md-4">
+                            <label for="nomeCopa" class="form-label">
+                                <span class="form-cadastrar__primeiro-lugar">
+                                    <i class="bi bi-trophy-fill"></i>
+                                </span> 
+                                1º Lugar
+                            </label>
+                            
+                            <input type="number" class="form-control" id="nomeCopa" name="nomeCopa"
+                                placeholder="Ex: 200">
+                        </div>
+
+                        <div class="col-12 col-md-4">
+                            <label for="nomeCopa" class="form-label">
+                                <span class="form-cadastrar__segundo-lugar">
+                                    <i class="bi bi-trophy-fill"></i>
+                                </span> 
+                                2º Lugar
+                            </label>
+                            
+                            <input type="number" class="form-control" id="nomeCopa" name="nomeCopa"
+                                placeholder="Ex: 200">
+                        </div>
+
+                        <div class="col-12 col-md-4">
+                            <label for="nomeCopa" class="form-label">
+                                <span class="form-cadastrar__terceiro-lugar">
+                                    <i class="bi bi-trophy-fill"></i>
+                                </span> 
+                                3º Lugar
+                            </label>
+                            
+                            <input type="number" class="form-control" id="nomeCopa" name="nomeCopa"
+                                placeholder="Ex: 200">
+                        </div>
+                    </div>
+
+                    <div class="btn-atualizar">
+                        <button class="btn mt-4 mb-2"><i class="bi bi-check2-circle"></i> Atualizar</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+
+</div>
