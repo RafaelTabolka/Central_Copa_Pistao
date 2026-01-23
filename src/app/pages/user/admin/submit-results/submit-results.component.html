@@ -1,1 +1,196 @@
-<p>submit-results works!</p>
+<div class="container-fluid">
+    <div class="container-fluid__header">
+        <h1>Lançar Resultados</h1>
+
+        <div class="container-fluid__data-status">
+            <p>
+                Crie torneios ou edite as informações das copas cadastradas
+            </p>
+
+            <!-- <span class="section-cards__span-abertas">Inscrições Abertas</span> -->
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-12">
+            <section class="section-resultado ">
+                <div class="section-resultado__borda-topo mb-3"></div>
+
+                <div class="section-resultado__procura-copa mb-3">
+                    <span><i class="bi bi-search"></i></span>
+
+                    <select class="form-select" name="status" id="status" aria-label="Default select example">
+                        <option selected disabled>Selecione a Copa</option>
+                        <option value="">Copa Radiator Springs</option>
+                        <option value="">Copa Desert Dash</option>
+                        <option value="">Copa Night Run</option>
+                        <option value="">Copa Grand Prix</option>
+                    </select>
+                </div>
+
+                <div class="row section-resultado__cabecalho mb-3">
+                    <div class="col-12 col-sm-8 section-resultado__informacoes mb-3 mb-sm-0">
+                        <img class="section-resultado__img-fluid"
+                            src="assets/img/user/competitor/available_cups/img_copas_disponiveis_grand_prix.png"
+                            alt="logo copa radiator springs">
+
+                        <div class="ms-sm-4 section-resultado__titulo">
+                            <h2 class="mt-2">Copa Radiator Springs</h2>
+                            <p class="mt-2 mb-0 text-center">Copa Finalizada</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-4 section-resultado__datas">
+                        <p>
+                            <i class="bi bi-people me-1"></i> Equipes Inscritas: 10
+                        </p>
+
+                        <p>
+                            <i class="bi bi-calendar3 me-2"></i>
+                            <time datetime="2026/02/10">10/02/2026</time> a
+                            <time datetime="2026/02/12">12/02/2026</time>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <section class="section-table">
+                        <h3 class="section-table__dados-copa-h3 mt-2 mb-2">Resultado Final</h3>
+
+                        <p>
+                            Selecione a colocação das equipes. Pontos serão calculados automaticamente iniciando em 50
+                            pontos e decrementando 5 pontos por colocação
+                        </p>
+
+                        <!-- Tabela -->
+                        <table class="table mb-md-2">
+                            <thead class="table__thead align-middle text-center">
+                                <tr>
+                                    <th scope="col">Equipe</th>
+                                    <th scope="col">Colocação</th>
+                                    <th class="table__esconde-no-mobile" scope="col">Pontos</th>
+                                    <th class="table__esconde-no-mobile" scope="col">Situação</th>
+                                    <th class="table__esconde-no-desktop" scope="col">Detalhes</th>
+                                </tr>
+                            </thead>
+
+                            <tbody class="table__body align-middle text-center">
+                                <tr>
+                                    <td>Relâmpago Marquinhos</td>
+
+                                    <td class="table__td-select">
+                                        <select class="form-select" name="status" id="status"
+                                            aria-label="Default select example">
+                                            <option selected disabled>N/A</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </td>
+
+                                    <td class="table_td-pontos table__esconde-no-mobile">
+                                        <span>0</span>
+                                    </td>
+
+                                    <td class="table__esconde-no-mobile">
+                                        <span class="table__situacao-pendente"><i class="bi bi-exclamation-circle"></i> Pendente</span>
+                                    </td>
+
+                                    <td class="table__esconde-no-desktop">
+                                        <button class="btn btn-seta-detalhes" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#detalhe-1" aria-expanded="false"
+                                            aria-controls="detalhe-1">
+                                            <i class="bi bi-arrow-down"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr class="table__esconde-no-desktop">
+                                    <td class="table__detalhes-td" colspan="5">
+                                        <div class="collapse table__detalhes" id="detalhe-1">
+                                            <p class="mb-2">Pontos: <span>0</span></p>
+                                            
+                                            <p>
+                                                Situação: 
+                                                <span class="table__situacao-pendente">
+                                                    <i class="bi bi-exclamation-circle"></i> Pendente
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Relâmpago Marquinhos</td>
+
+                                    <td class="table__td-select">
+                                        <select class="form-select" name="status" id="status"
+                                            aria-label="Default select example">
+                                            <option selected disabled>N/A</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </td>
+
+                                    <td class="table_td-pontos table__esconde-no-mobile">
+                                        <span>0</span>
+                                    </td>
+
+                                    <td class="table__esconde-no-mobile">
+                                        <span class="table__situacao-ok"><i class="bi bi-check-circle"></i> Ok</span>
+                                    </td>
+
+                                    <td class="table__esconde-no-desktop">
+                                        <button class="btn btn-seta-detalhes" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#detalhe-2" aria-expanded="false"
+                                            aria-controls="detalhe-2">
+                                            <i class="bi bi-arrow-down"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr class="table__esconde-no-desktop">
+                                    <td class="table__detalhes-td" colspan="5">
+                                        <div class="collapse table__detalhes" id="detalhe-2">
+                                            <p class="mb-2">Pontos: <span>0</span></p>
+                                            
+                                            <p>
+                                                Situação: 
+                                                <span class="table__situacao-ok">
+                                                    <i class="bi bi-check-circle"></i> Ok
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="section-table__dados-preenchidos">
+                            <span>Equipes preenchidas: 1 / Faltam: 9</span>
+                        </div>
+
+                        <div class="btn-salvar mt-3">
+                            <button class="btn"><i class="bi bi-check2-circle me-2"></i> Finalizar e Salvar</button>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
