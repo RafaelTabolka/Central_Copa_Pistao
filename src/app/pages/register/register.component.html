@@ -54,8 +54,8 @@
                         </div>
 
                         <div class="col-12 col-md-3 mb-3 mb-md-0">
-                            <label for="senha" class="form-label">Categoria*</label>
-                            <select class="form-select" aria-label="Default select example">
+                            <label for="categoria" class="form-label">Categoria*</label>
+                            <select class="form-select" name="categoria" id="categoria" aria-label="Default select example">
                                 <option selected disabled>Selecione...</option>
                                 <option value="rua">Rua</option>
                                 <option value="rally">Rally</option>
@@ -91,21 +91,20 @@
                         </div>
 
                         <div class="col-12 col-md-4 mb-3 mb-md-0">
-                            <label for="participante2" class="form-label">Participante #2</label>
+                            <label for="funcao" class="form-label">Função</label>                            
                             
-                            <i class="bi bi-trash ms-2"></i>
-                            
-                            <input type="text" class="form-control" id="participante2" name="participante2"
-                                placeholder="Ex: Catchau do relâmpago">
+                            <input type="text" class="form-control" id="funcao" name="funcao"
+                                placeholder="Ex: Mecânico">
                         </div>
 
                         <div class="col-12 col-md-4">
-                            <label for="participante3" class="form-label">Participante #3</label> 
+                            <label for="status" class="form-label">Status*</label>                            
                             
-                            <i class="bi bi-trash ms-2"></i>
-                            
-                            <input type="text" class="form-control" id="participante3" name="participante3"
-                                placeholder="Ex: Catchau do relâmpago">
+                            <select class="form-select" name="status" id="status" aria-label="Default select example">
+                                <option selected disabled>Selecione...</option>
+                                <option value="ativo">Ativo</option>
+                                <option value="inativo">Inativo</option>
+                            </select>
                         </div>
                     </div>
 

@@ -297,6 +297,26 @@
   box-shadow: 0 8px 18px rgba(49, 165, 231, .18);
 }
 
+.section-table__container-footer {
+  /* outline: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.paginacao-nav {
+  /* outline: 1px solid red; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.pagination {
+  margin: 0;
+}
+
 @media (width >=576px) {
   .section-table__dados-preenchidos {
     font-size: 1.2rem;
@@ -324,6 +344,12 @@
   .table__situacao-ok,
   .table__situacao-pendente {
     width: 120px;
+  }
+
+  .section-table__container-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .btn-salvar button {
