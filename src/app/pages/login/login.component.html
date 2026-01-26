@@ -7,27 +7,41 @@
                 <h2>Bem vindo(a) de volta</h2>
                 <p>Entre com e-mail e senha para acessar o sistema</p>
 
-                <form class="form-entrar">
+                <form [formGroup]="formLogin" class="form-entrar">
                     <div class="mb-3">
                         <label for="email" class="form-label">E-mail</label>
-                        <input type="email" class="form-control" id="email" name="email"
-                            placeholder="nome@exemplo.com" autocomplete="username">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="nome@exemplo.com"
+                            autocomplete="username" formControlName="email">
+                        
+                        @if (formLogin.controls.email.touched && formLogin.controls.email.invalid) {
+                            <p class="text-danger mt-2 mb-0">Campo obrigatório</p>
+                        }
                     </div>
 
                     <div class="mb-2">
                         <label for="senha" class="form-label">Senha</label>
-                        <input type="password" class="form-control" id="senha" name="senha"
-                            placeholder="......" autocomplete="current-password">
+                        <input type="password" class="form-control" id="senha" name="senha" placeholder="......"
+                            autocomplete="current-password" formControlName="senha">
+                        
+                        @if (formLogin.controls.senha.touched && formLogin.controls.senha.invalid) {
+                            <p class="text-danger mt-2 mb-0">Campo obrigatório</p>
+                        }
                     </div>
 
-                    <div>                        
+                    <div>
                         <a class="form-entrar__link" href="#">Esqueci a senha</a>
                     </div>
 
-                    <button class="btn mt-4 mb-2"><i class="bi bi-box-arrow-in-right"></i> Entrar</button>
+                    <button class="btn mt-4 mb-2" [disabled]="formLogin.invalid" (click)="fazerLogin()"><i
+                            class="bi bi-box-arrow-in-right"></i> Entrar</button>
+
+                    @if (mensagemSemCadastro) {
+                    <p class="text-danger">Usuário ou senha incorretos</p>
+                    }
 
                     <div class="text-center">
-                        <p>Ainda não possui cadastro? <a class="form-entrar__link" routerLink="/register">Clique aqui</a></p>
+                        <p>Ainda não possui cadastro? <a class="form-entrar__link" routerLink="/register">Clique
+                                aqui</a></p>
                     </div>
                 </form>
             </section>

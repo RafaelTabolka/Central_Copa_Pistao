@@ -16,8 +16,8 @@
 
                 <!-- Seção produto botões -->
                 <div class="secao-produto__botoes mb-3">
-                    <button class="btn secao-produto__fazer-cadastro"><i class="bi bi-lightning-charge"></i> Fazer Cadastro</button>
-                    <button class="btn secao-produto__acessar-painel"><i class="bi bi-eye"></i> Acessar Painel</button>
+                    <button class="btn secao-produto__fazer-cadastro" routerLink="/public/register"><i class="bi bi-lightning-charge"></i> Fazer Cadastro</button>
+                    <button class="btn secao-produto__acessar-painel" routerLink="/public/login"><i class="bi bi-eye"></i> Acessar Painel</button>
                 </div>
 
                 <!-- Seção produto article -->
@@ -72,7 +72,7 @@
 
                 <div class="mt-3 mb-1 section-visao__header">
                     <h2>Visão Rápida</h2>
-                    <span><i class="bi bi-people"></i> 18 Equipes</span>
+                    <span><i class="bi bi-people"></i> {{ equipesAtivas }} Equipes</span>
                 </div>
 
                 <p>
@@ -84,21 +84,21 @@
                     <div class="col-12 col-md-4">
                         <article class="section-visao__article mb-3">
                             <h3>Copas Ativas</h3>
-                            <p>4</p>
+                            <p>{{ copasAtivas }}</p>
                         </article>
                     </div>
 
                     <div class="col-12 col-md-4">
                         <article class="section-visao__article mb-3">
-                            <h3>Equipes</h3>
-                            <p>18</p>
+                            <h3>Total Copas</h3>
+                            <p>{{ copas.length }}</p>
                         </article>
                     </div>
 
                     <div class="col-12 col-md-4">
                         <article class="section-visao__article mb-3">
                             <h3>Inscrições</h3>
-                            <p>38</p>
+                            <p>{{ inscricoes }}</p>
                         </article>
                     </div>
                 </div>
@@ -107,9 +107,17 @@
                 <article class="section-visao__article-ol">
                     <h3>Top 3 equipes</h3>
                     <ol class="section-visao__ol">
-                        <li class="section-visao__li mb-3">1. Relâmpago Marquinhos <span>120 pts</span></li>
-                        <li class="section-visao__li mb-3">2. Pistões Turbo <span>95 pts</span></li>
-                        <li class="section-visao__li">3. Reis do Asfalto <span>88 pts</span></li>
+                        @for (equipes of topTresEquipes; track equipes.id) {
+                            <div class="section-visao__li">                                
+                                <li class=""> {{ equipes.nomeEquipe }} </li>
+                                
+                                <div>
+                                    <span>{{ equipes.pontuacaoTotal }} pts</span>
+                                </div>
+                            </div>
+                        }
+                        <!-- <li class="section-visao__li mb-3">2. {{ topTresEquipes[1].nomeEquipe }} <span>95 pts</span></li>
+                        <li class="section-visao__li">3. {{ topTresEquipes[2].nomeEquipe }} <span>88 pts</span></li> -->
                     </ol>
                 </article>
             </section>
@@ -127,8 +135,8 @@
                 </p>
     
                 <div class="section-controle__botoes mb-3">
-                    <button class="btn section-controle__botao-criar"><i class="bi bi-flag"></i> Criar Minha Equipe</button>
-                    <button class="btn section-controle__botao-acessar"><i class="bi bi-person-circle"></i> Acessar Painel</button>
+                    <button class="btn section-controle__botao-criar" routerLink="/public/register"><i class="bi bi-flag"></i> Criar Minha Equipe</button>
+                    <button class="btn section-controle__botao-acessar" routerLink="/public/login"><i class="bi bi-person-circle"></i> Acessar Painel</button>
                 </div>
     
                 <article class="section-controle__article">
