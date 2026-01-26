@@ -283,18 +283,18 @@ p {
 }
 
 .section-visao__ol {
-    padding-left: 0;
+    /* padding-left: 0; */
     color: #0F172A;
     font-weight: 500;
-    list-style: none;
+    /* list-style: none; */
     margin-bottom: 0;
 }
 
 .section-visao__li {
     border-bottom: 1px solid rgba(49, 165, 231, .22);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    gap: 8px;
     padding-bottom: 8px;
 }
 
@@ -309,6 +309,19 @@ p {
     font-weight: bold;
     border-radius: 12px;
     padding: 4px 12px;
+}
+
+@media (width >=400px) {
+    .section-visao__li {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+    }
+
+    .section-visao__li:last-child {
+        margin-bottom: 0;
+    }
 }
 
 /* Seção controle de confiança */
@@ -368,9 +381,9 @@ p {
 
 .section-controle__botao-acessar:hover,
 .section-controle__botao-acessar:focus-visible {
-    background-color: rgba(49,165,231,.10);
-    border: 1px solid rgba(49,165,231,.35);
-    box-shadow: 0 5px 5px rgba(49,165,231,.18);
+    background-color: rgba(49, 165, 231, .10);
+    border: 1px solid rgba(49, 165, 231, .35);
+    box-shadow: 0 5px 5px rgba(49, 165, 231, .18);
     /* color: #0F172A; */
 }
 

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { UsuarioService } from '../../core/services/usuario.service';
 
 @Component({
   selector: 'app-footer',
@@ -6,6 +7,18 @@ import { Component } from '@angular/core';
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
 })
-export class FooterComponent {
-
+export class FooterComponent implements OnInit{
+  statusServidor: string = 'Inativo';
+  
+  constructor(private usuarioService: UsuarioService) {}
+  
+  ngOnInit(): void {
+    this.statusServidor = 'Inativo';
+    
+    this.usuarioService.listarUsuarios().subscribe({
+      next: () => {
+        this.statusServidor = 'Ok'
+      }
+    })
+  }
 }
