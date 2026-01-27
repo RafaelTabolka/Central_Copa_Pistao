@@ -3,6 +3,8 @@ import { FormArray, FormControl, FormGroup, NonNullableFormBuilder, ReactiveForm
 import { RouterLink } from "@angular/router";
 import { EquipeCategoria } from '../../core/interfaces/models/equipe/equipe-categoria.enum';
 import { EquipeStatus } from '../../core/interfaces/models/equipe/equipe-status.enum';
+import { IEquipe } from '../../core/interfaces/models/equipe/equipe';
+import { EquipeService } from '../../core/services/equipe.service';
 
 type Participantes = FormGroup<{
   nomeParticipante: FormControl<string>;
@@ -33,7 +35,8 @@ export class RegisterComponent {
   readonly equipeCategoria = EquipeCategoria;
   
   constructor(
-    private fb: NonNullableFormBuilder
+    private fb: NonNullableFormBuilder,
+    private equipeService: EquipeService
   ) {
     this.formCadastrar = this.fb.group({
       nome: ['', [Validators.required]],
@@ -79,5 +82,41 @@ export class RegisterComponent {
     this.formCadastrar.controls.qtdeParticipantes.setValue(this.participantes.controls.length);
     this.formCadastrar.updateValueAndValidity();
     this.participantes.updateValueAndValidity();
+  }
+
+  cadastrarEquipe(): void {
+    const idUsuario = crypto.randomUUID();
+    const idEquipe = crypto.randomUUID();
+    
+    const participantesForm = this.formCadastrar.controls.participantes.getRawValue();
+
+    const participantes = participantesForm.map((participante) => {
+      return {
+        id: crypto.randomUUID(),
+        nome: participante.nomeParticipante,
+        funcao: participante.funcao,
+        status: participante.status
+      }
+    });
+    
+    console.log(participantesForm)
+
+    const equipe: IEquipe = {
+      id: idEquipe,
+      idUsuario: idUsuario,
+      nomeEquipe: this.formCadastrar.controls.nomeEquipe.value,
+      status: this.equipeStatus.Ativo,
+      categoria: this.formCadastrar.controls.categoria.value,
+      qtdeParticipantes: this.formCadastrar.controls.qtdeParticipantes.value,
+      participantes: participantes,
+      pontuacaoTotal: 0,
+      inscricoes: []
+    };
+
+    this.equipeService.cadastrarEquipe(equipe).subscribe({
+      next: () => {
+
+      }
+    })
   }
 }

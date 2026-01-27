@@ -14,4 +14,8 @@ export class EquipeService {
   listarEquipes(): Observable<IEquipe[]> {
     return this.http.get<IEquipe[]>(this.baseUrl);
   }
+
+  cadastrarEquipe(equipe: IEquipe): Observable<IEquipe> {
+    return this.http.post<IEquipe>(this.baseUrl, equipe);
+  }
 }
