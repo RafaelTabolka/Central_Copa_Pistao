@@ -67,7 +67,7 @@
                         <div class="col-12 col-md-4">
                             <label for="qtdeIntegrantes" class="form-label">Qtde de Participantes*</label>
                             <input type="number" class="form-control" id="qtdeIntegrantes" name="qtdeIntegrantes"
-                                placeholder="Ex: 2" min="2" formControlName="qtdeParticipantes" [disabled]="true" readonly>
+                                placeholder="Ex: 2" min="2" formControlName="qtdeParticipantes" readonly>
                         </div>
                     </div>
 
@@ -119,7 +119,7 @@
                     </div>
 
                     <div class="btn-criar-conta">
-                        <button type="submit" class="btn mt-4 mb-2" [disabled]="formCadastrar.invalid"><i class="bi bi-person-fill-add"></i> Criar Conta</button>
+                        <button type="submit" class="btn mt-4 mb-2" (click)="cadastrarEquipe()" [disabled]="formCadastrar.invalid"><i class="bi bi-person-fill-add"></i> Criar Conta</button>
                     </div>
 
                     <div class="text-center">

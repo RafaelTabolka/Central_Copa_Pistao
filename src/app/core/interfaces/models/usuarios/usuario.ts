@@ -7,5 +7,5 @@ export interface IUsuario {
     equipe: {
         id: string,
         nomeEquipe: string
-    } | null
+    }
 }
