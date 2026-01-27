@@ -100,18 +100,26 @@
     /* justify-content: space-between; */
 }
 
+.btn-trash {
+    background-color: transparent;
+    border: none;
+}
+
+.btn-trash:hover {
+    filter:
+        drop-shadow(0 10px 16px rgba(225, 8, 17, .22)) drop-shadow(0 3px 8px rgba(0, 0, 0, .18)) drop-shadow(0 0 10px rgba(225, 8, 17, .18));
+}
+
+.btn-trash:disabled {
+    filter: none;
+    cursor: not-allowed;
+}
+
 .bi-trash {
     color: #E10811;
     font-size: 1.2rem;
-    cursor: pointer;
+    /* cursor: pointer; */
     transition: .2s;
-}
-
-.bi-trash:hover {
-    filter:
-        drop-shadow(0 10px 16px rgba(225, 8, 17, .22)) 
-        drop-shadow(0 3px 8px rgba(0, 0, 0, .18)) 
-        drop-shadow(0 0 10px rgba(225, 8, 17, .18));
 }
 
 .btn-adicionar-participante {
@@ -156,8 +164,8 @@
 }
 
 @media (width >=768px) {
-    .form-cadastrar label {
-        font-size: 1.3rem;
+    .section-form__etapa {
+        font-size: 1.1rem;
     }
 
     .bi-trash {
@@ -177,6 +185,14 @@
 }
 
 @media (width >=992px) {
+    .section-form__etapa {
+        font-size: 1.2rem;
+    }
+
+    .form-cadastrar label {
+        font-size: 1.3rem;
+    }
+
     .btn-criar-conta {
         text-align: center;
     }

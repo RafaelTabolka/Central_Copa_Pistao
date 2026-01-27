@@ -12,18 +12,18 @@
                     <p>Dados do Usuário</p>
                 </div>
 
-                <form class="form-cadastrar">
+                <form [formGroup]="formCadastrar" class="form-cadastrar">
                     <div class="row mb-3">
                         <div class="col-12 col-md-6 mb-3 mb-md-0">
                             <label for="nome" class="form-label">Nome*</label>
                             <input type="text" class="form-control" id="nome" name="nome"
-                                placeholder="Mate, igual tomate">
+                                placeholder="Mate, igual tomate" formControlName="nome">
                         </div>
 
                         <div class="col-12 col-md-6">
                             <label for="email" class="form-label">E-mail*</label>
                             <input type="email" class="form-control" id="email" name="email"
-                                placeholder="nome@exemplo.com" autocomplete="username">
+                                placeholder="nome@exemplo.com" autocomplete="username" formControlName="email">
                         </div>
                     </div>
 
@@ -31,13 +31,13 @@
                         <div class="col-12 col-md-6 mb-3 mb-md-0">
                             <label for="senha" class="form-label">Senha*</label>
                             <input type="password" class="form-control" id="senha" name="senha" placeholder="......"
-                                autocomplete="new-password">
+                                autocomplete="new-password" formControlName="senha">
                         </div>
 
                         <div class="col-12 col-md-6">
                             <label for="confirmarSenha" class="form-label">Confirmar Senha*</label>
                             <input type="password" class="form-control" id="confirmarSenha" name="confirmarSenha"
-                                placeholder="......" autocomplete="new-password">
+                                placeholder="......" autocomplete="new-password" formControlName="confirmarSenha">
                         </div>
                     </div>
 
@@ -50,23 +50,24 @@
                         <div class="col-12 col-md-5 mb-3 mb-md-0">
                             <label for="nomeEquipe" class="form-label">Nome da Equipe*</label>
                             <input type="text" class="form-control" id="nomeEquipe" name="nomeEquipe"
-                                placeholder="Ex: Catchau do relâmpago">
+                                placeholder="Ex: Catchau do relâmpago" formControlName="nomeEquipe">
                         </div>
 
                         <div class="col-12 col-md-3 mb-3 mb-md-0">
                             <label for="categoria" class="form-label">Categoria*</label>
-                            <select class="form-select" name="categoria" id="categoria" aria-label="Default select example">
-                                <option selected disabled>Selecione...</option>
-                                <option value="rua">Rua</option>
-                                <option value="rally">Rally</option>
-                                <option value="pista">Pista</option>
+                            <select class="form-select" name="categoria" id="categoria"
+                                aria-label="Default select example" formControlName="categoria">
+                                <option [ngValue]="null" disabled>Selecione...</option>
+                                <option [ngValue]="equipeCategoria.Pista">Pista</option>
+                                <option [ngValue]="equipeCategoria.Rally">Rally</option>
+                                <option [ngValue]="equipeCategoria.Rua">Rua</option>
                             </select>
                         </div>
 
                         <div class="col-12 col-md-4">
-                            <label for="qtdeIntegrantes" class="form-label">Qtde de Integrantes*</label>
+                            <label for="qtdeIntegrantes" class="form-label">Qtde de Participantes*</label>
                             <input type="number" class="form-control" id="qtdeIntegrantes" name="qtdeIntegrantes"
-                                placeholder="Ex: 2" min="2">
+                                placeholder="Ex: 2" min="2" formControlName="qtdeParticipantes" [disabled]="true" readonly>
                         </div>
                     </div>
 
@@ -76,46 +77,55 @@
                             <p>Participantes</p>
                         </div>
 
-                        <button class="btn-adicionar-participante"><i class="bi bi-plus-circle"></i> Adicionar
+                        <button type="button" class="btn-adicionar-participante" (click)="adicionaParticipante()"><i
+                                class="bi bi-plus-circle"></i> Adicionar
                             Participante</button>
                     </div>
 
-                    <div class="row">
-                        <div class="col-12 col-md-4 mb-3 mb-md-0">
-                            <label for="participante1" class="form-label">Participante #1</label> 
-                            
-                            <i class="bi bi-trash ms-2"></i>
-                            
-                            <input type="text" class="form-control" id="participante1" name="participante1"
-                                placeholder="Ex: Catchau do relâmpago">
-                        </div>
+                    <div formArrayName="participantes">
+                        @for (grupo of participantes.controls; track grupo) {
+                        <div class="row" [formGroupName]="$index">
+                            <div class="col-12 col-md-4 mb-3">
+                                <label for="participante1" class="form-label">Participante #{{ $index + 1 }}</label>
 
-                        <div class="col-12 col-md-4 mb-3 mb-md-0">
-                            <label for="funcao" class="form-label">Função</label>                            
-                            
-                            <input type="text" class="form-control" id="funcao" name="funcao"
-                                placeholder="Ex: Mecânico">
-                        </div>
+                                <button class="btn-trash ms-2" type="button" (click)="excluirParticipante($index)"
+                                    [disabled]="participantes.controls.length <= 3">
+                                    <i class="bi bi-trash"></i>
+                                </button>
 
-                        <div class="col-12 col-md-4">
-                            <label for="status" class="form-label">Status*</label>                            
-                            
-                            <select class="form-select" name="status" id="status" aria-label="Default select example">
-                                <option selected disabled>Selecione...</option>
-                                <option value="ativo">Ativo</option>
-                                <option value="inativo">Inativo</option>
-                            </select>
+                                <input type="text" class="form-control" id="participante1" name="participante1"
+                                    placeholder="Ex: Catchau do relâmpago" formControlName="nomeParticipante">
+                            </div>
+
+                            <div class="col-12 col-md-4 mb-3">
+                                <label for="funcao" class="form-label">Função</label>
+
+                                <input type="text" class="form-control" id="funcao" name="funcao"
+                                    placeholder="Ex: Mecânico" formControlName="funcao">
+                            </div>
+
+                            <div class="col-12 col-md-4 mb-3">
+                                <label for="status" class="form-label">Status*</label>
+
+                                <select class="form-select" name="status" id="status"
+                                    aria-label="Default select example" formControlName="status">
+                                    <option [ngValue]="null" disabled>Selecione...</option>
+                                    <option [ngValue]="equipeStatus.Ativo">Ativo</option>
+                                    <option [ngValue]="equipeStatus.Inativo">Inativo</option>
+                                </select>
+                            </div>
                         </div>
+                        }
                     </div>
 
-                    <div class="btn-criar-conta">                        
-                        <button class="btn mt-4 mb-2"><i class="bi bi-person-fill-add"></i> Criar Conta</button>
+                    <div class="btn-criar-conta">
+                        <button type="submit" class="btn mt-4 mb-2" [disabled]="formCadastrar.invalid"><i class="bi bi-person-fill-add"></i> Criar Conta</button>
                     </div>
 
                     <div class="text-center">
                         <p>
                             Já possui cadastro?
-                            <a class="form-cadastrar__link" routerLink="/login">Clique aqui</a>
+                            <a class="form-cadastrar__link" routerLink="/public/login">Clique aqui</a>
                         </p>
                     </div>
                 </form>
