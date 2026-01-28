@@ -1,12 +1,46 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink } from "@angular/router";
+import { CopaService } from '../../../../core/services/copa.service';
+import { ICopa } from '../../../../core/interfaces/models/copa/copa';
+import { DatePipe, NgClass } from '@angular/common';
+import { CopaStatus } from '../../../../core/interfaces/models/copa/copa-status.enum';
 
 @Component({
   selector: 'app-available-cups',
-  imports: [RouterLink],
+  imports: [RouterLink, DatePipe, NgClass],
   templateUrl: './available-cups.component.html',
   styleUrl: './available-cups.component.css'
 })
-export class AvailableCupsComponent {
+export class AvailableCupsComponent implements OnInit {
+  copas: ICopa[] = [];
+
+  copaStatusEstilos: Record<string, string> = {
+    inscricoesAbertas: 'section-cards__span-abertas',
+    emAndamento: 'section-cards__span-andamento',
+    inscricoesEncerradas: 'section-cards__span-encerradas',
+    copaFinalizada: 'section-cards__span-finalizadas'
+  };
+
+  copaStatusNomes: Record<CopaStatus, string> = {
+    inscricoesAbertas: 'Inscrições Abertas',
+    emAndamento: 'Em Andamento',
+    inscricoesEncerradas: 'Inscrições Encerradas',
+    copaFinalizada: 'Copa Finalizada'
+  }
+
+
+
+  constructor(
+    private copaService: CopaService
+  ) {}
+
+  ngOnInit(): void {
+    this.copaService.listarCopas().subscribe({
+      next: (copas) => {
+        this.copas = copas;
+        console.log(this.copas);
+      }
+    })
+  }
 
 }
