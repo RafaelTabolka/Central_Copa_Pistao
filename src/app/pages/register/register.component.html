@@ -17,7 +17,7 @@
                         <div class="col-12 col-md-6 mb-3 mb-md-0">
                             <label for="nome" class="form-label">Nome*</label>
                             <input type="text" class="form-control" id="nome" name="nome"
-                                placeholder="Mate, igual tomate" formControlName="nome">
+                                placeholder="Mate, igual tomate" formControlName="nomeUsuario">
                         </div>
 
                         <div class="col-12 col-md-6">
@@ -32,12 +32,20 @@
                             <label for="senha" class="form-label">Senha*</label>
                             <input type="password" class="form-control" id="senha" name="senha" placeholder="......"
                                 autocomplete="new-password" formControlName="senha">
+
+                            @if (senhasDiferentes) {
+                                <p class="text-danger mt-1">Os campos precisam ser iguais</p>
+                            }
                         </div>
 
                         <div class="col-12 col-md-6">
                             <label for="confirmarSenha" class="form-label">Confirmar Senha*</label>
                             <input type="password" class="form-control" id="confirmarSenha" name="confirmarSenha"
                                 placeholder="......" autocomplete="new-password" formControlName="confirmarSenha">
+
+                            @if (senhasDiferentes) {
+                                <p class="text-danger mt-1">Os campos precisam ser iguais</p>
+                            }
                         </div>
                     </div>
 
@@ -57,7 +65,7 @@
                             <label for="categoria" class="form-label">Categoria*</label>
                             <select class="form-select" name="categoria" id="categoria"
                                 aria-label="Default select example" formControlName="categoria">
-                                <option [ngValue]="null" disabled>Selecione...</option>
+                                <!-- <option [ngValue]="null" disabled>Selecione...</option> -->
                                 <option [ngValue]="equipeCategoria.Pista">Pista</option>
                                 <option [ngValue]="equipeCategoria.Rally">Rally</option>
                                 <option [ngValue]="equipeCategoria.Rua">Rua</option>
@@ -109,7 +117,7 @@
 
                                 <select class="form-select" name="status" id="status"
                                     aria-label="Default select example" formControlName="status">
-                                    <option [ngValue]="null" disabled>Selecione...</option>
+                                    <!-- <option [ngValue]="null" disabled>Selecione...</option> -->
                                     <option [ngValue]="equipeStatus.Ativo">Ativo</option>
                                     <option [ngValue]="equipeStatus.Inativo">Inativo</option>
                                 </select>
@@ -119,7 +127,9 @@
                     </div>
 
                     <div class="btn-criar-conta">
-                        <button type="submit" class="btn mt-4 mb-2" (click)="cadastrarEquipe()" [disabled]="formCadastrar.invalid"><i class="bi bi-person-fill-add"></i> Criar Conta</button>
+                        <button type="submit" class="btn mt-4 mb-2" (click)="cadastrarEquipe()"
+                            [disabled]="formCadastrar.invalid"><i class="bi bi-person-fill-add"></i> Criar
+                            Conta</button>
                     </div>
 
                     <div class="text-center">

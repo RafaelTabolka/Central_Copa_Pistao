@@ -46,9 +46,9 @@ export class LoginComponent {
         }
 
         if (temCadastro.perfil === 'admin') {
-          this.router.navigate(['/admin/cups']);
+          this.router.navigateByUrl('/admin/cups', {replaceUrl: true});
         } else {
-          this.router.navigate(['/competitor/available-cups']);
+          this.router.navigateByUrl('/competitor/available-cups', {replaceUrl: true});
           localStorage.setItem('idEquipe', temCadastro.equipe!.id)
         }
 
