@@ -1,910 +1,958 @@
 {
-    "usuarios": [
+  "usuarios": [
+    {
+      "id": "c2b4d0b8-5e66-4a6f-8e2d-4f3b9c2d1a10",
+      "nomeUsuario": "Relâmpago Marquinhos",
+      "email": "marquinhos@email.com",
+      "senha": "Copa@123",
+      "perfil": "competidor",
+      "equipe": {
+        "id": "a7c34f41-2eba-4cce-85f4-c605e2690aaa",
+        "nomeEquipe": "Raio de Radiator Springs"
+      }
+    },
+    {
+      "id": "b32d7e44-2f2e-4d52-90b5-0a2e2f1c9a11",
+      "nomeUsuario": "Sally Carrera",
+      "email": "sally@email.com",
+      "senha": "Copa@123",
+      "perfil": "competidor",
+      "equipe": {
+        "id": "a6e9d6f5-30d6-4c4c-8b03-6d9cfe98a1f8",
+        "nomeEquipe": "Porsche Radiator"
+      }
+    },
+    {
+      "id": "7a1c3d0e-9b77-4a2f-9a0f-2d9a7c1b0c13",
+      "nomeUsuario": "Chico Veloz",
+      "email": "chico@email.com",
+      "senha": "Copa@123",
+      "perfil": "competidor",
+      "equipe": {
+        "id": "2f1e6c3a-0b5d-4c2b-9d3a-1e5d0a2c4f55",
+        "nomeEquipe": "Velocidade Dinoco"
+      }
+    },
+    {
+      "id": "1d9a6e22-8d2b-4f65-9b31-3c2d1e0f9a14",
+      "nomeUsuario": "Francesco Bernoulli",
+      "email": "francesco@email.com",
+      "senha": "Copa@123",
+      "perfil": "competidor",
+      "equipe": {
+        "id": "6a2e1f44-3c77-4b6a-8f11-6d2c0a1b4c66",
+        "nomeEquipe": "Fórmula Itálica"
+      }
+    },
+    {
+      "id": "9c1e2d33-4a55-4c88-9d11-2b3c4d5e6f70",
+      "nomeUsuario": "Fillmore",
+      "email": "fillmore@email.com",
+      "senha": "Copa@123",
+      "perfil": "competidor",
+      "equipe": {
+        "id": "4b7f1d33-9e2a-4d1f-a0b1-1c2d3e4f5a67",
+        "nomeEquipe": "BioDiesel Vibes"
+      }
+    },
+    {
+      "id": "8f2c1a09-3e4d-4b2c-9a33-0d1e2f3a4b55",
+      "nomeUsuario": "Jackson Storm",
+      "email": "storm@email.com",
+      "senha": "Copa@123",
+      "perfil": "competidor",
+      "equipe": {
+        "id": "9d3a2b1c-5e6f-4a7b-8c9d-0e1f2a3b4c55",
+        "nomeEquipe": "Tempestade 20"
+      }
+    },
+    {
+      "id": "6e5d4c3b-2a19-4f08-8d77-7a6b5c4d3e22",
+      "nomeUsuario": "Snot Rod",
+      "email": "snotrod@email.com",
+      "senha": "Copa@123",
+      "perfil": "competidor",
+      "equipe": {
+        "id": "3a2b1c0d-9e8f-4a7b-8c6d-5e4f3a2b1c00",
+        "nomeEquipe": "Tunados do Snot Rod"
+      }
+    },
+    {
+      "id": "0f6a6a2c-3b3d-4b2f-9c1e-2d3a4b5c6d77",
+      "nomeUsuario": "Admin Central Copa Pistão",
+      "email": "admin@email.com",
+      "senha": "Copa@123",
+      "perfil": "admin",
+      "equipe": null
+    }
+  ],
+  "equipes": [
+    {
+      "id": "a7c34f41-2eba-4cce-85f4-c605e2690aaa",
+      "idUsuario": "c2b4d0b8-5e66-4a6f-8e2d-4f3b9c2d1a10",
+      "nomeEquipe": "Raio de Radiator Springs",
+      "status": "ativo",
+      "categoria": "pista",
+      "qtdeIntegrantes": 3,
+      "integrantes": [
         {
-            "id": "c2b4d0b8-5e66-4a6f-8e2d-4f3b9c2d1a10",
-            "nomeUsuario": "Relâmpago Marquinhos",
-            "email": "marquinhos@email.com",
-            "senha": "Copa@123",
-            "perfil": "competidor",
-            "equipe": {
-                "id": "a7c34f41-2eba-4cce-85f4-c605e2690aaa",
-                "nomeEquipe": "Raio de Radiator Springs"
-            }
+          "id": "f4f0ef55-79f9-4ba7-a841-5a9b91c6d2d8",
+          "nome": "Relâmpago Marquinhos",
+          "funcao": "Piloto",
+          "status": "ativo"
         },
         {
-            "id": "b32d7e44-2f2e-4d52-90b5-0a2e2f1c9a11",
-            "nomeUsuario": "Sally Carrera",
-            "email": "sally@email.com",
-            "senha": "Copa@123",
-            "perfil": "competidor",
-            "equipe": {
-                "id": "a6e9d6f5-30d6-4c4c-8b03-6d9cfe98a1f8",
-                "nomeEquipe": "Porsche Radiator"
-            }
+          "id": "8d9bdb5d-36b9-4bdc-b7b8-3b9c6d21b4d2",
+          "nome": "Guido",
+          "funcao": "Troca de Pneus",
+          "status": "ativo"
         },
         {
-            "id": "7a1c3d0e-9b77-4a2f-9a0f-2d9a7c1b0c13",
-            "nomeUsuario": "Chico Veloz",
-            "email": "chico@email.com",
-            "senha": "Copa@123",
-            "perfil": "competidor",
-            "equipe": {
-                "id": "2f1e6c3a-0b5d-4c2b-9d3a-1e5d0a2c4f55",
-                "nomeEquipe": "Velocidade Dinoco"
-            }
-        },
-        {
-            "id": "1d9a6e22-8d2b-4f65-9b31-3c2d1e0f9a14",
-            "nomeUsuario": "Francesco Bernoulli",
-            "email": "francesco@email.com",
-            "senha": "Copa@123",
-            "perfil": "competidor",
-            "equipe": {
-                "id": "6a2e1f44-3c77-4b6a-8f11-6d2c0a1b4c66",
-                "nomeEquipe": "Fórmula Itálica"
-            }
-        },
-        {
-            "id": "9c1e2d33-4a55-4c88-9d11-2b3c4d5e6f70",
-            "nomeUsuario": "Fillmore",
-            "email": "fillmore@email.com",
-            "senha": "Copa@123",
-            "perfil": "competidor",
-            "equipe": {
-                "id": "4b7f1d33-9e2a-4d1f-a0b1-1c2d3e4f5a67",
-                "nomeEquipe": "BioDiesel Vibes"
-            }
-        },
-        {
-            "id": "8f2c1a09-3e4d-4b2c-9a33-0d1e2f3a4b55",
-            "nomeUsuario": "Jackson Storm",
-            "email": "storm@email.com",
-            "senha": "Copa@123",
-            "perfil": "competidor",
-            "equipe": {
-                "id": "9d3a2b1c-5e6f-4a7b-8c9d-0e1f2a3b4c55",
-                "nomeEquipe": "Tempestade 20"
-            }
-        },
-        {
-            "id": "6e5d4c3b-2a19-4f08-8d77-7a6b5c4d3e22",
-            "nomeUsuario": "Snot Rod",
-            "email": "snotrod@email.com",
-            "senha": "Copa@123",
-            "perfil": "competidor",
-            "equipe": {
-                "id": "3a2b1c0d-9e8f-4a7b-8c6d-5e4f3a2b1c00",
-                "nomeEquipe": "Tunados do Snot Rod"
-            }
-        },
-        {
-            "id": "0f6a6a2c-3b3d-4b2f-9c1e-2d3a4b5c6d77",
-            "nomeUsuario": "Admin Central Copa Pistão",
-            "email": "admin@email.com",
-            "senha": "Copa@123",
-            "perfil": "admin",
-            "equipe": null
+          "id": "b3f2aa2a-6ef1-4d6a-9c25-7f8b0a0a9f8a",
+          "nome": "Luigi",
+          "funcao": "Mecânico",
+          "status": "ativo"
         }
-    ],
-    "equipes": [
+      ],
+      "pontuacaoTotal": 320,
+      "inscricoes": [
         {
-            "id": "a7c34f41-2eba-4cce-85f4-c605e2690aaa",
-            "idUsuario": "c2b4d0b8-5e66-4a6f-8e2d-4f3b9c2d1a10",
-            "nomeEquipe": "Raio de Radiator Springs",
-            "status": "ativo",
-            "categoria": "pista",
-            "qtdeIntegrantes": 3,
-            "integrantes": [
-                {
-                    "id": "f4f0ef55-79f9-4ba7-a841-5a9b91c6d2d8",
-                    "nome": "Relâmpago Marquinhos",
-                    "funcao": "Piloto",
-                    "status": "ativo"
-                },
-                {
-                    "id": "8d9bdb5d-36b9-4bdc-b7b8-3b9c6d21b4d2",
-                    "nome": "Guido",
-                    "funcao": "Troca de Pneus",
-                    "status": "ativo"
-                },
-                {
-                    "id": "b3f2aa2a-6ef1-4d6a-9c25-7f8b0a0a9f8a",
-                    "nome": "Luigi",
-                    "funcao": "Mecânico",
-                    "status": "ativo"
-                }
-            ],
-            "pontuacaoTotal": 320,
-            "inscricoes": [
-                {
-                    "id": "7b4a34b8-5c1a-4a9b-8e9f-0b764c0c8b40",
-                    "nomeCopa": "Copa Pistão 2025 - Grande Final",
-                    "status": "copaFinalizada",
-                    "imagemLogo": "/arquivos/logos/copas/copa-pistao-2025-grande-final.png",
-                    "dataInicio": "2025-12-10",
-                    "dataTermino": "2025-12-12",
-                    "descricao": "Grande final da temporada 2025. Pontos: 150, 145, 140... até 5; a partir de 5, todo mundo recebe 5.",
-                    "preRequisito": {
-                        "minimoParticipantes": 3,
-                        "pontuacaoMinima": 50
-                    },
-                    "posicaoEquipe": 1,
-                    "pontosAdicionais": {
-                        "primeiroLugar": null,
-                        "segundoLugar": null,
-                        "terceiroLugar": null
-                    },
-                    "pontuacaoEquipe": 150
-                },
-                {
-                    "id": "e1a4c219-7f2b-4df1-9f4f-1f0bdbd60c22",
-                    "nomeCopa": "Copa Pistão 2026 - Troféu Dourado",
-                    "status": "copaFinalizada",
-                    "imagemLogo": "/arquivos/logos/copas/copa-pistao-2026-trofeu-dourado.png",
-                    "dataInicio": "2026-01-05",
-                    "dataTermino": "2026-01-07",
-                    "descricao": "Etapa especial com bônus Top 3. Pontos base: 150..5.",
-                    "preRequisito": {
-                        "minimoParticipantes": 3,
-                        "pontuacaoMinima": 50
-                    },
-                    "posicaoEquipe": 1,
-                    "pontosAdicionais": {
-                        "primeiroLugar": 20,
-                        "segundoLugar": null,
-                        "terceiroLugar": null
-                    },
-                    "pontuacaoEquipe": 170
-                },
-                {
-                    "id": "b9f0a6d6-8c62-4e35-90c2-2f3b8cfa1c01",
-                    "nomeCopa": "Copa Pistão 2026 - Etapa 3",
-                    "status": "inscricoesAbertas",
-                    "imagemLogo": "/arquivos/logos/copas/copa-pistao-2026-etapa-3.png",
-                    "dataInicio": "2026-02-20",
-                    "dataTermino": "2026-02-22",
-                    "descricao": "Inscrições abertas para a próxima etapa oficial.",
-                    "preRequisito": {
-                        "minimoParticipantes": 3,
-                        "pontuacaoMinima": 50
-                    },
-                    "posicaoEquipe": null,
-                    "pontosAdicionais": {
-                        "primeiroLugar": null,
-                        "segundoLugar": null,
-                        "terceiroLugar": null
-                    },
-                    "pontuacaoEquipe": null
-                }
-            ]
+          "id": "7b4a34b8-5c1a-4a9b-8e9f-0b764c0c8b40",
+          "nomeCopa": "Copa Pistão 2025 - Grande Final",
+          "status": "copaFinalizada",
+          "imagemLogo": "/arquivos/logos/copas/copa-pistao-2025-grande-final.png",
+          "dataInicio": "2025-12-10",
+          "dataTermino": "2025-12-12",
+          "descricao": "Grande final da temporada 2025. Pontos: 150, 145, 140... até 5; a partir de 5, todo mundo recebe 5.",
+          "preRequisito": {
+            "minimoParticipantes": 3,
+            "pontuacaoMinima": 50
+          },
+          "posicaoEquipe": 1,
+          "pontosAdicionais": {
+            "primeiroLugar": null,
+            "segundoLugar": null,
+            "terceiroLugar": null
+          },
+          "pontuacaoEquipe": 150
         },
         {
-            "id": "a6e9d6f5-30d6-4c4c-8b03-6d9cfe98a1f8",
-            "idUsuario": "b32d7e44-2f2e-4d52-90b5-0a2e2f1c9a11",
-            "nomeEquipe": "Porsche Radiator",
-            "status": "ativo",
-            "categoria": "rua",
-            "qtdeIntegrantes": 3,
-            "integrantes": [
-                {
-                    "id": "a3a2c8d1-1a6b-4a2d-a7f0-68b7f9855bdb",
-                    "nome": "Sally Carrera",
-                    "funcao": "Pilota",
-                    "status": "ativo"
-                },
-                {
-                    "id": "2bdc9c9a-602c-4b4a-86d5-0371e8d8ff6f",
-                    "nome": "Ramone",
-                    "funcao": "Chefe de Equipe",
-                    "status": "ativo"
-                },
-                {
-                    "id": "d92b8bdf-cbfa-44c8-9e29-2fbf70b51b88",
-                    "nome": "Flo",
-                    "funcao": "Estratégia de Corrida",
-                    "status": "ativo"
-                }
-            ],
-            "pontuacaoTotal": 300,
-            "inscricoes": [
-                {
-                    "id": "7b4a34b8-5c1a-4a9b-8e9f-0b764c0c8b40",
-                    "nomeCopa": "Copa Pistão 2025 - Grande Final",
-                    "status": "copaFinalizada",
-                    "imagemLogo": "/arquivos/logos/copas/copa-pistao-2025-grande-final.png",
-                    "dataInicio": "2025-12-10",
-                    "dataTermino": "2025-12-12",
-                    "descricao": "Grande final da temporada 2025. Pontos: 150, 145, 140... até 5; a partir de 5, todo mundo recebe 5.",
-                    "preRequisito": {
-                        "minimoParticipantes": 3,
-                        "pontuacaoMinima": 50
-                    },
-                    "posicaoEquipe": 2,
-                    "pontosAdicionais": {
-                        "primeiroLugar": null,
-                        "segundoLugar": null,
-                        "terceiroLugar": null
-                    },
-                    "pontuacaoEquipe": 145
-                },
-                {
-                    "id": "e1a4c219-7f2b-4df1-9f4f-1f0bdbd60c22",
-                    "nomeCopa": "Copa Pistão 2026 - Troféu Dourado",
-                    "status": "copaFinalizada",
-                    "imagemLogo": "/arquivos/logos/copas/copa-pistao-2026-trofeu-dourado.png",
-                    "dataInicio": "2026-01-05",
-                    "dataTermino": "2026-01-07",
-                    "descricao": "Etapa especial com bônus Top 3. Pontos base: 150..5.",
-                    "preRequisito": {
-                        "minimoParticipantes": 3,
-                        "pontuacaoMinima": 50
-                    },
-                    "posicaoEquipe": 2,
-                    "pontosAdicionais": {
-                        "primeiroLugar": null,
-                        "segundoLugar": 10,
-                        "terceiroLugar": null
-                    },
-                    "pontuacaoEquipe": 155
-                },
-                {
-                    "id": "d4d2b1c1-1c45-4b36-9c1c-3f2a8b0d2d02",
-                    "nomeCopa": "Copa Pistão 2026 - Etapa 2",
-                    "status": "emAndamento",
-                    "imagemLogo": "/arquivos/logos/copas/copa-pistao-2026-etapa-2.png",
-                    "dataInicio": "2026-01-20",
-                    "dataTermino": "2026-01-23",
-                    "descricao": "Etapa em andamento. Inscrições bloqueadas durante as corridas.",
-                    "preRequisito": {
-                        "minimoParticipantes": 3,
-                        "pontuacaoMinima": 50
-                    },
-                    "posicaoEquipe": null,
-                    "pontosAdicionais": {
-                        "primeiroLugar": 15,
-                        "segundoLugar": 10,
-                        "terceiroLugar": 5
-                    },
-                    "pontuacaoEquipe": null
-                },
-                {
-                    "id": "b9f0a6d6-8c62-4e35-90c2-2f3b8cfa1c01",
-                    "nomeCopa": "Copa Pistão 2026 - Etapa 3",
-                    "status": "inscricoesAbertas",
-                    "imagemLogo": "/arquivos/logos/copas/copa-pistao-2026-etapa-3.png",
-                    "dataInicio": "2026-02-20",
-                    "dataTermino": "2026-02-22",
-                    "descricao": "Inscrições abertas para a próxima etapa oficial.",
-                    "preRequisito": {
-                        "minimoParticipantes": 3,
-                        "pontuacaoMinima": 50
-                    },
-                    "posicaoEquipe": null,
-                    "pontosAdicionais": {
-                        "primeiroLugar": null,
-                        "segundoLugar": null,
-                        "terceiroLugar": null
-                    },
-                    "pontuacaoEquipe": null
-                }
-            ]
+          "id": "e1a4c219-7f2b-4df1-9f4f-1f0bdbd60c22",
+          "nomeCopa": "Copa Pistão 2026 - Troféu Dourado",
+          "status": "copaFinalizada",
+          "imagemLogo": "/arquivos/logos/copas/copa-pistao-2026-trofeu-dourado.png",
+          "dataInicio": "2026-01-05",
+          "dataTermino": "2026-01-07",
+          "descricao": "Etapa especial com bônus Top 3. Pontos base: 150..5.",
+          "preRequisito": {
+            "minimoParticipantes": 3,
+            "pontuacaoMinima": 50
+          },
+          "posicaoEquipe": 1,
+          "pontosAdicionais": {
+            "primeiroLugar": 20,
+            "segundoLugar": null,
+            "terceiroLugar": null
+          },
+          "pontuacaoEquipe": 170
         },
         {
-            "id": "2f1e6c3a-0b5d-4c2b-9d3a-1e5d0a2c4f55",
-            "idUsuario": "7a1c3d0e-9b77-4a2f-9a0f-2d9a7c1b0c13",
-            "nomeEquipe": "Velocidade Dinoco",
-            "status": "ativo",
-            "categoria": "pista",
-            "qtdeIntegrantes": 3,
-            "integrantes": [
-                {
-                    "id": "1f0a2b3c-4d5e-6f70-8a9b-0c1d2e3f4a55",
-                    "nome": "Chico Veloz",
-                    "funcao": "Piloto",
-                    "status": "ativo"
-                },
-                {
-                    "id": "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c44",
-                    "nome": "Tex",
-                    "funcao": "Patrocinador",
-                    "status": "ativo"
-                },
-                {
-                    "id": "3c2b1a0d-9e8f-7a6b-5c4d-3e2f1a0b9c33",
-                    "nome": "Chefe Dinoco",
-                    "funcao": "Chefe de Equipe",
-                    "status": "ativo"
-                }
-            ],
-            "pontuacaoTotal": 150,
-            "inscricoes": [
-                {
-                    "id": "7b4a34b8-5c1a-4a9b-8e9f-0b764c0c8b40",
-                    "nomeCopa": "Copa Pistão 2025 - Grande Final",
-                    "status": "copaFinalizada",
-                    "imagemLogo": "/arquivos/logos/copas/copa-pistao-2025-grande-final.png",
-                    "dataInicio": "2025-12-10",
-                    "dataTermino": "2025-12-12",
-                    "descricao": "Grande final da temporada 2025. Pontos: 150, 145, 140... até 5; a partir de 5, todo mundo recebe 5.",
-                    "preRequisito": {
-                        "minimoParticipantes": 3,
-                        "pontuacaoMinima": 50
-                    },
-                    "posicaoEquipe": 40,
-                    "pontosAdicionais": {
-                        "primeiroLugar": null,
-                        "segundoLugar": null,
-                        "terceiroLugar": null
-                    },
-                    "pontuacaoEquipe": 5
-                },
-                {
-                    "id": "e1a4c219-7f2b-4df1-9f4f-1f0bdbd60c22",
-                    "nomeCopa": "Copa Pistão 2026 - Troféu Dourado",
-                    "status": "copaFinalizada",
-                    "imagemLogo": "/arquivos/logos/copas/copa-pistao-2026-trofeu-dourado.png",
-                    "dataInicio": "2026-01-05",
-                    "dataTermino": "2026-01-07",
-                    "descricao": "Etapa especial com bônus Top 3. Pontos base: 150..5.",
-                    "preRequisito": {
-                        "minimoParticipantes": 3,
-                        "pontuacaoMinima": 50
-                    },
-                    "posicaoEquipe": 3,
-                    "pontosAdicionais": {
-                        "primeiroLugar": null,
-                        "segundoLugar": null,
-                        "terceiroLugar": 5
-                    },
-                    "pontuacaoEquipe": 145
-                },
-                {
-                    "id": "f6a1f02d-1a67-4e86-8b6d-9e6c3b1a3c03",
-                    "nomeCopa": "Copa Pistão 2026 - Etapa 1",
-                    "status": "inscricoesEncerradas",
-                    "imagemLogo": "/arquivos/logos/copas/copa-pistao-2026-etapa-1.png",
-                    "dataInicio": "2026-02-01",
-                    "dataTermino": "2026-02-03",
-                    "descricao": "Inscrições encerradas. Etapa aguardando início.",
-                    "preRequisito": {
-                        "minimoParticipantes": 3,
-                        "pontuacaoMinima": 50
-                    },
-                    "posicaoEquipe": null,
-                    "pontosAdicionais": {
-                        "primeiroLugar": 10,
-                        "segundoLugar": null,
-                        "terceiroLugar": null
-                    },
-                    "pontuacaoEquipe": null
-                }
-            ]
-        },
-        {
-            "id": "6a2e1f44-3c77-4b6a-8f11-6d2c0a1b4c66",
-            "idUsuario": "1d9a6e22-8d2b-4f65-9b31-3c2d1e0f9a14",
-            "nomeEquipe": "Fórmula Itálica",
-            "status": "ativo",
-            "categoria": "pista",
-            "qtdeIntegrantes": 3,
-            "integrantes": [
-                {
-                    "id": "0a1b2c3d-4e5f-4a6b-8c9d-0e1f2a3b4c5d",
-                    "nome": "Francesco Bernoulli",
-                    "funcao": "Piloto",
-                    "status": "ativo"
-                },
-                {
-                    "id": "1b2c3d4e-5f60-4a7b-8c9d-1e2f3a4b5c6d",
-                    "nome": "Mamma Topolino",
-                    "funcao": "Chefe de Equipe",
-                    "status": "ativo"
-                },
-                {
-                    "id": "2c3d4e5f-6071-4b8c-9d0e-2f3a4b5c6d7e",
-                    "nome": "Pit Italiano",
-                    "funcao": "Troca de Pneus",
-                    "status": "ativo"
-                }
-            ],
-            "pontuacaoTotal": 275,
-            "inscricoes": [
-                {
-                    "id": "7b4a34b8-5c1a-4a9b-8e9f-0b764c0c8b40",
-                    "nomeCopa": "Copa Pistão 2025 - Grande Final",
-                    "status": "copaFinalizada",
-                    "imagemLogo": "/arquivos/logos/copas/copa-pistao-2025-grande-final.png",
-                    "dataInicio": "2025-12-10",
-                    "dataTermino": "2025-12-12",
-                    "descricao": "Grande final da temporada 2025. Pontos: 150, 145, 140... até 5; a partir de 5, todo mundo recebe 5.",
-                    "preRequisito": {
-                        "minimoParticipantes": 3,
-                        "pontuacaoMinima": 50
-                    },
-                    "posicaoEquipe": 3,
-                    "pontosAdicionais": {
-                        "primeiroLugar": null,
-                        "segundoLugar": null,
-                        "terceiroLugar": null
-                    },
-                    "pontuacaoEquipe": 140
-                },
-                {
-                    "id": "e1a4c219-7f2b-4df1-9f4f-1f0bdbd60c22",
-                    "nomeCopa": "Copa Pistão 2026 - Troféu Dourado",
-                    "status": "copaFinalizada",
-                    "imagemLogo": "/arquivos/logos/copas/copa-pistao-2026-trofeu-dourado.png",
-                    "dataInicio": "2026-01-05",
-                    "dataTermino": "2026-01-07",
-                    "descricao": "Etapa especial com bônus Top 3. Pontos base: 150..5.",
-                    "preRequisito": {
-                        "minimoParticipantes": 3,
-                        "pontuacaoMinima": 50
-                    },
-                    "posicaoEquipe": 4,
-                    "pontosAdicionais": {
-                        "primeiroLugar": null,
-                        "segundoLugar": null,
-                        "terceiroLugar": null
-                    },
-                    "pontuacaoEquipe": 135
-                },
-                {
-                    "id": "f6a1f02d-1a67-4e86-8b6d-9e6c3b1a3c03",
-                    "nomeCopa": "Copa Pistão 2026 - Etapa 1",
-                    "status": "inscricoesEncerradas",
-                    "imagemLogo": "/arquivos/logos/copas/copa-pistao-2026-etapa-1.png",
-                    "dataInicio": "2026-02-01",
-                    "dataTermino": "2026-02-03",
-                    "descricao": "Inscrições encerradas. Etapa aguardando início.",
-                    "preRequisito": {
-                        "minimoParticipantes": 3,
-                        "pontuacaoMinima": 50
-                    },
-                    "posicaoEquipe": null,
-                    "pontosAdicionais": {
-                        "primeiroLugar": 10,
-                        "segundoLugar": null,
-                        "terceiroLugar": null
-                    },
-                    "pontuacaoEquipe": null
-                },
-                {
-                    "id": "b9f0a6d6-8c62-4e35-90c2-2f3b8cfa1c01",
-                    "nomeCopa": "Copa Pistão 2026 - Etapa 3",
-                    "status": "inscricoesAbertas",
-                    "imagemLogo": "/arquivos/logos/copas/copa-pistao-2026-etapa-3.png",
-                    "dataInicio": "2026-02-20",
-                    "dataTermino": "2026-02-22",
-                    "descricao": "Inscrições abertas para a próxima etapa oficial.",
-                    "preRequisito": {
-                        "minimoParticipantes": 3,
-                        "pontuacaoMinima": 50
-                    },
-                    "posicaoEquipe": null,
-                    "pontosAdicionais": {
-                        "primeiroLugar": null,
-                        "segundoLugar": null,
-                        "terceiroLugar": null
-                    },
-                    "pontuacaoEquipe": null
-                }
-            ]
-        },
-        {
-            "id": "4b7f1d33-9e2a-4d1f-a0b1-1c2d3e4f5a67",
-            "idUsuario": "9c1e2d33-4a55-4c88-9d11-2b3c4d5e6f70",
-            "nomeEquipe": "BioDiesel Vibes",
-            "status": "ativo",
-            "categoria": "rally",
-            "qtdeIntegrantes": 3,
-            "integrantes": [
-                {
-                    "id": "aa1b2c3d-4e5f-4a6b-8c9d-0e1f2a3b4c5e",
-                    "nome": "Fillmore",
-                    "funcao": "Piloto",
-                    "status": "ativo"
-                },
-                {
-                    "id": "bb2c3d4e-5f60-4a7b-8c9d-1e2f3a4b5c6e",
-                    "nome": "DJ",
-                    "funcao": "Estratégia de Corrida",
-                    "status": "ativo"
-                },
-                {
-                    "id": "cc3d4e5f-6071-4b8c-9d0e-2f3a4b5c6d7f",
-                    "nome": "Mack",
-                    "funcao": "Logística",
-                    "status": "ativo"
-                }
-            ],
-            "pontuacaoTotal": 230,
-            "inscricoes": [
-                {
-                    "id": "7b4a34b8-5c1a-4a9b-8e9f-0b764c0c8b40",
-                    "nomeCopa": "Copa Pistão 2025 - Grande Final",
-                    "status": "copaFinalizada",
-                    "imagemLogo": "/arquivos/logos/copas/copa-pistao-2025-grande-final.png",
-                    "dataInicio": "2025-12-10",
-                    "dataTermino": "2025-12-12",
-                    "descricao": "Grande final da temporada 2025. Pontos: 150, 145, 140... até 5; a partir de 5, todo mundo recebe 5.",
-                    "preRequisito": {
-                        "minimoParticipantes": 3,
-                        "pontuacaoMinima": 50
-                    },
-                    "posicaoEquipe": 4,
-                    "pontosAdicionais": {
-                        "primeiroLugar": null,
-                        "segundoLugar": null,
-                        "terceiroLugar": null
-                    },
-                    "pontuacaoEquipe": 135
-                },
-                {
-                    "id": "e1a4c219-7f2b-4df1-9f4f-1f0bdbd60c22",
-                    "nomeCopa": "Copa Pistão 2026 - Troféu Dourado",
-                    "status": "copaFinalizada",
-                    "imagemLogo": "/arquivos/logos/copas/copa-pistao-2026-trofeu-dourado.png",
-                    "dataInicio": "2026-01-05",
-                    "dataTermino": "2026-01-07",
-                    "descricao": "Etapa especial com bônus Top 3. Pontos base: 150..5.",
-                    "preRequisito": {
-                        "minimoParticipantes": 3,
-                        "pontuacaoMinima": 50
-                    },
-                    "posicaoEquipe": 12,
-                    "pontosAdicionais": {
-                        "primeiroLugar": null,
-                        "segundoLugar": null,
-                        "terceiroLugar": null
-                    },
-                    "pontuacaoEquipe": 95
-                },
-                {
-                    "id": "d4d2b1c1-1c45-4b36-9c1c-3f2a8b0d2d02",
-                    "nomeCopa": "Copa Pistão 2026 - Etapa 2",
-                    "status": "emAndamento",
-                    "imagemLogo": "/arquivos/logos/copas/copa-pistao-2026-etapa-2.png",
-                    "dataInicio": "2026-01-20",
-                    "dataTermino": "2026-01-23",
-                    "descricao": "Etapa em andamento. Inscrições bloqueadas durante as corridas.",
-                    "preRequisito": {
-                        "minimoParticipantes": 3,
-                        "pontuacaoMinima": 50
-                    },
-                    "posicaoEquipe": null,
-                    "pontosAdicionais": {
-                        "primeiroLugar": 15,
-                        "segundoLugar": 10,
-                        "terceiroLugar": 5
-                    },
-                    "pontuacaoEquipe": null
-                },
-                {
-                    "id": "b9f0a6d6-8c62-4e35-90c2-2f3b8cfa1c01",
-                    "nomeCopa": "Copa Pistão 2026 - Etapa 3",
-                    "status": "inscricoesAbertas",
-                    "imagemLogo": "/arquivos/logos/copas/copa-pistao-2026-etapa-3.png",
-                    "dataInicio": "2026-02-20",
-                    "dataTermino": "2026-02-22",
-                    "descricao": "Inscrições abertas para a próxima etapa oficial.",
-                    "preRequisito": {
-                        "minimoParticipantes": 3,
-                        "pontuacaoMinima": 50
-                    },
-                    "posicaoEquipe": null,
-                    "pontosAdicionais": {
-                        "primeiroLugar": null,
-                        "segundoLugar": null,
-                        "terceiroLugar": null
-                    },
-                    "pontuacaoEquipe": null
-                }
-            ]
-        },
-        {
-            "id": "9d3a2b1c-5e6f-4a7b-8c9d-0e1f2a3b4c55",
-            "idUsuario": "8f2c1a09-3e4d-4b2c-9a33-0d1e2f3a4b55",
-            "nomeEquipe": "Tempestade 20",
-            "status": "inativo",
-            "categoria": "pista",
-            "qtdeIntegrantes": 3,
-            "integrantes": [
-                {
-                    "id": "dd4e5f60-6071-4b8c-9d0e-2f3a4b5c6d70",
-                    "nome": "Jackson Storm",
-                    "funcao": "Piloto",
-                    "status": "inativo"
-                },
-                {
-                    "id": "ee5f6071-7182-4c9d-0e1f-3a4b5c6d7e80",
-                    "nome": "Equipe Aero",
-                    "funcao": "Chefe de Equipe",
-                    "status": "inativo"
-                },
-                {
-                    "id": "ff607182-8293-4d0e-1f2a-4b5c6d7e8f90",
-                    "nome": "Pit Turbo",
-                    "funcao": "Troca de Pneus",
-                    "status": "inativo"
-                }
-            ],
-            "pontuacaoTotal": 0,
-            "inscricoes": []
-        },
-        {
-            "id": "3a2b1c0d-9e8f-4a7b-8c6d-5e4f3a2b1c00",
-            "idUsuario": "6e5d4c3b-2a19-4f08-8d77-7a6b5c4d3e22",
-            "nomeEquipe": "Tunados do Snot Rod",
-            "status": "inativo",
-            "categoria": "rua",
-            "qtdeIntegrantes": 3,
-            "integrantes": [
-                {
-                    "id": "11111111-2222-4a7b-8c6d-333333333333",
-                    "nome": "Snot Rod",
-                    "funcao": "Piloto",
-                    "status": "inativo"
-                },
-                {
-                    "id": "44444444-5555-4b8c-9d0e-666666666666",
-                    "nome": "Equipe Nitro",
-                    "funcao": "Mecânico",
-                    "status": "inativo"
-                },
-                {
-                    "id": "77777777-8888-4c9d-0e1f-999999999999",
-                    "nome": "Equipe Som",
-                    "funcao": "Estratégia de Corrida",
-                    "status": "inativo"
-                }
-            ],
-            "pontuacaoTotal": 0,
-            "inscricoes": []
+          "id": "b9f0a6d6-8c62-4e35-90c2-2f3b8cfa1c01",
+          "nomeCopa": "Copa Pistão 2026 - Etapa 3",
+          "status": "inscricoesAbertas",
+          "imagemLogo": "/arquivos/logos/copas/copa-pistao-2026-etapa-3.png",
+          "dataInicio": "2026-02-20",
+          "dataTermino": "2026-02-22",
+          "descricao": "Inscrições abertas para a próxima etapa oficial.",
+          "preRequisito": {
+            "minimoParticipantes": 3,
+            "pontuacaoMinima": 50
+          },
+          "posicaoEquipe": null,
+          "pontosAdicionais": {
+            "primeiroLugar": null,
+            "segundoLugar": null,
+            "terceiroLugar": null
+          },
+          "pontuacaoEquipe": null
         }
-    ],
-    "copas": [
+      ]
+    },
+    {
+      "id": "a6e9d6f5-30d6-4c4c-8b03-6d9cfe98a1f8",
+      "idUsuario": "b32d7e44-2f2e-4d52-90b5-0a2e2f1c9a11",
+      "nomeEquipe": "Porsche Radiator",
+      "status": "ativo",
+      "categoria": "rua",
+      "qtdeIntegrantes": 3,
+      "integrantes": [
         {
-            "id": "b9f0a6d6-8c62-4e35-90c2-2f3b8cfa1c01",
-            "nomeCopa": "Copa Pistão 2026 - Etapa 3",
-            "status": "inscricoesAbertas",
-            "imagemLogo": "/arquivos/logos/copas/copa-pistao-2026-etapa-3.png",
-            "dataInicio": "2026-02-20",
-            "dataTermino": "2026-02-22",
-            "descricao": "Inscrições abertas para a próxima etapa oficial.",
-            "preRequisito": {
-                "minimoParticipantes": 3,
-                "pontuacaoMinima": 50
-            },
-            "pontosAdicionais": {
-                "primeiroLugar": null,
-                "segundoLugar": null,
-                "terceiroLugar": null
-            },
-            "equipes": [
-                {
-                    "idEquipe": "a7c34f41-2eba-4cce-85f4-c605e2690aaa",
-                    "nomeEquipe": "Raio de Radiator Springs"
-                },
-                {
-                    "idEquipe": "a6e9d6f5-30d6-4c4c-8b03-6d9cfe98a1f8",
-                    "nomeEquipe": "Porsche Radiator"
-                },
-                {
-                    "idEquipe": "6a2e1f44-3c77-4b6a-8f11-6d2c0a1b4c66",
-                    "nomeEquipe": "Fórmula Itálica"
-                },
-                {
-                    "idEquipe": "4b7f1d33-9e2a-4d1f-a0b1-1c2d3e4f5a67",
-                    "nomeEquipe": "BioDiesel Vibes"
-                }
-            ]
+          "id": "a3a2c8d1-1a6b-4a2d-a7f0-68b7f9855bdb",
+          "nome": "Sally Carrera",
+          "funcao": "Pilota",
+          "status": "ativo"
         },
         {
-            "id": "d4d2b1c1-1c45-4b36-9c1c-3f2a8b0d2d02",
-            "nomeCopa": "Copa Pistão 2026 - Etapa 2",
-            "status": "emAndamento",
-            "imagemLogo": "/arquivos/logos/copas/copa-pistao-2026-etapa-2.png",
-            "dataInicio": "2026-01-20",
-            "dataTermino": "2026-01-23",
-            "descricao": "Etapa em andamento. Inscrições bloqueadas durante as corridas.",
-            "preRequisito": {
-                "minimoParticipantes": 3,
-                "pontuacaoMinima": 50
-            },
-            "pontosAdicionais": {
-                "primeiroLugar": 15,
-                "segundoLugar": 10,
-                "terceiroLugar": 5
-            },
-            "equipes": [
-                {
-                    "idEquipe": "a6e9d6f5-30d6-4c4c-8b03-6d9cfe98a1f8",
-                    "nomeEquipe": "Porsche Radiator"
-                },
-                {
-                    "idEquipe": "4b7f1d33-9e2a-4d1f-a0b1-1c2d3e4f5a67",
-                    "nomeEquipe": "BioDiesel Vibes"
-                }
-            ]
+          "id": "2bdc9c9a-602c-4b4a-86d5-0371e8d8ff6f",
+          "nome": "Ramone",
+          "funcao": "Chefe de Equipe",
+          "status": "ativo"
         },
         {
-            "id": "f6a1f02d-1a67-4e86-8b6d-9e6c3b1a3c03",
-            "nomeCopa": "Copa Pistão 2026 - Etapa 1",
-            "status": "inscricoesEncerradas",
-            "imagemLogo": "/arquivos/logos/copas/copa-pistao-2026-etapa-1.png",
-            "dataInicio": "2026-02-01",
-            "dataTermino": "2026-02-03",
-            "descricao": "Inscrições encerradas. Etapa aguardando início.",
-            "preRequisito": {
-                "minimoParticipantes": 3,
-                "pontuacaoMinima": 50
-            },
-            "pontosAdicionais": {
-                "primeiroLugar": 10,
-                "segundoLugar": null,
-                "terceiroLugar": null
-            },
-            "equipes": [
-                {
-                    "idEquipe": "2f1e6c3a-0b5d-4c2b-9d3a-1e5d0a2c4f55",
-                    "nomeEquipe": "Velocidade Dinoco"
-                },
-                {
-                    "idEquipe": "6a2e1f44-3c77-4b6a-8f11-6d2c0a1b4c66",
-                    "nomeEquipe": "Fórmula Itálica"
-                }
-            ]
-        },
-        {
-            "id": "7b4a34b8-5c1a-4a9b-8e9f-0b764c0c8b40",
-            "nomeCopa": "Copa Pistão 2025 - Grande Final",
-            "status": "copaFinalizada",
-            "imagemLogo": "/arquivos/logos/copas/copa-pistao-2025-grande-final.png",
-            "dataInicio": "2025-12-10",
-            "dataTermino": "2025-12-12",
-            "descricao": "Pontos: 150, 145, 140... até 5; a partir de 5, todo mundo recebe 5.",
-            "preRequisito": {
-                "minimoParticipantes": 3,
-                "pontuacaoMinima": 50
-            },
-            "pontosAdicionais": {
-                "primeiroLugar": null,
-                "segundoLugar": null,
-                "terceiroLugar": null
-            },
-            "equipes": [
-                {
-                    "idEquipe": "a7c34f41-2eba-4cce-85f4-c605e2690aaa",
-                    "nomeEquipe": "Raio de Radiator Springs",
-                    "posicaoEquipe": 1,
-                    "pontosAdicionais": {
-                        "primeiroLugar": null,
-                        "segundoLugar": null,
-                        "terceiroLugar": null
-                    },
-                    "pontuacaoEquipe": 150
-                },
-                {
-                    "idEquipe": "a6e9d6f5-30d6-4c4c-8b03-6d9cfe98a1f8",
-                    "nomeEquipe": "Porsche Radiator",
-                    "posicaoEquipe": 2,
-                    "pontosAdicionais": {
-                        "primeiroLugar": null,
-                        "segundoLugar": null,
-                        "terceiroLugar": null
-                    },
-                    "pontuacaoEquipe": 145
-                },
-                {
-                    "idEquipe": "6a2e1f44-3c77-4b6a-8f11-6d2c0a1b4c66",
-                    "nomeEquipe": "Fórmula Itálica",
-                    "posicaoEquipe": 3,
-                    "pontosAdicionais": {
-                        "primeiroLugar": null,
-                        "segundoLugar": null,
-                        "terceiroLugar": null
-                    },
-                    "pontuacaoEquipe": 140
-                },
-                {
-                    "idEquipe": "4b7f1d33-9e2a-4d1f-a0b1-1c2d3e4f5a67",
-                    "nomeEquipe": "BioDiesel Vibes",
-                    "posicaoEquipe": 4,
-                    "pontosAdicionais": {
-                        "primeiroLugar": null,
-                        "segundoLugar": null,
-                        "terceiroLugar": null
-                    },
-                    "pontuacaoEquipe": 135
-                },
-                {
-                    "idEquipe": "2f1e6c3a-0b5d-4c2b-9d3a-1e5d0a2c4f55",
-                    "nomeEquipe": "Velocidade Dinoco",
-                    "posicaoEquipe": 40,
-                    "pontosAdicionais": {
-                        "primeiroLugar": null,
-                        "segundoLugar": null,
-                        "terceiroLugar": null
-                    },
-                    "pontuacaoEquipe": 5
-                }
-            ]
-        },
-        {
-            "id": "e1a4c219-7f2b-4df1-9f4f-1f0bdbd60c22",
-            "nomeCopa": "Copa Pistão 2026 - Troféu Dourado",
-            "status": "copaFinalizada",
-            "imagemLogo": "/arquivos/logos/copas/copa-pistao-2026-trofeu-dourado.png",
-            "dataInicio": "2026-01-05",
-            "dataTermino": "2026-01-07",
-            "descricao": "Pontos base: 150..5 + bônus Top 3 (campos opcionais).",
-            "preRequisito": {
-                "minimoParticipantes": 3,
-                "pontuacaoMinima": 50
-            },
-            "pontosAdicionais": {
-                "primeiroLugar": 20,
-                "segundoLugar": 10,
-                "terceiroLugar": 5
-            },
-            "equipes": [
-                {
-                    "idEquipe": "a7c34f41-2eba-4cce-85f4-c605e2690aaa",
-                    "nomeEquipe": "Raio de Radiator Springs",
-                    "posicaoEquipe": 1,
-                    "pontosAdicionais": {
-                        "primeiroLugar": 20,
-                        "segundoLugar": null,
-                        "terceiroLugar": null
-                    },
-                    "pontuacaoEquipe": 170
-                },
-                {
-                    "idEquipe": "a6e9d6f5-30d6-4c4c-8b03-6d9cfe98a1f8",
-                    "nomeEquipe": "Porsche Radiator",
-                    "posicaoEquipe": 2,
-                    "pontosAdicionais": {
-                        "primeiroLugar": null,
-                        "segundoLugar": 10,
-                        "terceiroLugar": null
-                    },
-                    "pontuacaoEquipe": 155
-                },
-                {
-                    "idEquipe": "2f1e6c3a-0b5d-4c2b-9d3a-1e5d0a2c4f55",
-                    "nomeEquipe": "Velocidade Dinoco",
-                    "posicaoEquipe": 3,
-                    "pontosAdicionais": {
-                        "primeiroLugar": null,
-                        "segundoLugar": null,
-                        "terceiroLugar": 5
-                    },
-                    "pontuacaoEquipe": 145
-                },
-                {
-                    "idEquipe": "6a2e1f44-3c77-4b6a-8f11-6d2c0a1b4c66",
-                    "nomeEquipe": "Fórmula Itálica",
-                    "posicaoEquipe": 4,
-                    "pontosAdicionais": {
-                        "primeiroLugar": null,
-                        "segundoLugar": null,
-                        "terceiroLugar": null
-                    },
-                    "pontuacaoEquipe": 135
-                },
-                {
-                    "idEquipe": "4b7f1d33-9e2a-4d1f-a0b1-1c2d3e4f5a67",
-                    "nomeEquipe": "BioDiesel Vibes",
-                    "posicaoEquipe": 12,
-                    "pontosAdicionais": {
-                        "primeiroLugar": null,
-                        "segundoLugar": null,
-                        "terceiroLugar": null
-                    },
-                    "pontuacaoEquipe": 95
-                }
-            ]
+          "id": "d92b8bdf-cbfa-44c8-9e29-2fbf70b51b88",
+          "nome": "Flo",
+          "funcao": "Estratégia de Corrida",
+          "status": "ativo"
         }
-    ]
+      ],
+      "pontuacaoTotal": 300,
+      "inscricoes": [
+        {
+          "id": "7b4a34b8-5c1a-4a9b-8e9f-0b764c0c8b40",
+          "nomeCopa": "Copa Pistão 2025 - Grande Final",
+          "status": "copaFinalizada",
+          "imagemLogo": "/arquivos/logos/copas/copa-pistao-2025-grande-final.png",
+          "dataInicio": "2025-12-10",
+          "dataTermino": "2025-12-12",
+          "descricao": "Grande final da temporada 2025. Pontos: 150, 145, 140... até 5; a partir de 5, todo mundo recebe 5.",
+          "preRequisito": {
+            "minimoParticipantes": 3,
+            "pontuacaoMinima": 50
+          },
+          "posicaoEquipe": 2,
+          "pontosAdicionais": {
+            "primeiroLugar": null,
+            "segundoLugar": null,
+            "terceiroLugar": null
+          },
+          "pontuacaoEquipe": 145
+        },
+        {
+          "id": "e1a4c219-7f2b-4df1-9f4f-1f0bdbd60c22",
+          "nomeCopa": "Copa Pistão 2026 - Troféu Dourado",
+          "status": "copaFinalizada",
+          "imagemLogo": "/arquivos/logos/copas/copa-pistao-2026-trofeu-dourado.png",
+          "dataInicio": "2026-01-05",
+          "dataTermino": "2026-01-07",
+          "descricao": "Etapa especial com bônus Top 3. Pontos base: 150..5.",
+          "preRequisito": {
+            "minimoParticipantes": 3,
+            "pontuacaoMinima": 50
+          },
+          "posicaoEquipe": 2,
+          "pontosAdicionais": {
+            "primeiroLugar": null,
+            "segundoLugar": 10,
+            "terceiroLugar": null
+          },
+          "pontuacaoEquipe": 155
+        },
+        {
+          "id": "d4d2b1c1-1c45-4b36-9c1c-3f2a8b0d2d02",
+          "nomeCopa": "Copa Pistão 2026 - Etapa 2",
+          "status": "emAndamento",
+          "imagemLogo": "/arquivos/logos/copas/copa-pistao-2026-etapa-2.png",
+          "dataInicio": "2026-01-20",
+          "dataTermino": "2026-01-23",
+          "descricao": "Etapa em andamento. Inscrições bloqueadas durante as corridas.",
+          "preRequisito": {
+            "minimoParticipantes": 3,
+            "pontuacaoMinima": 50
+          },
+          "posicaoEquipe": null,
+          "pontosAdicionais": {
+            "primeiroLugar": 15,
+            "segundoLugar": 10,
+            "terceiroLugar": 5
+          },
+          "pontuacaoEquipe": null
+        },
+        {
+          "id": "b9f0a6d6-8c62-4e35-90c2-2f3b8cfa1c01",
+          "nomeCopa": "Copa Pistão 2026 - Etapa 3",
+          "status": "inscricoesAbertas",
+          "imagemLogo": "/arquivos/logos/copas/copa-pistao-2026-etapa-3.png",
+          "dataInicio": "2026-02-20",
+          "dataTermino": "2026-02-22",
+          "descricao": "Inscrições abertas para a próxima etapa oficial.",
+          "preRequisito": {
+            "minimoParticipantes": 3,
+            "pontuacaoMinima": 50
+          },
+          "posicaoEquipe": null,
+          "pontosAdicionais": {
+            "primeiroLugar": null,
+            "segundoLugar": null,
+            "terceiroLugar": null
+          },
+          "pontuacaoEquipe": null
+        }
+      ]
+    },
+    {
+      "id": "2f1e6c3a-0b5d-4c2b-9d3a-1e5d0a2c4f55",
+      "idUsuario": "7a1c3d0e-9b77-4a2f-9a0f-2d9a7c1b0c13",
+      "nomeEquipe": "Velocidade Dinoco",
+      "status": "ativo",
+      "categoria": "pista",
+      "qtdeIntegrantes": 3,
+      "integrantes": [
+        {
+          "id": "1f0a2b3c-4d5e-6f70-8a9b-0c1d2e3f4a55",
+          "nome": "Chico Veloz",
+          "funcao": "Piloto",
+          "status": "ativo"
+        },
+        {
+          "id": "9a8b7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c44",
+          "nome": "Tex",
+          "funcao": "Patrocinador",
+          "status": "ativo"
+        },
+        {
+          "id": "3c2b1a0d-9e8f-7a6b-5c4d-3e2f1a0b9c33",
+          "nome": "Chefe Dinoco",
+          "funcao": "Chefe de Equipe",
+          "status": "ativo"
+        }
+      ],
+      "pontuacaoTotal": 150,
+      "inscricoes": [
+        {
+          "id": "7b4a34b8-5c1a-4a9b-8e9f-0b764c0c8b40",
+          "nomeCopa": "Copa Pistão 2025 - Grande Final",
+          "status": "copaFinalizada",
+          "imagemLogo": "/arquivos/logos/copas/copa-pistao-2025-grande-final.png",
+          "dataInicio": "2025-12-10",
+          "dataTermino": "2025-12-12",
+          "descricao": "Grande final da temporada 2025. Pontos: 150, 145, 140... até 5; a partir de 5, todo mundo recebe 5.",
+          "preRequisito": {
+            "minimoParticipantes": 3,
+            "pontuacaoMinima": 50
+          },
+          "posicaoEquipe": 40,
+          "pontosAdicionais": {
+            "primeiroLugar": null,
+            "segundoLugar": null,
+            "terceiroLugar": null
+          },
+          "pontuacaoEquipe": 5
+        },
+        {
+          "id": "e1a4c219-7f2b-4df1-9f4f-1f0bdbd60c22",
+          "nomeCopa": "Copa Pistão 2026 - Troféu Dourado",
+          "status": "copaFinalizada",
+          "imagemLogo": "/arquivos/logos/copas/copa-pistao-2026-trofeu-dourado.png",
+          "dataInicio": "2026-01-05",
+          "dataTermino": "2026-01-07",
+          "descricao": "Etapa especial com bônus Top 3. Pontos base: 150..5.",
+          "preRequisito": {
+            "minimoParticipantes": 3,
+            "pontuacaoMinima": 50
+          },
+          "posicaoEquipe": 3,
+          "pontosAdicionais": {
+            "primeiroLugar": null,
+            "segundoLugar": null,
+            "terceiroLugar": 5
+          },
+          "pontuacaoEquipe": 145
+        },
+        {
+          "id": "f6a1f02d-1a67-4e86-8b6d-9e6c3b1a3c03",
+          "nomeCopa": "Copa Pistão 2026 - Etapa 1",
+          "status": "inscricoesEncerradas",
+          "imagemLogo": "/arquivos/logos/copas/copa-pistao-2026-etapa-1.png",
+          "dataInicio": "2026-02-01",
+          "dataTermino": "2026-02-03",
+          "descricao": "Inscrições encerradas. Etapa aguardando início.",
+          "preRequisito": {
+            "minimoParticipantes": 3,
+            "pontuacaoMinima": 50
+          },
+          "posicaoEquipe": null,
+          "pontosAdicionais": {
+            "primeiroLugar": 10,
+            "segundoLugar": null,
+            "terceiroLugar": null
+          },
+          "pontuacaoEquipe": null
+        }
+      ]
+    },
+    {
+      "id": "6a2e1f44-3c77-4b6a-8f11-6d2c0a1b4c66",
+      "idUsuario": "1d9a6e22-8d2b-4f65-9b31-3c2d1e0f9a14",
+      "nomeEquipe": "Fórmula Itálica",
+      "status": "ativo",
+      "categoria": "pista",
+      "qtdeIntegrantes": 3,
+      "integrantes": [
+        {
+          "id": "0a1b2c3d-4e5f-4a6b-8c9d-0e1f2a3b4c5d",
+          "nome": "Francesco Bernoulli",
+          "funcao": "Piloto",
+          "status": "ativo"
+        },
+        {
+          "id": "1b2c3d4e-5f60-4a7b-8c9d-1e2f3a4b5c6d",
+          "nome": "Mamma Topolino",
+          "funcao": "Chefe de Equipe",
+          "status": "ativo"
+        },
+        {
+          "id": "2c3d4e5f-6071-4b8c-9d0e-2f3a4b5c6d7e",
+          "nome": "Pit Italiano",
+          "funcao": "Troca de Pneus",
+          "status": "ativo"
+        }
+      ],
+      "pontuacaoTotal": 275,
+      "inscricoes": [
+        {
+          "id": "7b4a34b8-5c1a-4a9b-8e9f-0b764c0c8b40",
+          "nomeCopa": "Copa Pistão 2025 - Grande Final",
+          "status": "copaFinalizada",
+          "imagemLogo": "/arquivos/logos/copas/copa-pistao-2025-grande-final.png",
+          "dataInicio": "2025-12-10",
+          "dataTermino": "2025-12-12",
+          "descricao": "Grande final da temporada 2025. Pontos: 150, 145, 140... até 5; a partir de 5, todo mundo recebe 5.",
+          "preRequisito": {
+            "minimoParticipantes": 3,
+            "pontuacaoMinima": 50
+          },
+          "posicaoEquipe": 3,
+          "pontosAdicionais": {
+            "primeiroLugar": null,
+            "segundoLugar": null,
+            "terceiroLugar": null
+          },
+          "pontuacaoEquipe": 140
+        },
+        {
+          "id": "e1a4c219-7f2b-4df1-9f4f-1f0bdbd60c22",
+          "nomeCopa": "Copa Pistão 2026 - Troféu Dourado",
+          "status": "copaFinalizada",
+          "imagemLogo": "/arquivos/logos/copas/copa-pistao-2026-trofeu-dourado.png",
+          "dataInicio": "2026-01-05",
+          "dataTermino": "2026-01-07",
+          "descricao": "Etapa especial com bônus Top 3. Pontos base: 150..5.",
+          "preRequisito": {
+            "minimoParticipantes": 3,
+            "pontuacaoMinima": 50
+          },
+          "posicaoEquipe": 4,
+          "pontosAdicionais": {
+            "primeiroLugar": null,
+            "segundoLugar": null,
+            "terceiroLugar": null
+          },
+          "pontuacaoEquipe": 135
+        },
+        {
+          "id": "f6a1f02d-1a67-4e86-8b6d-9e6c3b1a3c03",
+          "nomeCopa": "Copa Pistão 2026 - Etapa 1",
+          "status": "inscricoesEncerradas",
+          "imagemLogo": "/arquivos/logos/copas/copa-pistao-2026-etapa-1.png",
+          "dataInicio": "2026-02-01",
+          "dataTermino": "2026-02-03",
+          "descricao": "Inscrições encerradas. Etapa aguardando início.",
+          "preRequisito": {
+            "minimoParticipantes": 3,
+            "pontuacaoMinima": 50
+          },
+          "posicaoEquipe": null,
+          "pontosAdicionais": {
+            "primeiroLugar": 10,
+            "segundoLugar": null,
+            "terceiroLugar": null
+          },
+          "pontuacaoEquipe": null
+        },
+        {
+          "id": "b9f0a6d6-8c62-4e35-90c2-2f3b8cfa1c01",
+          "nomeCopa": "Copa Pistão 2026 - Etapa 3",
+          "status": "inscricoesAbertas",
+          "imagemLogo": "/arquivos/logos/copas/copa-pistao-2026-etapa-3.png",
+          "dataInicio": "2026-02-20",
+          "dataTermino": "2026-02-22",
+          "descricao": "Inscrições abertas para a próxima etapa oficial.",
+          "preRequisito": {
+            "minimoParticipantes": 3,
+            "pontuacaoMinima": 50
+          },
+          "posicaoEquipe": null,
+          "pontosAdicionais": {
+            "primeiroLugar": null,
+            "segundoLugar": null,
+            "terceiroLugar": null
+          },
+          "pontuacaoEquipe": null
+        }
+      ]
+    },
+    {
+      "id": "4b7f1d33-9e2a-4d1f-a0b1-1c2d3e4f5a67",
+      "idUsuario": "9c1e2d33-4a55-4c88-9d11-2b3c4d5e6f70",
+      "nomeEquipe": "BioDiesel Vibes",
+      "status": "ativo",
+      "categoria": "rally",
+      "qtdeIntegrantes": 3,
+      "integrantes": [
+        {
+          "id": "aa1b2c3d-4e5f-4a6b-8c9d-0e1f2a3b4c5e",
+          "nome": "Fillmore",
+          "funcao": "Piloto",
+          "status": "ativo"
+        },
+        {
+          "id": "bb2c3d4e-5f60-4a7b-8c9d-1e2f3a4b5c6e",
+          "nome": "DJ",
+          "funcao": "Estratégia de Corrida",
+          "status": "ativo"
+        },
+        {
+          "id": "cc3d4e5f-6071-4b8c-9d0e-2f3a4b5c6d7f",
+          "nome": "Mack",
+          "funcao": "Logística",
+          "status": "ativo"
+        }
+      ],
+      "pontuacaoTotal": 230,
+      "inscricoes": [
+        {
+          "id": "7b4a34b8-5c1a-4a9b-8e9f-0b764c0c8b40",
+          "nomeCopa": "Copa Pistão 2025 - Grande Final",
+          "status": "copaFinalizada",
+          "imagemLogo": "/arquivos/logos/copas/copa-pistao-2025-grande-final.png",
+          "dataInicio": "2025-12-10",
+          "dataTermino": "2025-12-12",
+          "descricao": "Grande final da temporada 2025. Pontos: 150, 145, 140... até 5; a partir de 5, todo mundo recebe 5.",
+          "preRequisito": {
+            "minimoParticipantes": 3,
+            "pontuacaoMinima": 50
+          },
+          "posicaoEquipe": 4,
+          "pontosAdicionais": {
+            "primeiroLugar": null,
+            "segundoLugar": null,
+            "terceiroLugar": null
+          },
+          "pontuacaoEquipe": 135
+        },
+        {
+          "id": "e1a4c219-7f2b-4df1-9f4f-1f0bdbd60c22",
+          "nomeCopa": "Copa Pistão 2026 - Troféu Dourado",
+          "status": "copaFinalizada",
+          "imagemLogo": "/arquivos/logos/copas/copa-pistao-2026-trofeu-dourado.png",
+          "dataInicio": "2026-01-05",
+          "dataTermino": "2026-01-07",
+          "descricao": "Etapa especial com bônus Top 3. Pontos base: 150..5.",
+          "preRequisito": {
+            "minimoParticipantes": 3,
+            "pontuacaoMinima": 50
+          },
+          "posicaoEquipe": 12,
+          "pontosAdicionais": {
+            "primeiroLugar": null,
+            "segundoLugar": null,
+            "terceiroLugar": null
+          },
+          "pontuacaoEquipe": 95
+        },
+        {
+          "id": "d4d2b1c1-1c45-4b36-9c1c-3f2a8b0d2d02",
+          "nomeCopa": "Copa Pistão 2026 - Etapa 2",
+          "status": "emAndamento",
+          "imagemLogo": "/arquivos/logos/copas/copa-pistao-2026-etapa-2.png",
+          "dataInicio": "2026-01-20",
+          "dataTermino": "2026-01-23",
+          "descricao": "Etapa em andamento. Inscrições bloqueadas durante as corridas.",
+          "preRequisito": {
+            "minimoParticipantes": 3,
+            "pontuacaoMinima": 50
+          },
+          "posicaoEquipe": null,
+          "pontosAdicionais": {
+            "primeiroLugar": 15,
+            "segundoLugar": 10,
+            "terceiroLugar": 5
+          },
+          "pontuacaoEquipe": null
+        },
+        {
+          "id": "b9f0a6d6-8c62-4e35-90c2-2f3b8cfa1c01",
+          "nomeCopa": "Copa Pistão 2026 - Etapa 3",
+          "status": "inscricoesAbertas",
+          "imagemLogo": "/arquivos/logos/copas/copa-pistao-2026-etapa-3.png",
+          "dataInicio": "2026-02-20",
+          "dataTermino": "2026-02-22",
+          "descricao": "Inscrições abertas para a próxima etapa oficial.",
+          "preRequisito": {
+            "minimoParticipantes": 3,
+            "pontuacaoMinima": 50
+          },
+          "posicaoEquipe": null,
+          "pontosAdicionais": {
+            "primeiroLugar": null,
+            "segundoLugar": null,
+            "terceiroLugar": null
+          },
+          "pontuacaoEquipe": null
+        }
+      ]
+    },
+    {
+      "id": "9d3a2b1c-5e6f-4a7b-8c9d-0e1f2a3b4c55",
+      "idUsuario": "8f2c1a09-3e4d-4b2c-9a33-0d1e2f3a4b55",
+      "nomeEquipe": "Tempestade 20",
+      "status": "inativo",
+      "categoria": "pista",
+      "qtdeIntegrantes": 3,
+      "integrantes": [
+        {
+          "id": "dd4e5f60-6071-4b8c-9d0e-2f3a4b5c6d70",
+          "nome": "Jackson Storm",
+          "funcao": "Piloto",
+          "status": "inativo"
+        },
+        {
+          "id": "ee5f6071-7182-4c9d-0e1f-3a4b5c6d7e80",
+          "nome": "Equipe Aero",
+          "funcao": "Chefe de Equipe",
+          "status": "inativo"
+        },
+        {
+          "id": "ff607182-8293-4d0e-1f2a-4b5c6d7e8f90",
+          "nome": "Pit Turbo",
+          "funcao": "Troca de Pneus",
+          "status": "inativo"
+        }
+      ],
+      "pontuacaoTotal": 0,
+      "inscricoes": []
+    },
+    {
+      "id": "3a2b1c0d-9e8f-4a7b-8c6d-5e4f3a2b1c00",
+      "idUsuario": "6e5d4c3b-2a19-4f08-8d77-7a6b5c4d3e22",
+      "nomeEquipe": "Tunados do Snot Rod",
+      "status": "inativo",
+      "categoria": "rua",
+      "qtdeIntegrantes": 3,
+      "integrantes": [
+        {
+          "id": "11111111-2222-4a7b-8c6d-333333333333",
+          "nome": "Snot Rod",
+          "funcao": "Piloto",
+          "status": "inativo"
+        },
+        {
+          "id": "44444444-5555-4b8c-9d0e-666666666666",
+          "nome": "Equipe Nitro",
+          "funcao": "Mecânico",
+          "status": "inativo"
+        },
+        {
+          "id": "77777777-8888-4c9d-0e1f-999999999999",
+          "nome": "Equipe Som",
+          "funcao": "Estratégia de Corrida",
+          "status": "inativo"
+        }
+      ],
+      "pontuacaoTotal": 0,
+      "inscricoes": []
+    },
+    {
+      "id": "e6a6f3da-b669-49e8-8845-db3f70504c69",
+      "idUsuario": "d5ef52ef-73fe-41d4-9293-7a2e52f901bc",
+      "nomeEquipe": "asd",
+      "status": "ativo",
+      "categoria": "pista",
+      "qtdeParticipantes": 6,
+      "participantes": [
+        {
+          "id": "768c42fb-913b-4693-a22c-031f2d7631eb",
+          "nome": "asd",
+          "funcao": "asd",
+          "status": "ativo"
+        },
+        {
+          "id": "73a847e0-4844-4e85-a178-15fa0499e72b",
+          "nome": "asd",
+          "funcao": "asd",
+          "status": "ativo"
+        },
+        {
+          "id": "aeb2dc43-cb51-47c3-85c6-1494af98edc0",
+          "nome": "asd",
+          "funcao": "asd",
+          "status": "ativo"
+        },
+        {
+          "id": "8816984e-9e3f-4d87-b27f-d062b4080e35",
+          "nome": "asd",
+          "funcao": "asd",
+          "status": "ativo"
+        },
+        {
+          "id": "0d7fec30-e4f4-49c3-8187-5933d26b71cd",
+          "nome": "asd",
+          "funcao": "asd",
+          "status": "ativo"
+        },
+        {
+          "id": "8c2dc988-8d58-41d7-9b1c-8859aba2d7ba",
+          "nome": "asda",
+          "funcao": "sd",
+          "status": "ativo"
+        }
+      ],
+      "pontuacaoTotal": 0,
+      "inscricoes": []
+    }
+  ],
+  "copas": [
+    {
+      "id": "b9f0a6d6-8c62-4e35-90c2-2f3b8cfa1c01",
+      "nomeCopa": "Copa Pistão 2026 - Etapa 3",
+      "status": "inscricoesAbertas",
+      "imagemLogo": "/arquivos/logos/copas/copa-pistao-2026-etapa-3.png",
+      "dataInicio": "2026-02-20",
+      "dataTermino": "2026-02-22",
+      "descricao": "Inscrições abertas para a próxima etapa oficial.",
+      "preRequisito": {
+        "minimoParticipantes": 3,
+        "pontuacaoMinima": 50
+      },
+      "pontosAdicionais": {
+        "primeiroLugar": null,
+        "segundoLugar": null,
+        "terceiroLugar": null
+      },
+      "equipes": [
+        {
+          "idEquipe": "a7c34f41-2eba-4cce-85f4-c605e2690aaa",
+          "nomeEquipe": "Raio de Radiator Springs"
+        },
+        {
+          "idEquipe": "a6e9d6f5-30d6-4c4c-8b03-6d9cfe98a1f8",
+          "nomeEquipe": "Porsche Radiator"
+        },
+        {
+          "idEquipe": "6a2e1f44-3c77-4b6a-8f11-6d2c0a1b4c66",
+          "nomeEquipe": "Fórmula Itálica"
+        },
+        {
+          "idEquipe": "4b7f1d33-9e2a-4d1f-a0b1-1c2d3e4f5a67",
+          "nomeEquipe": "BioDiesel Vibes"
+        }
+      ]
+    },
+    {
+      "id": "d4d2b1c1-1c45-4b36-9c1c-3f2a8b0d2d02",
+      "nomeCopa": "Copa Pistão 2026 - Etapa 2",
+      "status": "emAndamento",
+      "imagemLogo": "/arquivos/logos/copas/copa-pistao-2026-etapa-2.png",
+      "dataInicio": "2026-01-20",
+      "dataTermino": "2026-01-23",
+      "descricao": "Etapa em andamento. Inscrições bloqueadas durante as corridas.",
+      "preRequisito": {
+        "minimoParticipantes": 3,
+        "pontuacaoMinima": 50
+      },
+      "pontosAdicionais": {
+        "primeiroLugar": 15,
+        "segundoLugar": 10,
+        "terceiroLugar": 5
+      },
+      "equipes": [
+        {
+          "idEquipe": "a6e9d6f5-30d6-4c4c-8b03-6d9cfe98a1f8",
+          "nomeEquipe": "Porsche Radiator"
+        },
+        {
+          "idEquipe": "4b7f1d33-9e2a-4d1f-a0b1-1c2d3e4f5a67",
+          "nomeEquipe": "BioDiesel Vibes"
+        }
+      ]
+    },
+    {
+      "id": "f6a1f02d-1a67-4e86-8b6d-9e6c3b1a3c03",
+      "nomeCopa": "Copa Pistão 2026 - Etapa 1",
+      "status": "inscricoesEncerradas",
+      "imagemLogo": "/arquivos/logos/copas/copa-pistao-2026-etapa-1.png",
+      "dataInicio": "2026-02-01",
+      "dataTermino": "2026-02-03",
+      "descricao": "Inscrições encerradas. Etapa aguardando início.",
+      "preRequisito": {
+        "minimoParticipantes": 3,
+        "pontuacaoMinima": 50
+      },
+      "pontosAdicionais": {
+        "primeiroLugar": 10,
+        "segundoLugar": null,
+        "terceiroLugar": null
+      },
+      "equipes": [
+        {
+          "idEquipe": "2f1e6c3a-0b5d-4c2b-9d3a-1e5d0a2c4f55",
+          "nomeEquipe": "Velocidade Dinoco"
+        },
+        {
+          "idEquipe": "6a2e1f44-3c77-4b6a-8f11-6d2c0a1b4c66",
+          "nomeEquipe": "Fórmula Itálica"
+        }
+      ]
+    },
+    {
+      "id": "7b4a34b8-5c1a-4a9b-8e9f-0b764c0c8b40",
+      "nomeCopa": "Copa Pistão 2025 - Grande Final",
+      "status": "copaFinalizada",
+      "imagemLogo": "/arquivos/logos/copas/copa-pistao-2025-grande-final.png",
+      "dataInicio": "2025-12-10",
+      "dataTermino": "2025-12-12",
+      "descricao": "Pontos: 150, 145, 140... até 5; a partir de 5, todo mundo recebe 5.",
+      "preRequisito": {
+        "minimoParticipantes": 3,
+        "pontuacaoMinima": 50
+      },
+      "pontosAdicionais": {
+        "primeiroLugar": null,
+        "segundoLugar": null,
+        "terceiroLugar": null
+      },
+      "equipes": [
+        {
+          "idEquipe": "a7c34f41-2eba-4cce-85f4-c605e2690aaa",
+          "nomeEquipe": "Raio de Radiator Springs",
+          "posicaoEquipe": 1,
+          "pontosAdicionais": {
+            "primeiroLugar": null,
+            "segundoLugar": null,
+            "terceiroLugar": null
+          },
+          "pontuacaoEquipe": 150
+        },
+        {
+          "idEquipe": "a6e9d6f5-30d6-4c4c-8b03-6d9cfe98a1f8",
+          "nomeEquipe": "Porsche Radiator",
+          "posicaoEquipe": 2,
+          "pontosAdicionais": {
+            "primeiroLugar": null,
+            "segundoLugar": null,
+            "terceiroLugar": null
+          },
+          "pontuacaoEquipe": 145
+        },
+        {
+          "idEquipe": "6a2e1f44-3c77-4b6a-8f11-6d2c0a1b4c66",
+          "nomeEquipe": "Fórmula Itálica",
+          "posicaoEquipe": 3,
+          "pontosAdicionais": {
+            "primeiroLugar": null,
+            "segundoLugar": null,
+            "terceiroLugar": null
+          },
+          "pontuacaoEquipe": 140
+        },
+        {
+          "idEquipe": "4b7f1d33-9e2a-4d1f-a0b1-1c2d3e4f5a67",
+          "nomeEquipe": "BioDiesel Vibes",
+          "posicaoEquipe": 4,
+          "pontosAdicionais": {
+            "primeiroLugar": null,
+            "segundoLugar": null,
+            "terceiroLugar": null
+          },
+          "pontuacaoEquipe": 135
+        },
+        {
+          "idEquipe": "2f1e6c3a-0b5d-4c2b-9d3a-1e5d0a2c4f55",
+          "nomeEquipe": "Velocidade Dinoco",
+          "posicaoEquipe": 40,
+          "pontosAdicionais": {
+            "primeiroLugar": null,
+            "segundoLugar": null,
+            "terceiroLugar": null
+          },
+          "pontuacaoEquipe": 5
+        }
+      ]
+    },
+    {
+      "id": "e1a4c219-7f2b-4df1-9f4f-1f0bdbd60c22",
+      "nomeCopa": "Copa Pistão 2026 - Troféu Dourado",
+      "status": "copaFinalizada",
+      "imagemLogo": "/arquivos/logos/copas/copa-pistao-2026-trofeu-dourado.png",
+      "dataInicio": "2026-01-05",
+      "dataTermino": "2026-01-07",
+      "descricao": "Pontos base: 150..5 + bônus Top 3 (campos opcionais).",
+      "preRequisito": {
+        "minimoParticipantes": 3,
+        "pontuacaoMinima": 50
+      },
+      "pontosAdicionais": {
+        "primeiroLugar": 20,
+        "segundoLugar": 10,
+        "terceiroLugar": 5
+      },
+      "equipes": [
+        {
+          "idEquipe": "a7c34f41-2eba-4cce-85f4-c605e2690aaa",
+          "nomeEquipe": "Raio de Radiator Springs",
+          "posicaoEquipe": 1,
+          "pontosAdicionais": {
+            "primeiroLugar": 20,
+            "segundoLugar": null,
+            "terceiroLugar": null
+          },
+          "pontuacaoEquipe": 170
+        },
+        {
+          "idEquipe": "a6e9d6f5-30d6-4c4c-8b03-6d9cfe98a1f8",
+          "nomeEquipe": "Porsche Radiator",
+          "posicaoEquipe": 2,
+          "pontosAdicionais": {
+            "primeiroLugar": null,
+            "segundoLugar": 10,
+            "terceiroLugar": null
+          },
+          "pontuacaoEquipe": 155
+        },
+        {
+          "idEquipe": "2f1e6c3a-0b5d-4c2b-9d3a-1e5d0a2c4f55",
+          "nomeEquipe": "Velocidade Dinoco",
+          "posicaoEquipe": 3,
+          "pontosAdicionais": {
+            "primeiroLugar": null,
+            "segundoLugar": null,
+            "terceiroLugar": 5
+          },
+          "pontuacaoEquipe": 145
+        },
+        {
+          "idEquipe": "6a2e1f44-3c77-4b6a-8f11-6d2c0a1b4c66",
+          "nomeEquipe": "Fórmula Itálica",
+          "posicaoEquipe": 4,
+          "pontosAdicionais": {
+            "primeiroLugar": null,
+            "segundoLugar": null,
+            "terceiroLugar": null
+          },
+          "pontuacaoEquipe": 135
+        },
+        {
+          "idEquipe": "4b7f1d33-9e2a-4d1f-a0b1-1c2d3e4f5a67",
+          "nomeEquipe": "BioDiesel Vibes",
+          "posicaoEquipe": 12,
+          "pontosAdicionais": {
+            "primeiroLugar": null,
+            "segundoLugar": null,
+            "terceiroLugar": null
+          },
+          "pontuacaoEquipe": 95
+        }
+      ]
+    }
+  ]
 }
