@@ -187,6 +187,11 @@
     box-shadow: 0 8px 18px rgba(49, 165, 231, .18);
 }
 
+.section-cards__btn-inscrever:disabled {
+    background-color: #E5E7EB;
+    border: 1px solid rgba(0, 0, 0, .6);
+}
+
 .section-cards__btn-detalhes {
     background-color: rgba(246, 192, 27, .2);
     border: 1px solid #F6C01B;

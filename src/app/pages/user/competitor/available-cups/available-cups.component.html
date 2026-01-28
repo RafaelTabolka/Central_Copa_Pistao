@@ -5,49 +5,58 @@
     </div>
     
     <div class="row">
-        <div class="col-12 col-md-6 mb-3 col-container">
-            <section class="section-cards">
-                <div class="section-cards__borda-topo"></div>
-
-                <figure class="section-cards__figure">
-                    <img class="img-fluid"
-                        src="assets/img/user/competitor/available_cups/img_copas_disponiveis_radiator_springs.png"
-                        alt="logo da copa">
-                </figure>
-
-                <div class="section-cards__dados-copa">
-                    <h2>Copa Radiator Springs</h2>
-                    
-                    <div class="section-cards__data-status">                        
-                        <p>
-                            <i class="bi bi-calendar3 me-1"></i>
-                            <time datetime="2026/02/10">10/02/2026</time> a <time datetime="2026/02/12">12/02/2026</time>
-                        </p>
+        @for (copa of copas; track copa.id) {
+            <div class="col-12 col-md-6 mb-3 col-container">
+                <section class="section-cards">
+                    <div class="section-cards__borda-topo"></div>
+    
+                    <figure class="section-cards__figure">
+                        <img class="img-fluid"
+                            [src]="copa.imagemLogo"
+                            alt="logo da copa">
+                    </figure>
+    
+                    <div class="section-cards__dados-copa">
+                        <h2>{{ copa.nomeCopa }}</h2>
                         
-                        <span class="section-cards__span-abertas">Inscrições Abertas</span>
+                        <div class="section-cards__data-status">                        
+                            <p>
+                                <i class="bi bi-calendar3 me-1"></i>
+                                
+                                <time datetime="2026/02/10">{{ copa.dataInicio | date:'dd/MM/yyyy' }}</time> a
+                                <time datetime="2026/02/12">{{ copa.dataTermino | date:'dd/MM/yyyy' }}</time>
+                            </p>
+                            
+                            <span [ngClass]="copaStatusEstilos[copa.status]">{{ copaStatusNomes[copa.status] }}</span>
+                        </div>
                     </div>
-                </div>
+    
+                    <div class="section-cards__divisor"></div>
+    
+                    <ul class="section-cards__ul">
+                        <li>
+                            Pré-requisito: <span>Mínimo de {{ copa.preRequisito.minimoParticipantes }} integrantes</span>
+                        </li>
+    
+                        <li>
+                            Pontuação Mínima: <span>{{ copa.preRequisito.pontuacaoMinima }} pts</span>
+                        </li>
+                    </ul>
+    
+                    <div class="section-cards__buttons">
+                        <button class="btn section-cards__btn-inscrever" [disabled]="copa.status !== 'inscricoesAbertas'">
+                            <i class="bi bi-flag"></i> Inscrever
+                        </button>
 
-                <div class="section-cards__divisor"></div>
+                        <button routerLink="/competitor/available-cups/a" class="btn section-cards__btn-detalhes">
+                            <i class="bi bi-eye"></i> Detalhes
+                        </button>
+                    </div>
+                </section>
+            </div>
+        }
 
-                <ul class="section-cards__ul">
-                    <li>
-                        Pré-requisito: <span>Mínimo de 3 integrantes</span>
-                    </li>
-
-                    <li>
-                        Pontuação Mínima: <span>50 pts</span>
-                    </li>
-                </ul>
-
-                <div class="section-cards__buttons">
-                    <button class="btn section-cards__btn-inscrever"><i class="bi bi-flag"></i> Inscrever</button>
-                    <button routerLink="/competitor/available-cups/a" class="btn section-cards__btn-detalhes"><i class="bi bi-eye"></i> Detalhes</button>
-                </div>
-            </section>
-        </div>
-
-        <div class="col-12 col-md-6 mb-3 col-container">
+        <!-- <div class="col-12 col-md-6 mb-3 col-container">
             <section class="section-cards">
                 <div class="section-cards__borda-topo"></div>
 
@@ -171,7 +180,7 @@
                     <button routerLink="/competitor/available-cups/a" class="btn section-cards__btn-detalhes"><i class="bi bi-eye"></i> Detalhes</button>
                 </div>
             </section>
-        </div>
+        </div> -->
     </div>
 
 </div>

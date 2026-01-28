@@ -8,7 +8,7 @@ export interface ICopa {
     dataInicio: string,
     dataTermino: string,
     descricao: string,
-    preRequisitos: {
+    preRequisito: {
         minimoParticipantes: number,
         pontuacaoMinima: number
     },
@@ -17,10 +17,8 @@ export interface ICopa {
         segundoLugar: number | null,
         terceiroLugar: number | null
     } | null,
-    equipes: [
-        {
-            idEquipe: string,
-            nomeEquipe: string
-        }
-    ] | []
+    equipes: {
+        idEquipe: string,
+        nomeEquipe: string
+    }[]
 }
