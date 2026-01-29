@@ -5,9 +5,9 @@ export interface IEquipe {
     id: string,
     idUsuario: string,
     nomeEquipe: string,
-    status: EquipeStatus,
-    categoria: EquipeCategoria,
-    qtdeParticipantes: number,
+    status: EquipeStatus | null,
+    categoria: EquipeCategoria | null,
+    qtdeIntegrantes: number,
     participantes: {
         id: string,
         nome: string,

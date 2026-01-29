@@ -44,7 +44,7 @@
                     </ul>
     
                     <div class="section-cards__buttons">
-                        <button class="btn section-cards__btn-inscrever" [disabled]="copa.status !== 'inscricoesAbertas'">
+                        <button class="btn section-cards__btn-inscrever" (click)="fazerInscricao()" [disabled]="copa.status !== 'inscricoesAbertas'">
                             <i class="bi bi-flag"></i> Inscrever
                         </button>
 

@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="col-12">
+        <section class="section-modal">
+            <div class="section-modal__borda-topo"></div>
+
+            <!-- Section cards matrícula -->
+            <div class="section-modal__matricula">
+
+                <div class="section-modal__data-status">
+                    <h2 class="mt-2">Matrícula</h2>
+
+                    <span class="section-modal__span-abertas">
+                        @if (inscricaoLiberada) {
+                            <i class="bi bi-check-circle"></i> Inscrição Liberada
+                        }
+                    </span>
+                </div>
+
+                <article class="section-modal__article mt-2 mb-4">
+                    <h3>Equipe</h3>
+                    <p>Relâmpago Marquinhos</p>
+
+                    <ul class="section-modal__ul">
+                        @if (equipe; as e) {
+                            <li>
+                                Mínimo de 3 integrantes
+                                @let a = requisitos(e.qtdeIntegrantes >= 3);
+                                <span [class]="a.classe">
+                                    <i class="bi" [class]="a.icon"></i> {{ a.texto }}
+                                </span>
+                            </li>
+    
+                            <li>
+                                Pontuação Mínima: 120 pts
+                                @let b = requisitos(e.pontuacaoTotal >= 120);
+                                <span [class]="b.classe">
+                                    <i class="bi" [class]="b.icon"></i> {{ b.texto }}
+                                </span>
+                            </li>
+    
+                            <li>
+                                Equipe Ativa
+                                @let c = requisitos(e.status === 'ativo');
+                                <span [class]="c.classe">
+                                    <i class="bi" [class]="c.icon"></i> {{ c.texto }}
+                                </span>
+                            </li>
+                        }
+                    </ul>
+                </article>
+            </div>
+
+            <div class="section-modal__buttom">
+                <button class="btn section-modal__btn-inscrever"><i class="bi bi-flag"></i> Inscrever</button>
+                <button class="btn section-modal__btn-cancelar" (click)="cancelar()"><i class="bi bi-x-circle"></i>
+                    Cancelar</button>
+            </div>
+        </section>
+    </div>
+</div>

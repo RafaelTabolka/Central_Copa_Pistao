@@ -15,6 +15,10 @@ export class EquipeService {
     return this.http.get<IEquipe[]>(this.baseUrl);
   }
 
+  buscarEquipePorId(id: string): Observable<IEquipe> {
+    return this.http.get<IEquipe>(`${this.baseUrl}/${id}`);
+  }
+
   cadastrarEquipe(equipe: IEquipe): Observable<IEquipe> {
     return this.http.post<IEquipe>(this.baseUrl, equipe);
   }

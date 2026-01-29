@@ -122,7 +122,7 @@ export class RegisterComponent {
       nomeEquipe: this.formCadastrar.controls.nomeEquipe.value,
       status: this.equipeStatus.Ativo,
       categoria: this.formCadastrar.controls.categoria.value,
-      qtdeParticipantes: this.formCadastrar.controls.qtdeParticipantes.value,
+      qtdeIntegrantes: this.formCadastrar.controls.qtdeParticipantes.value,
       participantes: participantes,
       pontuacaoTotal: 0,
       inscricoes: []
