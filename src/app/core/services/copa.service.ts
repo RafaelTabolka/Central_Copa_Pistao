@@ -14,4 +14,8 @@ export class CopaService {
   listarCopas(): Observable<ICopa[]> {
     return this.http.get<ICopa[]>(this.baseUrl);
   }
+
+  buscarCopaPorId(id: string): Observable<ICopa> {
+    return this.http.get<ICopa>(`${this.baseUrl}/${id}`);
+  }
 }

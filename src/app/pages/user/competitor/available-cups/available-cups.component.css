@@ -18,12 +18,6 @@
     margin: 0 auto;
 }
 
-.row {
-    /* outline: 1px solid red; */
-    /* display: flex;
-    justify-content: center; */
-}
-
 .col-container {
     /* outline: 1px solid red; */
     display: flex;
@@ -81,12 +75,6 @@
     /* width: 60%; */
     margin: 16px auto;
     text-align: center;
-}
-
-.section-cards__dados-copa {
-    /* outline: 1px solid red; */
-    /* display: flex;
-    flex-direction: column; */
 }
 
 .section-cards__data-status p {
@@ -213,10 +201,6 @@
     .section-cards__data-status p {
         margin-bottom: 0;
         margin-right: 16px;
-    }
-
-    .section-cards__dados-copa span {
-        /* outline: 1px solid red; */
     }
 
     .section-cards__buttons {

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from "@angular/router";
+import { ActivatedRoute, Router, RouterLink } from "@angular/router";
 import { CopaService } from '../../../../core/services/copa.service';
 import { ICopa } from '../../../../core/interfaces/models/copa/copa';
 import { DatePipe, NgClass } from '@angular/common';
@@ -28,10 +28,12 @@ export class AvailableCupsComponent implements OnInit {
     emAndamento: 'Em Andamento',
     inscricoesEncerradas: 'Inscrições Encerradas',
     copaFinalizada: 'Copa Finalizada'
-  }
+  };
 
   constructor(
     private copaService: CopaService,
+    private router: Router,
+    private route: ActivatedRoute,
     private modal: NgbModal
   ) {}
 
@@ -42,10 +44,24 @@ export class AvailableCupsComponent implements OnInit {
         // console.log(this.copas);
       }
     })
-  }
+  };
 
-  fazerInscricao(): void {
-    this.modal.open(SubscribeComponent, {centered: true, backdrop: 'static'});
-  }
-
+  abrirModal(copaId: string): void {
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: {inscrever: copaId}
+    });
+    
+    const ref = this.modal.open(SubscribeComponent, {centered: true, backdrop: 'static'});
+    
+    ref.componentInstance.copaId = copaId;
+    
+    ref.result.finally(() => {
+      this.router.navigate([], {
+        relativeTo: this.route,
+        queryParams: {inscrever: null}
+      }
+      );
+    });
+  };
 }
