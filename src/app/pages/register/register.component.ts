@@ -5,9 +5,11 @@ import { EquipeCategoria } from '../../core/interfaces/models/equipe/equipe-cate
 import { EquipeStatus } from '../../core/interfaces/models/equipe/equipe-status.enum';
 import { IEquipe } from '../../core/interfaces/models/equipe/equipe';
 import { EquipeService } from '../../core/services/equipe.service';
+import { UsuarioService } from '../../core/services/usuario.service';
+import { IUsuario } from '../../core/interfaces/models/usuarios/usuario';
 
-type Participantes = FormGroup<{
-  nomeParticipante: FormControl<string>;
+type Integrantes = FormGroup<{
+  nomeIntegrante: FormControl<string>;
   funcao: FormControl<string>;
   status: FormControl<EquipeStatus>;
 }>
@@ -19,8 +21,8 @@ type FormCadastrar = FormGroup<{
   confirmarSenha: FormControl<string>;
   nomeEquipe: FormControl<string>;
   categoria: FormControl<EquipeCategoria>;
-  qtdeParticipantes: FormControl<number>;
-  participantes: FormArray<Participantes>
+  qtdeIntegrantes: FormControl<number>;
+  integrantes: FormArray<Integrantes>
 }>
 
 @Component({
@@ -42,6 +44,7 @@ export class RegisterComponent {
   constructor(
     private fb: NonNullableFormBuilder,
     private equipeService: EquipeService,
+    private usuarioService: UsuarioService,
     private router: Router
   ) {
     this.formCadastrar = this.fb.group({
@@ -51,8 +54,8 @@ export class RegisterComponent {
       confirmarSenha: ['', [Validators.required, Validators.pattern(this.regexSenha)]],
       nomeEquipe: ['', [Validators.required]],
       categoria: [EquipeCategoria.Pista, [Validators.required]],
-      qtdeParticipantes: [{value: 3, disabled: true }, [Validators.required, Validators.min(3)]],
-      participantes: this.fb.array<Participantes>([
+      qtdeIntegrantes: [{value: 3, disabled: true }, [Validators.required, Validators.min(3)]],
+      integrantes: this.fb.array<Integrantes>([
         this.criarParticipante(),
         this.criarParticipante(),
         this.criarParticipante()
@@ -60,34 +63,34 @@ export class RegisterComponent {
     });
   };
 
-  get participantes(): FormArray<Participantes> {
-    return this.formCadastrar.controls.participantes;
+  get integrantes(): FormArray<Integrantes> {
+    return this.formCadastrar.controls.integrantes;
   };
 
-  private criarParticipante(): Participantes {
+  private criarParticipante(): Integrantes {
     return this.fb.group({
-      nomeParticipante: ['', [Validators.required]],
+      nomeIntegrante: ['', [Validators.required]],
       funcao: ['', [Validators.required]],
       status: [EquipeStatus.Ativo, [Validators.required]]
     });
   };
 
   adicionaParticipante(): void {
-    this.participantes.push(this.criarParticipante());
-    this.formCadastrar.controls.qtdeParticipantes.setValue(this.participantes.controls.length);
+    this.integrantes.push(this.criarParticipante());
+    this.formCadastrar.controls.qtdeIntegrantes.setValue(this.integrantes.controls.length);
     this.formCadastrar.updateValueAndValidity();
-    this.participantes.updateValueAndValidity();
+    this.integrantes.updateValueAndValidity();
   };
   
   excluirParticipante(i: number): void {
-    if (this.participantes.length <= 3) {
+    if (this.integrantes.length <= 3) {
       return;
     }
     
-    this.participantes.removeAt(i);
-    this.formCadastrar.controls.qtdeParticipantes.setValue(this.participantes.controls.length);
+    this.integrantes.removeAt(i);
+    this.formCadastrar.controls.qtdeIntegrantes.setValue(this.integrantes.controls.length);
     this.formCadastrar.updateValueAndValidity();
-    this.participantes.updateValueAndValidity();
+    this.integrantes.updateValueAndValidity();
   };
 
   cadastrarEquipe(): void {
@@ -105,37 +108,54 @@ export class RegisterComponent {
     const idUsuario = crypto.randomUUID();
     const idEquipe = crypto.randomUUID();
     
-    const participantesForm = this.formCadastrar.controls.participantes.getRawValue();
+    const integrantesForm = this.formCadastrar.controls.integrantes.getRawValue();
 
-    const participantes = participantesForm.map((participante) => {
+    const integrantes = integrantesForm.map((integrante) => {
       return {
         id: crypto.randomUUID(),
-        nome: participante.nomeParticipante,
-        funcao: participante.funcao,
-        status: participante.status
+        nome: integrante.nomeIntegrante,
+        funcao: integrante.funcao,
+        status: integrante.status
       };  
     });
 
     const equipe: IEquipe = {
       id: idEquipe,
       idUsuario: idUsuario,
-      nomeEquipe: this.formCadastrar.controls.nomeEquipe.value,
+      nomeEquipe: this.formCadastrar.controls.nomeEquipe.value.trim(),
       status: this.equipeStatus.Ativo,
       categoria: this.formCadastrar.controls.categoria.value,
-      qtdeIntegrantes: this.formCadastrar.controls.qtdeParticipantes.value,
-      participantes: participantes,
+      qtdeIntegrantes: this.formCadastrar.controls.qtdeIntegrantes.value,
+      integrantes: integrantes,
       pontuacaoTotal: 0,
       inscricoes: []
+    };
+
+    const usuario: IUsuario = {
+      id: idUsuario,
+      nomeUsuario: this.formCadastrar.controls.nomeUsuario.value.trim(),
+      email: this.formCadastrar.controls.email.value.trim(),
+      senha: this.formCadastrar.controls.senha.value,
+      perfil: 'competidor',
+      equipe: {
+        id: idEquipe,
+        nomeEquipe: equipe.nomeEquipe
+      }
     };
 
     this.equipeService.cadastrarEquipe(equipe).subscribe({
       next: () => {
         localStorage.setItem('idEquipe', idEquipe);
+        localStorage.setItem('nomeEquipe', equipe.nomeEquipe);
         localStorage.setItem('nomeUsuario', this.formCadastrar.controls.nomeUsuario.value);
         localStorage.setItem('accessToken', 'Tem Token aqui');
         // console.log('cadastrou')
         this.router.navigateByUrl('/competitor/available-cups', {replaceUrl: true});
+
+        this.usuarioService.cadastrarUsuario(usuario).subscribe({
+          next: () => {}
+        });
       }
-    })
+    });
   };
 }

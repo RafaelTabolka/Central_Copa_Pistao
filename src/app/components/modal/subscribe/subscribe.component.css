@@ -28,6 +28,10 @@
     flex-direction: column;
 }
 
+.section-modal__span {
+    width: 210px;
+}
+
 /* .section-modal__data-status h2 {
     color: #0F172A;
     font-weight: bold;
@@ -73,7 +77,8 @@
 }
 
 .section-modal__span-atendido,
-.section-modal__span-pendente {
+.section-modal__span-pendente,
+.section-modal__span {
     font-weight: bold;
     padding: 4px 8px;
     border-radius: 12px;
@@ -88,7 +93,8 @@
     color: #15803D;
 }
 
-.section-modal__span-pendente {
+.section-modal__span-pendente,
+.section-modal__span {
     background-color: rgba(246, 192, 27, .2);
     border: 1px solid rgba(246, 192, 27, .22);
     color: #0F172A;

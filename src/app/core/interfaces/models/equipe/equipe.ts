@@ -5,10 +5,10 @@ export interface IEquipe {
     id: string,
     idUsuario: string,
     nomeEquipe: string,
-    status: EquipeStatus | null,
-    categoria: EquipeCategoria | null,
+    status: EquipeStatus,
+    categoria: EquipeCategoria,
     qtdeIntegrantes: number,
-    participantes: {
+    integrantes: {
         id: string,
         nome: string,
         funcao: string,
@@ -25,15 +25,15 @@ export interface IEquipe {
         dataTermino: string,
         descricao: string,
         preRequisito: {
-            minimoParticipantes: number,
+            minimoIntegrantes: number,
             pontuacaoMinima: number
         },
-        posicaoEquipe: number,
+        posicaoEquipe: number | null,
         pontosAdicionais: {
-            primeiroLugar: number | null,
-            segundoLugar: number | null,
-            terceiroLugar: number | null
-        } | null,
-        pontuacaoEquipe: number
+            primeiroLugar: number,
+            segundoLugar: number,
+            terceiroLugar: number
+        },
+        pontuacaoEquipe: number | null
     }[]
 }

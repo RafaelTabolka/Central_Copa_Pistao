@@ -14,4 +14,8 @@ export class UsuarioService {
   listarUsuarios(): Observable<IUsuario[]> {
     return this.http.get<IUsuario[]>(this.baseUrl);
   }
+
+  cadastrarUsuario(usuario: IUsuario): Observable<IUsuario> {
+    return this.http.post<IUsuario>(this.baseUrl, usuario);
+  }
 }

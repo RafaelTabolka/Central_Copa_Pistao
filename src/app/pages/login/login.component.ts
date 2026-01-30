@@ -49,7 +49,8 @@ export class LoginComponent {
           this.router.navigateByUrl('/admin/cups', {replaceUrl: true});
         } else {
           this.router.navigateByUrl('/competitor/available-cups', {replaceUrl: true});
-          localStorage.setItem('idEquipe', temCadastro.equipe!.id)
+          localStorage.setItem('idEquipe', temCadastro.equipe!.id);
+          localStorage.setItem('nomeEquipe', temCadastro.equipe!.nomeEquipe);
         }
 
         localStorage.setItem('nomeUsuario', temCadastro.nomeUsuario);
