@@ -1,9 +1,7 @@
-import { CopaStatus } from "./copa-status.enum";
-
-export interface ICopa {
+export interface IEquipeInscricao {
     id: string,
     nomeCopa: string,
-    status: CopaStatus,
+    status: string,
     imagemLogo: string,
     dataInicio: string,
     dataTermino: string,
@@ -12,13 +10,11 @@ export interface ICopa {
         minimoIntegrantes: number,
         pontuacaoMinima: number
     },
+    posicaoEquipe: number | null,
     pontosAdicionais: {
         primeiroLugar: number,
         segundoLugar: number,
         terceiroLugar: number
     },
-    equipes: {
-        idEquipe: string,
-        nomeEquipe: string
-    }[]
+    pontuacaoEquipe: number | null
 }

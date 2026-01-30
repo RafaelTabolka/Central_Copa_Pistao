@@ -75,7 +75,7 @@
                         <div class="col-12 col-md-4">
                             <label for="qtdeIntegrantes" class="form-label">Qtde de Participantes*</label>
                             <input type="number" class="form-control" id="qtdeIntegrantes" name="qtdeIntegrantes"
-                                placeholder="Ex: 2" min="2" formControlName="qtdeParticipantes" readonly>
+                                placeholder="Ex: 2" min="2" formControlName="qtdeIntegrantes" readonly>
                         </div>
                     </div>
 
@@ -90,32 +90,32 @@
                             Participante</button>
                     </div>
 
-                    <div formArrayName="participantes">
-                        @for (grupo of participantes.controls; track grupo) {
+                    <div formArrayName="integrantes">
+                        @for (grupo of integrantes.controls; track grupo) {
                         <div class="row" [formGroupName]="$index">
                             <div class="col-12 col-md-4 mb-3">
                                 <label for="participante1" class="form-label">Participante #{{ $index + 1 }}</label>
 
                                 <button class="btn-trash ms-2" type="button" (click)="excluirParticipante($index)"
-                                    [disabled]="participantes.controls.length <= 3">
+                                    [disabled]="integrantes.controls.length <= 3">
                                     <i class="bi bi-trash"></i>
                                 </button>
 
-                                <input type="text" class="form-control" id="participante1" name="participante1"
-                                    placeholder="Ex: Catchau do relâmpago" formControlName="nomeParticipante">
+                                <input type="text" class="form-control" id="participante1"
+                                    placeholder="Ex: Catchau do relâmpago" formControlName="nomeIntegrante">
                             </div>
 
                             <div class="col-12 col-md-4 mb-3">
                                 <label for="funcao" class="form-label">Função</label>
 
-                                <input type="text" class="form-control" id="funcao" name="funcao"
+                                <input type="text" class="form-control" id="funcao"
                                     placeholder="Ex: Mecânico" formControlName="funcao">
                             </div>
 
                             <div class="col-12 col-md-4 mb-3">
                                 <label for="status" class="form-label">Status*</label>
 
-                                <select class="form-select" name="status" id="status"
+                                <select class="form-select" id="status"
                                     aria-label="Default select example" formControlName="status">
                                     <!-- <option [ngValue]="null" disabled>Selecione...</option> -->
                                     <option [ngValue]="equipeStatus.Ativo">Ativo</option>

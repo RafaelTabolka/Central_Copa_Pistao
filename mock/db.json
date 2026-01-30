@@ -87,34 +87,34 @@
           "dataTermino": "2025-11-23",
           "descricao": "Pontos: 150, 145, 140... até 5; a partir de 5, todo mundo recebe 5.",
           "preRequisito": {
-            "minimoParticipantes": 4,
+            "minimoIntegrantes": 4,
             "pontuacaoMinima": 80
           },
           "posicaoEquipe": 1,
           "pontosAdicionais": {
-            "primeiroLugar": null,
-            "segundoLugar": null,
-            "terceiroLugar": null
+            "primeiroLugar": 0,
+            "segundoLugar": 0,
+            "terceiroLugar": 0
           },
           "pontuacaoEquipe": 150
         },
         {
-          "id": "b9f0a6d6-8c62-4e35-90c2-2f3b8cfa1c01",
-          "nomeCopa": "Copa Pistão 2026",
+          "id": "3e2a1c44-7d12-4b6c-9a77-1f2e3d4c5b6a",
+          "nomeCopa": "Copa Desert Dash 2026 - Qualificatória",
           "status": "inscricoesAbertas",
-          "imagemLogo": "/assets/img/user/competitor/available_cups/img_copas_disponiveis_radiator_springs.png",
-          "dataInicio": "2026-02-14",
-          "dataTermino": "2026-02-16",
-          "descricao": "Inscrições abertas para a próxima etapa oficial.",
+          "imagemLogo": "/assets/img/user/competitor/available_cups/img_copas_disponiveis_desert_dash.png",
+          "dataInicio": "2026-04-10",
+          "dataTermino": "2026-04-12",
+          "descricao": "Inscrições abertas para a qualificatória no deserto. Vagas limitadas.",
           "preRequisito": {
-            "minimoParticipantes": 4,
-            "pontuacaoMinima": 35
+            "minimoIntegrantes": 4,
+            "pontuacaoMinima": 60
           },
           "posicaoEquipe": null,
           "pontosAdicionais": {
-            "primeiroLugar": null,
-            "segundoLugar": null,
-            "terceiroLugar": null
+            "primeiroLugar": 0,
+            "segundoLugar": 0,
+            "terceiroLugar": 0
           },
           "pontuacaoEquipe": null
         }
@@ -170,14 +170,14 @@
           "dataTermino": "2025-11-23",
           "descricao": "Pontos: 150, 145, 140... até 5; a partir de 5, todo mundo recebe 5.",
           "preRequisito": {
-            "minimoParticipantes": 4,
+            "minimoIntegrantes": 4,
             "pontuacaoMinima": 80
           },
           "posicaoEquipe": 2,
           "pontosAdicionais": {
-            "primeiroLugar": null,
-            "segundoLugar": null,
-            "terceiroLugar": null
+            "primeiroLugar": 0,
+            "segundoLugar": 0,
+            "terceiroLugar": 0
           },
           "pontuacaoEquipe": 145
         },
@@ -190,7 +190,7 @@
           "dataTermino": "2026-01-28",
           "descricao": "Etapa em andamento. Inscrições bloqueadas durante as corridas.",
           "preRequisito": {
-            "minimoParticipantes": 5,
+            "minimoIntegrantes": 5,
             "pontuacaoMinima": 45
           },
           "posicaoEquipe": null,
@@ -210,14 +210,54 @@
           "dataTermino": "2026-02-16",
           "descricao": "Inscrições abertas para a próxima etapa oficial.",
           "preRequisito": {
-            "minimoParticipantes": 4,
+            "minimoIntegrantes": 4,
             "pontuacaoMinima": 35
           },
           "posicaoEquipe": null,
           "pontosAdicionais": {
-            "primeiroLugar": null,
-            "segundoLugar": null,
-            "terceiroLugar": null
+            "primeiroLugar": 0,
+            "segundoLugar": 0,
+            "terceiroLugar": 0
+          },
+          "pontuacaoEquipe": null
+        },
+        {
+          "id": "3e2a1c44-7d12-4b6c-9a77-1f2e3d4c5b6a",
+          "nomeCopa": "Copa Desert Dash 2026 - Qualificatória",
+          "status": "inscricoesAbertas",
+          "imagemLogo": "/assets/img/user/competitor/available_cups/img_copas_disponiveis_desert_dash.png",
+          "dataInicio": "2026-04-10",
+          "dataTermino": "2026-04-12",
+          "descricao": "Inscrições abertas para a qualificatória no deserto. Vagas limitadas.",
+          "preRequisito": {
+            "minimoIntegrantes": 4,
+            "pontuacaoMinima": 60
+          },
+          "posicaoEquipe": null,
+          "pontosAdicionais": {
+            "primeiroLugar": 0,
+            "segundoLugar": 0,
+            "terceiroLugar": 0
+          },
+          "pontuacaoEquipe": null
+        },
+        {
+          "id": "5a7c9d10-2b3c-4d5e-8f90-1a2b3c4d5e6f",
+          "nomeCopa": "Copa Night Run 2026 - Edição Neon",
+          "status": "inscricoesAbertas",
+          "imagemLogo": "/assets/img/user/competitor/available_cups/img_copas_disponiveis_night_run.png",
+          "dataInicio": "2026-05-22",
+          "dataTermino": "2026-05-24",
+          "descricao": "Corrida noturna com clima neon. Inscrições abertas para novos competidores.",
+          "preRequisito": {
+            "minimoIntegrantes": 5,
+            "pontuacaoMinima": 50
+          },
+          "posicaoEquipe": null,
+          "pontosAdicionais": {
+            "primeiroLugar": 0,
+            "segundoLugar": 0,
+            "terceiroLugar": 0
           },
           "pontuacaoEquipe": null
         }
@@ -279,14 +319,14 @@
           "dataTermino": "2025-11-23",
           "descricao": "Pontos: 150, 145, 140... até 5; a partir de 5, todo mundo recebe 5.",
           "preRequisito": {
-            "minimoParticipantes": 4,
+            "minimoIntegrantes": 4,
             "pontuacaoMinima": 80
           },
           "posicaoEquipe": 3,
           "pontosAdicionais": {
-            "primeiroLugar": null,
-            "segundoLugar": null,
-            "terceiroLugar": null
+            "primeiroLugar": 0,
+            "segundoLugar": 0,
+            "terceiroLugar": 0
           },
           "pontuacaoEquipe": 140
         },
@@ -299,7 +339,7 @@
           "dataTermino": "2026-01-28",
           "descricao": "Etapa em andamento. Inscrições bloqueadas durante as corridas.",
           "preRequisito": {
-            "minimoParticipantes": 5,
+            "minimoIntegrantes": 5,
             "pontuacaoMinima": 45
           },
           "posicaoEquipe": null,
@@ -319,14 +359,14 @@
           "dataTermino": "2026-03-22",
           "descricao": "Inscrições encerradas. Etapa aguardando início.",
           "preRequisito": {
-            "minimoParticipantes": 6,
+            "minimoIntegrantes": 6,
             "pontuacaoMinima": 25
           },
           "posicaoEquipe": null,
           "pontosAdicionais": {
             "primeiroLugar": 10,
-            "segundoLugar": null,
-            "terceiroLugar": null
+            "segundoLugar": 0,
+            "terceiroLugar": 0
           },
           "pontuacaoEquipe": null
         },
@@ -339,14 +379,34 @@
           "dataTermino": "2026-02-16",
           "descricao": "Inscrições abertas para a próxima etapa oficial.",
           "preRequisito": {
-            "minimoParticipantes": 4,
+            "minimoIntegrantes": 4,
             "pontuacaoMinima": 35
           },
           "posicaoEquipe": null,
           "pontosAdicionais": {
-            "primeiroLugar": null,
-            "segundoLugar": null,
-            "terceiroLugar": null
+            "primeiroLugar": 0,
+            "segundoLugar": 0,
+            "terceiroLugar": 0
+          },
+          "pontuacaoEquipe": null
+        },
+        {
+          "id": "5a7c9d10-2b3c-4d5e-8f90-1a2b3c4d5e6f",
+          "nomeCopa": "Copa Night Run 2026 - Edição Neon",
+          "status": "inscricoesAbertas",
+          "imagemLogo": "/assets/img/user/competitor/available_cups/img_copas_disponiveis_night_run.png",
+          "dataInicio": "2026-05-22",
+          "dataTermino": "2026-05-24",
+          "descricao": "Corrida noturna com clima neon. Inscrições abertas para novos competidores.",
+          "preRequisito": {
+            "minimoIntegrantes": 5,
+            "pontuacaoMinima": 50
+          },
+          "posicaoEquipe": null,
+          "pontosAdicionais": {
+            "primeiroLugar": 0,
+            "segundoLugar": 0,
+            "terceiroLugar": 0
           },
           "pontuacaoEquipe": null
         }
@@ -363,19 +423,15 @@
       "dataTermino": "2026-02-16",
       "descricao": "Inscrições abertas para a próxima etapa oficial.",
       "preRequisito": {
-        "minimoParticipantes": 4,
+        "minimoIntegrantes": 4,
         "pontuacaoMinima": 35
       },
       "pontosAdicionais": {
-        "primeiroLugar": null,
-        "segundoLugar": null,
-        "terceiroLugar": null
+        "primeiroLugar": 0,
+        "segundoLugar": 0,
+        "terceiroLugar": 0
       },
       "equipes": [
-        {
-          "idEquipe": "a7c34f41-2eba-4cce-85f4-c605e2690aaa",
-          "nomeEquipe": "Raio de Radiator Springs"
-        },
         {
           "idEquipe": "a6e9d6f5-30d6-4c4c-8b03-6d9cfe98a1f8",
           "nomeEquipe": "Porsche Radiator"
@@ -395,47 +451,26 @@
       "dataTermino": "2025-11-23",
       "descricao": "Pontos: 150, 145, 140... até 5; a partir de 5, todo mundo recebe 5.",
       "preRequisito": {
-        "minimoParticipantes": 4,
+        "minimoIntegrantes": 4,
         "pontuacaoMinima": 80
       },
       "pontosAdicionais": {
-        "primeiroLugar": null,
-        "segundoLugar": null,
-        "terceiroLugar": null
+        "primeiroLugar": 0,
+        "segundoLugar": 0,
+        "terceiroLugar": 0
       },
       "equipes": [
         {
           "idEquipe": "a7c34f41-2eba-4cce-85f4-c605e2690aaa",
-          "nomeEquipe": "Raio de Radiator Springs",
-          "posicaoEquipe": 1,
-          "pontosAdicionais": {
-            "primeiroLugar": null,
-            "segundoLugar": null,
-            "terceiroLugar": null
-          },
-          "pontuacaoEquipe": 150
+          "nomeEquipe": "Raio de Radiator Springs"
         },
         {
           "idEquipe": "a6e9d6f5-30d6-4c4c-8b03-6d9cfe98a1f8",
-          "nomeEquipe": "Porsche Radiator",
-          "posicaoEquipe": 2,
-          "pontosAdicionais": {
-            "primeiroLugar": null,
-            "segundoLugar": null,
-            "terceiroLugar": null
-          },
-          "pontuacaoEquipe": 145
+          "nomeEquipe": "Porsche Radiator"
         },
         {
           "idEquipe": "2f1e6c3a-0b5d-4c2b-9d3a-1e5d0a2c4f55",
-          "nomeEquipe": "Velocidade Dinoco",
-          "posicaoEquipe": 3,
-          "pontosAdicionais": {
-            "primeiroLugar": null,
-            "segundoLugar": null,
-            "terceiroLugar": null
-          },
-          "pontuacaoEquipe": 140
+          "nomeEquipe": "Velocidade Dinoco"
         }
       ]
     },
@@ -448,7 +483,7 @@
       "dataTermino": "2026-01-28",
       "descricao": "Etapa em andamento. Inscrições bloqueadas durante as corridas.",
       "preRequisito": {
-        "minimoParticipantes": 5,
+        "minimoIntegrantes": 5,
         "pontuacaoMinima": 45
       },
       "pontosAdicionais": {
@@ -476,15 +511,71 @@
       "dataTermino": "2026-03-22",
       "descricao": "Inscrições encerradas. Etapa aguardando início.",
       "preRequisito": {
-        "minimoParticipantes": 6,
+        "minimoIntegrantes": 6,
         "pontuacaoMinima": 25
       },
       "pontosAdicionais": {
         "primeiroLugar": 10,
-        "segundoLugar": null,
-        "terceiroLugar": null
+        "segundoLugar": 0,
+        "terceiroLugar": 0
       },
       "equipes": [
+        {
+          "idEquipe": "2f1e6c3a-0b5d-4c2b-9d3a-1e5d0a2c4f55",
+          "nomeEquipe": "Velocidade Dinoco"
+        }
+      ]
+    },
+    {
+      "id": "3e2a1c44-7d12-4b6c-9a77-1f2e3d4c5b6a",
+      "nomeCopa": "Copa Desert Dash 2026 - Qualificatória",
+      "status": "inscricoesAbertas",
+      "imagemLogo": "/assets/img/user/competitor/available_cups/img_copas_disponiveis_desert_dash.png",
+      "dataInicio": "2026-04-10",
+      "dataTermino": "2026-04-12",
+      "descricao": "Inscrições abertas para a qualificatória no deserto. Vagas limitadas.",
+      "preRequisito": {
+        "minimoIntegrantes": 4,
+        "pontuacaoMinima": 60
+      },
+      "pontosAdicionais": {
+        "primeiroLugar": 0,
+        "segundoLugar": 0,
+        "terceiroLugar": 0
+      },
+      "equipes": [
+        {
+          "idEquipe": "a7c34f41-2eba-4cce-85f4-c605e2690aaa",
+          "nomeEquipe": "Raio de Radiator Springs"
+        },
+        {
+          "idEquipe": "a6e9d6f5-30d6-4c4c-8b03-6d9cfe98a1f8",
+          "nomeEquipe": "Porsche Radiator"
+        }
+      ]
+    },
+    {
+      "id": "5a7c9d10-2b3c-4d5e-8f90-1a2b3c4d5e6f",
+      "nomeCopa": "Copa Night Run 2026 - Edição Neon",
+      "status": "inscricoesAbertas",
+      "imagemLogo": "/assets/img/user/competitor/available_cups/img_copas_disponiveis_night_run.png",
+      "dataInicio": "2026-05-22",
+      "dataTermino": "2026-05-24",
+      "descricao": "Corrida noturna com clima neon. Inscrições abertas para novos competidores.",
+      "preRequisito": {
+        "minimoIntegrantes": 5,
+        "pontuacaoMinima": 50
+      },
+      "pontosAdicionais": {
+        "primeiroLugar": 0,
+        "segundoLugar": 0,
+        "terceiroLugar": 0
+      },
+      "equipes": [
+        {
+          "idEquipe": "a6e9d6f5-30d6-4c4c-8b03-6d9cfe98a1f8",
+          "nomeEquipe": "Porsche Radiator"
+        },
         {
           "idEquipe": "2f1e6c3a-0b5d-4c2b-9d3a-1e5d0a2c4f55",
           "nomeEquipe": "Velocidade Dinoco"

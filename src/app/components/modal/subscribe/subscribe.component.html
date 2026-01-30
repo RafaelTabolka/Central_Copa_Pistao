@@ -9,11 +9,10 @@
                 <div class="section-modal__data-status">
                     <h2 class="mt-2">Matrícula</h2>
 
-                    @if (inscricaoLiberada) {
-                        <span class="section-modal__span-abertas">
-                            <i class="bi bi-check-circle"></i> Inscrição Liberada
-                        </span>
-                    }
+                    @let inscricao = mensagemInscricao();
+                    <span [class]="inscricao.classe">
+                        <i [class]="inscricao.icon"></i> {{ inscricao.texto }}
+                    </span>
                 </div>
 
                 <article class="section-modal__article mt-2 mb-4">
@@ -23,18 +22,18 @@
                     <ul class="section-modal__ul">
                         @if (equipe; as e) {
                             <li>
-                                Mínimo de 3 integrantes
-                                @let a = requisitos(e.qtdeIntegrantes >= 3);
+                                Mínimo de {{ copa.preRequisito.minimoIntegrantes }} integrantes
+                                @let a = requisitos(e.qtdeIntegrantes >= copa.preRequisito.minimoIntegrantes);
                                 <span [class]="a.classe">
-                                    <i class="bi" [class]="a.icon"></i> {{ a.texto }}
+                                    <i [class]="a.icon"></i> {{ a.texto }}
                                 </span>
                             </li>
     
                             <li>
-                                Pontuação Mínima: 120 pts
-                                @let b = requisitos(e.pontuacaoTotal >= 120);
+                                Pontuação Mínima: {{ copa.preRequisito.pontuacaoMinima }} pts
+                                @let b = requisitos(e.pontuacaoTotal >= copa.preRequisito.pontuacaoMinima);
                                 <span [class]="b.classe">
-                                    <i class="bi" [class]="b.icon"></i> {{ b.texto }}
+                                    <i [class]="b.icon"></i> {{ b.texto }}
                                 </span>
                             </li>
     
@@ -42,7 +41,7 @@
                                 Equipe Ativa
                                 @let c = requisitos(e.status === 'ativo');
                                 <span [class]="c.classe">
-                                    <i class="bi" [class]="c.icon"></i> {{ c.texto }}
+                                    <i [class]="c.icon"></i> {{ c.texto }}
                                 </span>
                             </li>
                         }
@@ -51,7 +50,8 @@
             </div>
 
             <div class="section-modal__buttom">
-                <button class="btn section-modal__btn-inscrever"><i class="bi bi-flag"></i> Inscrever</button>
+                @let d = statusInscricao();
+                <button class="btn section-modal__btn-inscrever" [disabled]="!d" (click)="fazerInscricao()"><i class="bi bi-flag"></i> Inscrever</button>
                 <button class="btn section-modal__btn-cancelar" (click)="cancelar()"><i class="bi bi-x-circle"></i>
                     Cancelar</button>
             </div>
