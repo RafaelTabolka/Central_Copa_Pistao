@@ -51,7 +51,15 @@
 
             <div class="section-modal__buttom">
                 @let d = statusInscricao();
-                <button class="btn section-modal__btn-inscrever" [disabled]="!d" (click)="fazerInscricao()"><i class="bi bi-flag"></i> Inscrever</button>
+                <button class="btn section-modal__btn-inscrever" [disabled]="!d || inscricaoRealizada" (click)="fazerInscricao()">
+                    @if (inscricaoRealizada) {
+                        <i class="bi bi-check-circle"></i> Inscrito
+                    } 
+                    
+                    @else {                        
+                        <i class="bi bi-flag"></i> Inscrever
+                    }
+                </button>
                 <button class="btn section-modal__btn-cancelar" (click)="cancelar()"><i class="bi bi-x-circle"></i>
                     Cancelar</button>
             </div>

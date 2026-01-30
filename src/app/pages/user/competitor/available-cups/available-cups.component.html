@@ -44,8 +44,16 @@
                     </ul>
     
                     <div class="section-cards__buttons">
-                        <button class="btn section-cards__btn-inscrever" (click)="abrirModal(copa.id)" [disabled]="copa.status !== 'inscricoesAbertas'">
-                            <i class="bi bi-flag"></i> Inscrever
+                        <button class="btn section-cards__btn-inscrever" (click)="abrirModal(copa.id)" 
+                        [disabled]="copa.status !== 'inscricoesAbertas' ||
+                        equipeEstaCadastrada(copa)">
+                            @if (equipeEstaCadastrada(copa)) {
+                                <i class="bi bi-check-circle"></i> Inscrito
+                            }
+                            
+                            @else {
+                                <i class="bi bi-flag"></i> Inscrever
+                            }
                         </button>
 
                         <button routerLink="/competitor/available-cups/a" class="btn section-cards__btn-detalhes">
