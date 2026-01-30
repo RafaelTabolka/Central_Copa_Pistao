@@ -79,36 +79,16 @@
       "pontuacaoTotal": 150,
       "inscricoes": [
         {
-          "id": "7b4a34b8-5c1a-4a9b-8e9f-0b764c0c8b40",
-          "nomeCopa": "Copa Desert Dash 2025",
-          "status": "copaFinalizada",
-          "imagemLogo": "/assets/img/user/competitor/available_cups/img_copas_disponiveis_desert_dash.png",
-          "dataInicio": "2025-11-21",
-          "dataTermino": "2025-11-23",
-          "descricao": "Pontos: 150, 145, 140... até 5; a partir de 5, todo mundo recebe 5.",
-          "preRequisito": {
-            "minimoIntegrantes": 4,
-            "pontuacaoMinima": 80
-          },
-          "posicaoEquipe": 1,
-          "pontosAdicionais": {
-            "primeiroLugar": 0,
-            "segundoLugar": 0,
-            "terceiroLugar": 0
-          },
-          "pontuacaoEquipe": 150
-        },
-        {
-          "id": "3e2a1c44-7d12-4b6c-9a77-1f2e3d4c5b6a",
-          "nomeCopa": "Copa Desert Dash 2026 - Qualificatória",
+          "id": "b9f0a6d6-8c62-4e35-90c2-2f3b8cfa1c01",
+          "nomeCopa": "Copa Pistão 2026",
           "status": "inscricoesAbertas",
-          "imagemLogo": "/assets/img/user/competitor/available_cups/img_copas_disponiveis_desert_dash.png",
-          "dataInicio": "2026-04-10",
-          "dataTermino": "2026-04-12",
-          "descricao": "Inscrições abertas para a qualificatória no deserto. Vagas limitadas.",
+          "imagemLogo": "/assets/img/user/competitor/available_cups/img_copas_disponiveis_radiator_springs.png",
+          "dataInicio": "2026-02-14",
+          "dataTermino": "2026-02-16",
+          "descricao": "Inscrições abertas para a próxima etapa oficial.",
           "preRequisito": {
             "minimoIntegrantes": 4,
-            "pontuacaoMinima": 60
+            "pontuacaoMinima": 35
           },
           "posicaoEquipe": null,
           "pontosAdicionais": {
@@ -439,6 +419,10 @@
         {
           "idEquipe": "2f1e6c3a-0b5d-4c2b-9d3a-1e5d0a2c4f55",
           "nomeEquipe": "Velocidade Dinoco"
+        },
+        {
+          "idEquipe": "a7c34f41-2eba-4cce-85f4-c605e2690aaa",
+          "nomeEquipe": "Raio de Radiator Springs"
         }
       ]
     },
@@ -460,10 +444,6 @@
         "terceiroLugar": 0
       },
       "equipes": [
-        {
-          "idEquipe": "a7c34f41-2eba-4cce-85f4-c605e2690aaa",
-          "nomeEquipe": "Raio de Radiator Springs"
-        },
         {
           "idEquipe": "a6e9d6f5-30d6-4c4c-8b03-6d9cfe98a1f8",
           "nomeEquipe": "Porsche Radiator"
@@ -544,10 +524,6 @@
         "terceiroLugar": 0
       },
       "equipes": [
-        {
-          "idEquipe": "a7c34f41-2eba-4cce-85f4-c605e2690aaa",
-          "nomeEquipe": "Raio de Radiator Springs"
-        },
         {
           "idEquipe": "a6e9d6f5-30d6-4c4c-8b03-6d9cfe98a1f8",
           "nomeEquipe": "Porsche Radiator"

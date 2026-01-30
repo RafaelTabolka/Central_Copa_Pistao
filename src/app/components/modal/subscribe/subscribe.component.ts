@@ -57,6 +57,7 @@ export class SubscribeComponent implements OnInit {
   }
 
   inscricaoLiberada: boolean = false;
+  inscricaoRealizada: boolean = false;
   copaId: string = '';
 
   constructor(
@@ -116,7 +117,7 @@ export class SubscribeComponent implements OnInit {
 
     this.equipeService.fazerInscricao(localStorage.getItem('idEquipe')!, novasInscricoes).subscribe({
       next: (equipe) => {
-        console.log(equipe)
+        this.inscricaoRealizada = true;
       }
     })
 

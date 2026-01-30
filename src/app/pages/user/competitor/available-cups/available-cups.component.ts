@@ -30,6 +30,8 @@ export class AvailableCupsComponent implements OnInit {
     copaFinalizada: 'Copa Finalizada'
   };
 
+  jaEstaInscrito: boolean = false;
+
   constructor(
     private copaService: CopaService,
     private router: Router,
@@ -62,6 +64,14 @@ export class AvailableCupsComponent implements OnInit {
         queryParams: {inscrever: null}
       }
       );
+
+      this.ngOnInit();
     });
   };
+
+  equipeEstaCadastrada(copa: ICopa): boolean {
+    let temCadastro: boolean = copa.equipes.some((equipe) => equipe.idEquipe === localStorage.getItem('idEquipe'));
+
+    return temCadastro;
+  }
 }
