@@ -17,7 +17,7 @@
 
                 <article class="section-modal__article mt-2 mb-4">
                     <h3>Equipe</h3>
-                    <p>Relâmpago Marquinhos</p>
+                    <p>{{ equipe.nomeEquipe }}</p>
 
                     <ul class="section-modal__ul">
                         @if (equipe; as e) {
@@ -50,8 +50,7 @@
             </div>
 
             <div class="section-modal__buttom">
-                @let d = statusInscricao();
-                <button class="btn section-modal__btn-inscrever" [disabled]="!d || inscricaoRealizada" (click)="fazerInscricao()">
+                <button class="btn section-modal__btn-inscrever" [disabled]="!statusInscricao() || inscricaoRealizada" (click)="fazerInscricao()">
                     @if (inscricaoRealizada) {
                         <i class="bi bi-check-circle"></i> Inscrito
                     } 

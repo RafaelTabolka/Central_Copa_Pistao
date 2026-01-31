@@ -42,14 +42,21 @@
 
 
 
-    <div class="menu-lateral__select">
+    <div class="menu-lateral__dropdown">
         <label for="" class="form-label"><i class="bi bi-person-circle mb-0 me-1"></i></label>
-        
-        <select class="menu-lateral__form-select" aria-label="Default select example">
-            <option selected hidden>Doc Hudson</option>
-            <option value="1">
-                <button>&larr;Sair</button>
-            </option>
-        </select>
+
+        <div class="dropdown">
+            <button class="btn dropdown-toggle" data-bs-toggle="dropdown">
+                doc
+            </button>
+
+            <ul class="dropdown-menu">
+                <li>
+                    <button class="dropdown-item">
+                        <i class="bi bi-arrow-left"></i> Sair
+                    </button>
+                </li>
+            </ul>
+        </div>
     </div>
 </aside>
