@@ -23,8 +23,8 @@
                             <p>
                                 <i class="bi bi-calendar3 me-1"></i>
                                 
-                                <time datetime="2026/02/10">{{ copa.dataInicio | date:'dd/MM/yyyy' }}</time> a
-                                <time datetime="2026/02/12">{{ copa.dataTermino | date:'dd/MM/yyyy' }}</time>
+                                <time>{{ copa.dataInicio | date:'dd/MM/yyyy' }}</time> a
+                                <time>{{ copa.dataTermino | date:'dd/MM/yyyy' }}</time>
                             </p>
                             
                             <span [ngClass]="copaStatusEstilos[copa.status]">{{ copaStatusNomes[copa.status] }}</span>
@@ -56,7 +56,7 @@
                             }
                         </button>
 
-                        <button routerLink="/competitor/available-cups/a" class="btn section-cards__btn-detalhes">
+                        <button [routerLink]="['/competitor/available-cups', copa.id]" class="btn section-cards__btn-detalhes">
                             <i class="bi bi-eye"></i> Detalhes
                         </button>
                     </div>

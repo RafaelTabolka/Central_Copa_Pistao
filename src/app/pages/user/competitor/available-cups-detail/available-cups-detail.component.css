@@ -47,6 +47,13 @@
     color: #15803D;
 }
 
+.section-cards__ul .section-cards__span-pendente,
+.section-cards__data-status .section-cards__span-pendente {
+    background-color: rgba(246, 192, 27, .2);
+    border: 1px solid rgba(246, 192, 27, .22);
+    color: #0F172A;
+}
+
 .section-cards__span-andamento {
     background-color: rgba(14, 165, 233, .16);
     border: 1px solid rgba(14, 165, 233, .2);
@@ -220,6 +227,14 @@
     background-color: rgba(49, 165, 231, .30);
     border-color: rgba(49, 165, 231, .75);
     box-shadow: 0 8px 18px rgba(49, 165, 231, .18);
+}
+
+.btn.section-cards__btn-inscrever:disabled {
+    pointer-events: auto;
+    cursor: not-allowed;
+    box-shadow: none;
+    background-color: #E5E7EB;
+    border: 1px solid rgba(0, 0, 0, .6);
 }
 
 @media (width >=576px) {

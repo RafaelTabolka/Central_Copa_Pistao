@@ -21,8 +21,8 @@ type StatusInscricao = { ok: boolean, texto: string, classe: string, icon: strin
   styleUrl: './subscribe.component.css'
 })
 export class SubscribeComponent implements OnInit {
-  @Input() titulo: string = 'Fazer inscrição';
-  @Input() mensagem: string = 'Detalhes';
+  // @Input() titulo: string = 'Fazer inscrição';
+  // @Input() mensagem: string = 'Detalhes';
 
   equipe: IEquipe = {
     id: '',
@@ -54,7 +54,7 @@ export class SubscribeComponent implements OnInit {
       terceiroLugar: 0
     },
     equipes: []
-  }
+  };
 
   inscricaoLiberada: boolean = false;
   inscricaoRealizada: boolean = false;
@@ -80,12 +80,10 @@ export class SubscribeComponent implements OnInit {
         this.copa = copa;
         // console.log(this.copa)
       }
-    })
-  }
+    });
+  };
 
   fazerInscricao(): void {
-    // this.modalAtivo.close(true);
-
     const inscricao: IEquipeInscricao = {
       id: this.copa.id,
       nomeCopa: this.copa.nomeCopa,
@@ -105,7 +103,7 @@ export class SubscribeComponent implements OnInit {
         terceiroLugar: this.copa.pontosAdicionais.terceiroLugar
       },
       pontuacaoEquipe: null
-    }
+    };
 
     const equipe: ICopaInscricaoEquipe = {
       idEquipe: localStorage.getItem('idEquipe')!,
@@ -116,22 +114,21 @@ export class SubscribeComponent implements OnInit {
     const novasEquipes = [...this.copa.equipes, equipe];
 
     this.equipeService.fazerInscricao(localStorage.getItem('idEquipe')!, novasInscricoes).subscribe({
-      next: (equipe) => {
+      next: () => {
         this.inscricaoRealizada = true;
       }
-    })
+    });
 
     this.copaService.adicionaParticipante(this.copa.id, novasEquipes).subscribe({
       next: (copa) => {
         console.log(copa)
       }
-    })
-
-  }
+    });
+  };
 
   cancelar(): void {
     this.modalAtivo.close(false);
-  }
+  };
 
   requisitos(ok: boolean): Requisitos {
     if (ok === true) {
@@ -149,7 +146,7 @@ export class SubscribeComponent implements OnInit {
         icon: 'bi bi-exclamation-circle'
       }
     }
-  }
+  };
 
   mensagemInscricao(): StatusInscricao {
     const inscricaoLiberada = this.statusInscricao();
@@ -168,7 +165,7 @@ export class SubscribeComponent implements OnInit {
         classe: 'section-modal__span',
         icon: 'bi bi-exclamation-circle'
       }
-  }
+  };
 
   statusInscricao(): boolean {
     const inscricaoLiberada =
@@ -177,5 +174,5 @@ export class SubscribeComponent implements OnInit {
       this.equipe.status === 'ativo';
 
     return inscricaoLiberada;
-  }
+  };
 }

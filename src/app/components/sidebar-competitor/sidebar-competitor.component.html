@@ -17,9 +17,20 @@
         <div class="menu-lateral__equipe">
             <article class="menu-lateral__article">
                 <h3>Equipe</h3>
-                <p>Relâmpago Marquinhos</p>
-                <span class="menu-lateral__span-ativo"><i class="bi bi-check-circle"></i> Ativo</span>
-                <span class="menu-lateral__span-pontuacao ms-2"><i class="bi bi-trophy"></i> 120 pts</span>
+                <p>{{ equipe.nomeEquipe }}</p>
+
+                <span [ngClass]="equipeStatusEstilos[equipe.status]">
+                    @if (equipe.status === 'ativo') {
+                    <i class="bi bi-check-circle"></i> Ativo
+                    }
+
+                    @else {
+                    <i class="bi bi-ban"></i> Inativo
+                    }
+                </span>
+
+                <span class="menu-lateral__span-pontuacao ms-2"><i class="bi bi-trophy"></i> {{ equipe.pontuacaoTotal }}
+                    pts</span>
             </article>
         </div>
 
@@ -45,14 +56,21 @@
 
 
 
-    <div class="menu-lateral__select">
+    <div class="menu-lateral__dropdown">
         <label for="" class="form-label"><i class="bi bi-person-circle mb-0 me-1"></i></label>
-        
-        <select class="menu-lateral__form-select" aria-label="Default select example">
-            <option selected hidden>Relâmpago Marquinhos</option>
-            <option value="1">
-                <button>&larr;Sair</button>
-            </option>
-        </select>
+
+        <div class="dropdown">
+            <button class="btn dropdown-toggle" data-bs-toggle="dropdown">
+                {{ nomeUsuario }}
+            </button>
+
+            <ul class="dropdown-menu">
+                <li>
+                    <button class="dropdown-item" (click)="sair()">
+                        <i class="bi bi-arrow-left"></i> Sair
+                    </button>
+                </li>
+            </ul>
+        </div>
     </div>
 </aside>
