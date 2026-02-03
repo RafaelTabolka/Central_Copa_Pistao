@@ -16,15 +16,19 @@ export class EquipeService {
     return this.http.get<IEquipe[]>(this.baseUrl);
   }
 
-  buscarEquipePorId(id: string): Observable<IEquipe> {
-    return this.http.get<IEquipe>(`${this.baseUrl}/${id}`);
+  buscarEquipePorId(idEquipe: string): Observable<IEquipe> {
+    return this.http.get<IEquipe>(`${this.baseUrl}/${idEquipe}`);
   }
 
   cadastrarEquipe(equipe: IEquipe): Observable<IEquipe> {
     return this.http.post<IEquipe>(this.baseUrl, equipe);
   }
 
-  fazerInscricao(id: string, inscricoes: IEquipeInscricao[]): Observable<IEquipe> {
-    return this.http.patch<IEquipe>(`${this.baseUrl}/${id}`, { inscricoes });
+  atualizarInscricoesDasCopas(idEquipe: string, inscricoes: IEquipeInscricao[]): Observable<IEquipe> {
+    return this.http.patch<IEquipe>(`${this.baseUrl}/${idEquipe}`, { inscricoes });
+  }
+
+  modificarStatusEquipe(equipe: IEquipe): Observable<IEquipe> {
+    return this.http.put<IEquipe>(`${this.baseUrl}/${equipe.id}`, equipe);
   }
 }

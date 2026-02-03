@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-confirm',
@@ -7,5 +8,18 @@ import { Component } from '@angular/core';
   styleUrl: './confirm.component.css'
 })
 export class ConfirmComponent {
+  @Input() titulo: string = '';
+  @Input() mensagem: string = '';
 
+  constructor(
+    private modalAtivo: NgbActiveModal
+  ) {}
+
+  cancelarInscricao(): void {
+    this.modalAtivo.close(true)
+  }
+
+  fecharModal(): void {
+    this.modalAtivo.close(false)
+  }
 }

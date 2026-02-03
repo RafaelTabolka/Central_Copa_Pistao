@@ -1,1 +1,25 @@
-<p>confirm works!</p>
+<div class="container">
+    <div class="col-12">
+        <section class="section-modal">
+            <div class="section-modal__borda-topo"></div>
+
+            <div class="section-modal__data-status mb-2">
+                <h2 class="mt-2">{{ titulo }}</h2>
+
+                <p>
+                    {{ mensagem }}
+                </p>
+            </div>
+
+            <div class="section-modal__buttom">
+                <button class="btn section-modal__btn-cancelar" (click)="cancelarInscricao()">
+                    <i class="bi bi-x-circle"></i> Confirmar
+                </button>
+
+                <button class="btn section-modal__btn-fechar" (click)="fecharModal()">
+                    <i class="bi bi-arrow-left"></i> Fechar
+                </button>
+            </div>
+        </section>
+    </div>
+</div>

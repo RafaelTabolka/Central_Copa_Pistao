@@ -1,3 +1,4 @@
+import { CopaStatus } from "../copa/copa-status.enum"
 import { EquipeCategoria } from "./equipe-categoria.enum"
 import { EquipeStatus } from "./equipe-status.enum"
 
@@ -19,7 +20,7 @@ export interface IEquipe {
     {
         id: string,
         nomeCopa: string,
-        status: string,
+        status: CopaStatus,
         imagemLogo: string,
         dataInicio: string,
         dataTermino: string,

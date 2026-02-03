@@ -29,7 +29,8 @@
 }
 
 .container-fluid__button-editar,
-.container-fluid__button-desativar {
+.container-fluid__button-desativar,
+.container-fluid__button-ativar {
     font-weight: bold;
     font-size: 1.2rem;
 }
@@ -57,6 +58,19 @@
     background-color: rgba(246, 192, 27, .26);
     border-color: rgba(246, 192, 27, .65);
     box-shadow: 0 10px 18px rgba(246, 192, 27, .18);
+}
+
+.container-fluid__button-ativar {
+    background-color: rgba(22, 163, 74, .16);
+    border: 1px solid rgba(22, 163, 74, .22);
+    color: #15803D;
+}
+
+.container-fluid__button-ativar:hover,
+.container-fluid__button-ativar:focus-visible {
+    background-color: rgba(16, 123, 55, 0.86);
+    border: 1px solid rgba(22, 163, 74, .22);
+    color: #fff;
 }
 
 
@@ -213,16 +227,26 @@
     color: rgba(15, 23, 42, .7);
 }
 
-.table__body span {
+.table__span-ativo,
+.table__span-inativo {
     font-weight: bold;
     padding: 4px 12px;
     border-radius: 12px;
     text-align: center;
     display: inline-block;
-    margin-bottom: 12px;
+    /* margin-bottom: 12px; */
+}
+
+.table__span-ativo {
     background-color: rgba(22, 163, 74, .16);
     border: 1px solid rgba(22, 163, 74, .22);
     color: #15803D;
+}
+
+.table__span-inativo {
+    background-color: rgb(225, 8, 17, .85);
+    border: 1px solid rgba(0, 0, 0, .2);
+    color: #fff;
 }
 
 /* Section cards matrícula */
@@ -243,16 +267,30 @@
     /* flex-direction: column; */
 }
 
-.section-cards__inscricoes span {
+.section-cards__inscricoes h3 {
+    /* font-size: 1.3rem; */
+}
+
+.section-cards__span-ativo,
+.section-cards__span-encerrado {
     font-weight: bold;
     padding: 4px 12px;
     border-radius: 12px;
     text-align: center;
     display: inline-block;
     margin-bottom: 12px;
+}
+
+.section-cards__span-ativo {
     background-color: rgba(22, 163, 74, .16);
     border: 1px solid rgba(22, 163, 74, .22);
     color: #15803D;
+}
+
+.section-cards__span-encerrado {
+    background-color: rgba(246, 192, 27, .2);
+    border: 1px solid rgba(246, 192, 27, .22);
+    color: #0F172A;
 }
 
 /* .section-cards__ul {

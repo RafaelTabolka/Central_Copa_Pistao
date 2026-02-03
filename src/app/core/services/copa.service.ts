@@ -16,11 +16,11 @@ export class CopaService {
     return this.http.get<ICopa[]>(this.baseUrl);
   }
 
-  buscarCopaPorId(id: string): Observable<ICopa> {
-    return this.http.get<ICopa>(`${this.baseUrl}/${id}`);
+  buscarCopaPorId(idCopa: string): Observable<ICopa> {
+    return this.http.get<ICopa>(`${this.baseUrl}/${idCopa}`);
   }
 
-  adicionaParticipante(id: string, equipes: ICopaInscricaoEquipe[]): Observable<ICopa> {
-    return this.http.patch<ICopa>(`${this.baseUrl}/${id}`, { equipes });
+  atualizarEquipesDaCopa(idCopa: string, equipes: ICopaInscricaoEquipe[]): Observable<ICopa> {
+    return this.http.patch<ICopa>(`${this.baseUrl}/${idCopa}`, { equipes });
   }
 }

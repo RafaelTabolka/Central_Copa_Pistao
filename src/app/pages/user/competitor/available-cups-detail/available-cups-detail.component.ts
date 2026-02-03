@@ -128,13 +128,13 @@ export class AvailableCupsDetailComponent implements OnInit {
     const novasInscricoes = [...this.equipe.inscricoes, inscricao];
     const novasEquipes = [...this.copa.equipes, equipe];
 
-    this.equipeService.fazerInscricao(localStorage.getItem('idEquipe')!, novasInscricoes).subscribe({
+    this.equipeService.atualizarInscricoesDasCopas(localStorage.getItem('idEquipe')!, novasInscricoes).subscribe({
       next: () => {
         this.inscricaoRealizada = true;
       }
     });
 
-    this.copaService.adicionaParticipante(this.copa.id, novasEquipes).subscribe({
+    this.copaService.atualizarEquipesDaCopa(this.copa.id, novasEquipes).subscribe({
       next: (copa) => {
         console.log(copa)
       }

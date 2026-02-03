@@ -4,8 +4,22 @@
         <p>Mantenha sua equipe pronta: mantenha sempre as informações de sua equipe atualizadas</p>
 
         <div class="container-fluid__buttons mb-3 mb-md-2">
-            <button class="btn container-fluid__button-editar" routerLink="/competitor/my-team-edit"><i class="bi bi-pencil"></i> Editar</button>
-            <button class="btn container-fluid__button-desativar"><i class="bi bi-ban"></i> Desativar</button>
+            <button class="btn container-fluid__button-editar" routerLink="/competitor/my-team-edit">
+                <i class="bi bi-pencil"></i> Editar
+            </button>
+            
+            @if (equipe.status === 'ativo') {
+                <button class="btn container-fluid__button-desativar" (click)="desativarEquipe()">
+                    <i class="bi bi-ban"></i> Desativar
+                </button>
+            }
+            
+            @else {
+                <button class="btn container-fluid__button-ativar" (click)="ativarEquipe()">
+                    <i class="bi bi-ban"></i> Ativar
+                </button>
+            }
+
         </div>
     </div>
 
@@ -16,35 +30,30 @@
 
                 <!-- Section cards dados copa -->
                 <div class="section-cards__dados-equipe">
-                    <h2 class="mt-2">Relâmpago Marquinhos</h2>
+                    <h2 class="mt-2">{{ equipe.nomeEquipe }}</h2>
 
-                    <p>
-                        Equipe ativa - Criada em <time datetime="2026/04/01">01/04/2026</time>
-                    </p>
-
-
-                    <h3 class="section-cards__dados-equipe-h3">Dados</h3>
+                    <h3 class="section-cards__dados-equipe-h3 mt-2">Dados</h3>
 
                     <!-- Section visão rápida article -->
                     <div class="row">
                         <div class="col-12 col-md-4">
                             <article class="section-visao__article mb-3">
                                 <h3>Participantes</h3>
-                                <p>3</p>
+                                <p>{{ equipe.qtdeIntegrantes }}</p>
                             </article>
                         </div>
 
                         <div class="col-12 col-md-4">
                             <article class="section-visao__article mb-3">
                                 <h3>Pontuação Total</h3>
-                                <p>120</p>
+                                <p>{{ equipe.pontuacaoTotal }}</p>
                             </article>
                         </div>
 
                         <div class="col-12 col-md-4">
                             <article class="section-visao__article mb-3">
                                 <h3>Inscrições Ativas</h3>
-                                <p>2</p>
+                                <p>{{ inscricoesAtivas }}</p>
                             </article>
                         </div>
                     </div>
@@ -67,23 +76,24 @@
                         </thead>
 
                         <tbody class="table__body align-middle text-center">
-                            <tr>
-                                <td>Relâmpago Marquinhos</td>
-                                <td>Piloto</td>
-                                <td><span>Ativo</span></td>
-                            </tr>
+                            @for (integrante of equipe.integrantes; track integrante.id) {
+                                <tr>
+                                    <td>{{ integrante.nome }}</td>
+                                    <td>{{ integrante.funcao }}</td>
+                                    <td>
+                                        <span [ngClass]="instegrantesStatusEstilos[integrante.status]">
+                                            @if (integrante.status === 'ativo') {
+                                            <i class="bi bi-check-circle"></i> {{ integrante.status }}
+                                            }
 
-                            <tr>
-                                <td>Guido</td>
-                                <td>Equipe de box (pneus)</td>
-                                <td><span>Ativo</span></td>
-                            </tr>
+                                            @else {
+                                            <i class="bi bi-ban"></i> {{ integrante.status }}
+                                            }
 
-                            <tr>
-                                <td>Ramone</td>
-                                <td>Mecânico / Customização</td>
-                                <td><span>Ativo</span></td>
-                            </tr>
+                                        </span>
+                                    </td>
+                                </tr>
+                            }
                         </tbody>
                     </table>
                 </div>
@@ -100,47 +110,43 @@
 
                     <h2 class="mt-2">Inscrições Ativas</h2>
 
-                    <article class="section-cards__article mt-3 ">
-                        <div class="section-cards__inscricoes mb-3">
-                            <h3>Copa Radiator Springs</h3>
+                    @for (inscricao of equipe.inscricoes; track inscricao.id) {
+                        <article class="section-cards__article mt-3 ">
+                            <div class="section-cards__inscricoes mb-3">
+                                <h3>{{ inscricao.nomeCopa }}</h3>
 
-                            <span class="section-cards__span-abertas"><i class="bi bi-check-circle"></i> Ativo</span>
-                        </div>
+                                <span [ngClass]="inscricao.status !== 'copaFinalizada' ? 'section-cards__span-ativo' : 'section-cards__span-encerrado'">
+                                    @if (inscricao.status !== "copaFinalizada") {
+                                        <i class="bi bi-check-circle"></i> Ativo
+                                    }
 
-                        <div class="section-cards__inscricoes">
-                            <p class="mb-2 mb-md-0">
-                                <i class="bi bi-calendar3 me-2"></i> <time datetime="2026/04/01">01/04/2026</time>
-                            </p>
+                                    @else {
+                                        <i class="bi bi-exclamation-circle"></i> Encerrado
+                                    }
 
-                            <div class="section-cards__buttom">
-                                <button class="btn section-cards__btn-cancelar-inscricao">
-                                    <i class="bi bi-slash-circle"></i> Cancelar Inscrição
-                                </button>
+                                </span>
                             </div>
-                        </div>
-                    </article>
 
-                    <article class="section-cards__article mt-3 ">
-                        <div class="section-cards__inscricoes mb-3">
-                            <h3>Copa Radiator Springs</h3>
+                            <div class="section-cards__inscricoes">
+                                <p class="mb-2 mb-md-0">
+                                    <i class="bi bi-calendar3 me-2"></i>
+                                    <time>{{ inscricao.dataInicio | date: 'dd/MM/yyyy' }}</time> a
+                                    <time>{{ inscricao.dataTermino | date: 'dd/MM/yyyy' }}</time>
+                                </p>
 
-                            <span class="section-cards__span-abertas"><i class="bi bi-check-circle"></i> Ativo</span>
-                        </div>
-
-                        <div class="section-cards__inscricoes">
-                            <p class="mb-2 mb-md-0">
-                                <i class="bi bi-calendar3 me-2"></i> <time datetime="2026/04/01">01/04/2026</time>
-                            </p>
-
-                            <div class="section-cards__buttom">
-                                <button class="btn section-cards__btn-cancelar-inscricao">
-                                    <i class="bi bi-slash-circle"></i> Cancelar Inscrição
-                                </button>
+                                <div class="section-cards__buttom">
+                                    <button 
+                                    class="btn section-cards__btn-cancelar-inscricao" 
+                                    [disabled]="inscricao.status === 'emAndamento' || 
+                                    inscricao.status === 'copaFinalizada'" 
+                                    (click)="cancelarInscricao(inscricao.id)">
+                                        <i class="bi bi-slash-circle"></i> Cancelar Inscrição
+                                    </button>
+                                </div>
                             </div>
-                        </div>
-                    </article>
+                        </article>
+                    }
                 </div>
-
             </section>
         </div>
     </div>
