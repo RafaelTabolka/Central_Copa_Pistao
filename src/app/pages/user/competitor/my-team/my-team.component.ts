@@ -10,6 +10,7 @@ import { ICopa } from '../../../../core/interfaces/models/copa/copa';
 import { ConfirmComponent } from '../../../../components/modal/confirm/confirm.component';
 import { CopaService } from '../../../../core/services/copa.service';
 import { ICopaInscricaoEquipe } from '../../../../core/interfaces/models/copa/copa-inscricao';
+import { CopaStatus } from '../../../../core/interfaces/models/copa/copa-status.enum';
 
 @Component({
   selector: 'app-my-team',
@@ -116,7 +117,9 @@ export class MyTeamComponent implements OnInit {
       this.copaService.listarCopas().subscribe({
         next: (copas) => {
 
-          const copasComMinhaEquipe = copas.filter((copa) => copa.equipes.some((equipe) => equipe.idEquipe === this.equipe.id));
+          const copaMinhaEquipeAtivos = copas.filter((copa) => copa.status !== CopaStatus.CopaFinalizada);
+
+          const copasComMinhaEquipe = copaMinhaEquipeAtivos.filter((copa) => copa.equipes.some((equipe) => equipe.idEquipe === this.equipe.id));
 
 
           if (copasComMinhaEquipe.length === 0) {
