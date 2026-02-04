@@ -79,26 +79,6 @@
       "pontuacaoTotal": 150,
       "inscricoes": [
         {
-          "id": "b9f0a6d6-8c62-4e35-90c2-2f3b8cfa1c01",
-          "nomeCopa": "Copa Pistão 2026",
-          "status": "inscricoesAbertas",
-          "imagemLogo": "/assets/img/user/competitor/available_cups/img_copas_disponiveis_radiator_springs.png",
-          "dataInicio": "2026-02-14",
-          "dataTermino": "2026-02-16",
-          "descricao": "Inscrições abertas para a próxima etapa oficial.",
-          "preRequisito": {
-            "minimoIntegrantes": 4,
-            "pontuacaoMinima": 35
-          },
-          "posicaoEquipe": null,
-          "pontosAdicionais": {
-            "primeiroLugar": 0,
-            "segundoLugar": 0,
-            "terceiroLugar": 0
-          },
-          "pontuacaoEquipe": null
-        },
-        {
           "id": "3e2a1c44-7d12-4b6c-9a77-1f2e3d4c5b6a",
           "nomeCopa": "Copa Desert Dash 2026 - Qualificatória",
           "status": "inscricoesAbertas",
@@ -109,6 +89,26 @@
           "preRequisito": {
             "minimoIntegrantes": 4,
             "pontuacaoMinima": 60
+          },
+          "posicaoEquipe": null,
+          "pontosAdicionais": {
+            "primeiroLugar": 0,
+            "segundoLugar": 0,
+            "terceiroLugar": 0
+          },
+          "pontuacaoEquipe": null
+        },
+        {
+          "id": "b9f0a6d6-8c62-4e35-90c2-2f3b8cfa1c01",
+          "nomeCopa": "Copa Pistão 2026",
+          "status": "inscricoesAbertas",
+          "imagemLogo": "/assets/img/user/competitor/available_cups/img_copas_disponiveis_radiator_springs.png",
+          "dataInicio": "2026-02-14",
+          "dataTermino": "2026-02-16",
+          "descricao": "Inscrições abertas para a próxima etapa oficial.",
+          "preRequisito": {
+            "minimoIntegrantes": 4,
+            "pontuacaoMinima": 35
           },
           "posicaoEquipe": null,
           "pontosAdicionais": {
