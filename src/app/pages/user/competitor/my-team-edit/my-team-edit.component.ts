@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from "@angular/router";
+import { Router, RouterLink } from "@angular/router";
 import { EquipeService } from '../../../../core/services/equipe.service';
 import { IEquipe } from '../../../../core/interfaces/models/equipe/equipe';
 import { EquipeStatus } from '../../../../core/interfaces/models/equipe/equipe-status.enum';
 import { EquipeCategoria } from '../../../../core/interfaces/models/equipe/equipe-categoria.enum';
 import { FormArray, FormControl, FormGroup, NonNullableFormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { IEquipeAtualizar } from '../../../../core/interfaces/models/equipe/equipe-atualizar';
 
 type Integrantes = FormGroup<{
+  id: FormControl<string>;
   nomeIntegrante: FormControl<string>;
   funcao: FormControl<string>;
   status: FormControl<EquipeStatus>;
@@ -39,12 +41,14 @@ export class MyTeamEditComponent implements OnInit {
   };
 
   readonly equipeCategoria = EquipeCategoria;
-
   private idEquipe: string = localStorage.getItem('idEquipe')!;
+  temMudanca: boolean = false;
+  nomeEquieVazio: boolean = false;
 
   constructor(
     private equipeService: EquipeService,
-    private fb: NonNullableFormBuilder) {
+    private fb: NonNullableFormBuilder,
+    private router: Router) {
     this.formEdit = this.fb.group({
       nomeEquipe: ['', [Validators.required]],
       categoria: [EquipeCategoria.Pista],
@@ -59,34 +63,84 @@ export class MyTeamEditComponent implements OnInit {
     this.equipeService.buscarEquipePorId(this.idEquipe).subscribe({
       next: (equipe) => {
         this.equipe = equipe;
-
         this.formEdit.patchValue({
           nomeEquipe: equipe.nomeEquipe,
           categoria: equipe.categoria,
           qtdeIntegrantes: equipe.qtdeIntegrantes
         });
 
-        const integrantesArray = this.fb.array(
-          equipe.integrantes.map((integrante) => {
-            return this.fb.group({
-              nomeIntegrante: integrante.nome,
-              funcao: integrante.funcao,
-              status: integrante.status
-            })
-          })
-        )
+        this.integrantes.clear();
 
-        this.formEdit.setControl('integrantes', integrantesArray);
+        equipe.integrantes.forEach((integrante) => {
+          const formArray = this.criarParticipantes();
+          formArray.patchValue({
+            id: integrante.id,
+            nomeIntegrante: integrante.nome,
+            funcao: integrante.funcao,
+            status: integrante.status
+          });
+          this.integrantes.push(formArray);
+        });
+
+
+
+        const valorInicialFormEdit = this.formEdit.getRawValue();
+        // console.log(valorInicialFormEdit)
+
+        this.formEdit.valueChanges.subscribe({
+          next: () => {
+            const valorAtualFormEdit = this.formEdit.getRawValue()
+            // console.log(valorAtualFormEdit)
+
+            this.temMudanca = this.temMudancaNoFormulario(valorAtualFormEdit, valorInicialFormEdit);
+            console.log(this.temMudanca)
+          }
+        })
       }
     })
+  }
+
+  private temMudancaNoFormulario(a: any, b: any): boolean {
+    const mudouDadosEquipe = a.nomeEquipe !== b.nomeEquipe ||
+      a.categoria !== b.categoria ||
+      a.qtdeIntegrantes !== b.qtdeIntegrantes;
+
+    if (mudouDadosEquipe) {
+      return true;
+    }
+
+    if (a.integrantes.length !== b.integrantes.length) {
+      return true;
+    }
+
+    const mudouIntegrantes = a.integrantes.some((integranteA: any, i: number) => {
+      const integranteB = b.integrantes[i];
+
+      return (
+        integranteA.nomeIntegrante !== integranteB.nomeIntegrante ||
+        integranteA.funcao !== integranteB.funcao ||
+        integranteA.status !== integranteB.status
+      )
+    });
+
+    return mudouIntegrantes;
   }
 
   get integrantes() {
     return this.formEdit.controls.integrantes;
   }
 
+  integranteFormGroup(i: number) {
+    return this.integrantes.at(i)
+  }
+
+  integranteCopia(i: number, nome: 'nomeIntegrante' | 'funcao' | 'status') {
+    return this.integranteFormGroup(i).get(nome);
+  }
+
   private criarParticipantes(): Integrantes {
     return this.fb.group({
+      id: [crypto.randomUUID() as string, [Validators.required]],
       nomeIntegrante: ['', [Validators.required]],
       funcao: ['', [Validators.required]],
       status: [EquipeStatus.Ativo]
@@ -99,7 +153,7 @@ export class MyTeamEditComponent implements OnInit {
     this.formEdit.updateValueAndValidity();
     this.integrantes.updateValueAndValidity();
   }
-  
+
   excluirParticipante(i: number): void {
     this.integrantes.removeAt(i);
     this.formEdit.controls.qtdeIntegrantes.setValue(this.integrantes.controls.length);
@@ -107,4 +161,27 @@ export class MyTeamEditComponent implements OnInit {
     this.integrantes.updateValueAndValidity();
   }
 
+  atualizarEquipe(): void {
+    const idEquipe = localStorage.getItem('idEquipe')!;
+
+    const integrantes = this.integrantes.getRawValue().map((integrante, i) => ({
+      id: integrante.id,
+      nome: integrante.nomeIntegrante,
+      funcao: integrante.funcao,
+      status: integrante.status
+    }));
+
+    const dadosEquipe: IEquipeAtualizar = {
+      nomeEquipe: this.formEdit.controls.nomeEquipe.value.trim(),
+      categoria: this.formEdit.controls.categoria.value,
+      qtdeIntegrantes: this.formEdit.controls.qtdeIntegrantes.value,
+      integrantes: integrantes
+    }
+
+    this.equipeService.atualizarEquipe(idEquipe, dadosEquipe).subscribe({
+      next: (equipe) => {
+        this.equipe = equipe;
+      }
+    });
+  }
 }

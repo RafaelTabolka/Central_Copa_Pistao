@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IEquipe } from '../interfaces/models/equipe/equipe';
 import { IEquipeInscricao } from '../interfaces/models/equipe/equipe-inscricao';
+import { IEquipeAtualizar } from '../interfaces/models/equipe/equipe-atualizar';
 
 @Injectable({
   providedIn: 'root'
@@ -26,6 +27,10 @@ export class EquipeService {
 
   atualizarInscricoesDasCopas(idEquipe: string, inscricoes: IEquipeInscricao[]): Observable<IEquipe> {
     return this.http.patch<IEquipe>(`${this.baseUrl}/${idEquipe}`, { inscricoes });
+  }
+
+  atualizarEquipe(idEquipe: string, dadosEquipe: IEquipeAtualizar): Observable<IEquipe> {
+    return this.http.patch<IEquipe>(`${this.baseUrl}/${idEquipe}`, dadosEquipe);
   }
 
   modificarStatusEquipe(equipe: IEquipe): Observable<IEquipe> {
