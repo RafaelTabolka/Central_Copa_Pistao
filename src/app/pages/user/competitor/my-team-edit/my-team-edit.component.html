@@ -31,6 +31,10 @@
                         <div class="col-12 col-md-5 mb-3 mb-md-0">
                             <label for="nomeEquipe" class="form-label">Nome da Equipe*</label>
                             <input type="text" class="form-control" id="nomeEquipe" formControlName="nomeEquipe">
+
+                            @if (nomeEquieVazio) {
+                                <p class="text-danger mt-2 mb-0">Campo obrigatório</p>
+                            }
                         </div>
 
                         <div class="col-12 col-md-3 mb-3 mb-md-0">
@@ -75,13 +79,21 @@
     
                                     <input type="text" class="form-control" [id]="'nomeIntegrante' + i" formControlName="nomeIntegrante"
                                         placeholder="Ex: Catchau do relâmpago">
+
+                                    @if (integranteCopia(i, 'nomeIntegrante')?.hasError('required')) {
+                                        <p class="text-danger mt-2 mb-0">Campo obrigatório</p>
+                                    }
                                 </div>
-    
+                                
                                 <div class="col-12 col-md-4 mb-3 mb-md-0">
                                     <label [for]="'funcao' + i" class="form-label">Função</label>
-    
+                                    
                                     <input type="text" class="form-control" [id]="'funcao' + i" formControlName="funcao"
-                                        placeholder="Ex: Mecânico">
+                                    placeholder="Ex: Mecânico">
+                                    
+                                    @if (integranteCopia(i, 'funcao')?.hasError('required')) {  
+                                        <p class="text-danger mt-2 mb-0">Campo obrigatório</p>
+                                    }
                                 </div>
     
                                 <div class="col-12 col-md-4 mb-3">
@@ -89,7 +101,7 @@
     
                                     <select class="form-select" formControlName="status" [id]="'status' + i"
                                         aria-label="Default select example">
-                                        <option selected disabled>Selecione...</option>
+                                        <option disabled hidden>Selecione...</option>
                                         <option value="ativo">Ativo</option>
                                         <option value="inativo">Inativo</option>
                                     </select>
@@ -99,7 +111,9 @@
                     </div>
 
                     <div class="btn-atualizar">
-                        <button class="btn mt-4 mb-2"><i class="bi bi-check2-circle"></i> Atualizar</button>
+                        <button class="btn mt-4 mb-2" [disabled]="!temMudanca || formEdit.invalid" (click)="atualizarEquipe()">
+                            <i class="bi bi-check2-circle"></i> Atualizar
+                        </button>
                     </div>
                 </form>
             </section>
