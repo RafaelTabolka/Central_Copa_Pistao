@@ -19,7 +19,7 @@
                 <h2>Atualizar Conta</h2>
                 <p>Mantenha as informações de sua conta atualizadas</p>
 
-                <form class="form-atualizar">
+                <form class="form-atualizar" [formGroup]="formEdit">
                     <div class="section-form__etapa mt-4 mb-3">
                         <span>1ª Etapa</span>
                         <p>Dados da Equipe</p>
@@ -28,13 +28,13 @@
                     <div class="row mb-3">
                         <div class="col-12 col-md-6 mb-3 mb-md-0">
                             <label for="nome" class="form-label">Nome*</label>
-                            <input type="text" class="form-control" id="nome" name="nome"
+                            <input type="text" class="form-control" id="nome" formControlName="nome"
                                 placeholder="Mate, igual tomate">
                         </div>
 
                         <div class="col-12 col-md-6">
                             <label for="email" class="form-label">E-mail*</label>
-                            <input type="email" class="form-control" id="email" name="email"
+                            <input type="email" class="form-control" id="email" formControlName="email"
                                 placeholder="nome@exemplo.com" autocomplete="username">
                         </div>
                     </div>
@@ -42,19 +42,20 @@
                     <div class="row mb-3">
                         <div class="col-12 col-md-6 mb-3 mb-md-0">
                             <label for="senha" class="form-label">Senha*</label>
-                            <input type="password" class="form-control" id="senha" name="senha" placeholder="......"
-                                autocomplete="new-password">
+                            <input type="password" class="form-control" id="senha" formControlName="senha" placeholder="......" autocomplete="new-password">
                         </div>
 
                         <div class="col-12 col-md-6">
                             <label for="confirmarSenha" class="form-label">Confirmar Senha*</label>
-                            <input type="password" class="form-control" id="confirmarSenha" name="confirmarSenha"
-                                placeholder="......" autocomplete="new-password">
+                            <input type="password" class="form-control" id="confirmarSenha" formControlName="confirmarSenha" placeholder="......" autocomplete="new-password">
                         </div>
                     </div>
 
                     <div class="btn-atualizar">                        
-                        <button class="btn mt-4 mb-2"><i class="bi bi-check2-circle"></i> Atualizar</button>
+                        <button type="button" class="btn mt-4 mb-2" [disabled]="formEdit.invalid || !temMudancao" 
+                        (click)="atualizarUsuario()">
+                            <i class="bi bi-check2-circle"></i> Atualizar
+                        </button>
                     </div>
                 </form>
             </section>

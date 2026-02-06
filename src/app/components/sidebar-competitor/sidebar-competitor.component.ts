@@ -55,4 +55,8 @@ export class SidebarCompetitorComponent implements OnInit {
     localStorage.clear();
     this.router.navigate(['public/home']);
   }
+
+  rotaComecaCom(rota: string): boolean {
+    return this.router.url.startsWith(rota);
+  }
 }
