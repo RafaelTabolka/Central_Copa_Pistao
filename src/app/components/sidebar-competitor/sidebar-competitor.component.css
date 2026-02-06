@@ -31,6 +31,7 @@
     justify-content: space-between;
     transform: translateX(-100%);
     transition: 0.2s;
+    z-index: 1;
 }
 
 .menu-lateral__aberto {

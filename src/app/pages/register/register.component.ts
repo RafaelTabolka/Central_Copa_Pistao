@@ -148,7 +148,9 @@ export class RegisterComponent {
         localStorage.setItem('idEquipe', idEquipe);
         localStorage.setItem('nomeEquipe', equipe.nomeEquipe);
         localStorage.setItem('nomeUsuario', this.formCadastrar.controls.nomeUsuario.value);
-        localStorage.setItem('accessToken', 'Tem Token aqui');
+        localStorage.setItem('idUsuario', equipe.idUsuario);
+        // localStorage.setItem('accessToken', 'Tem Token aqui');
+
         // console.log('cadastrou')
         this.router.navigateByUrl('/competitor/available-cups', {replaceUrl: true});
 

@@ -43,7 +43,7 @@
                             class="me-1 bi bi-calendar-event"></i> Copas Disponíveis</a>
                 </li>
                 <li>
-                    <a routerLinkActive="active" routerLink="/competitor/my-team"><i
+                    <a [ngClass]="{'active' : rotaComecaCom('/competitor/my-team')}" routerLink="/competitor/my-team"><i
                             class="me-1 bi bi-car-front-fill"></i> Minha Equipe</a>
                 </li>
                 <li>
