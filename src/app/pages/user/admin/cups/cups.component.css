@@ -249,7 +249,8 @@
     box-shadow: 0 8px 18px rgba(49, 165, 231, .18);
 }
 
-.section-cards__btn-copa-finalizada {
+.section-cards__btn-copa-finalizada:disabled,
+.section-cards__btn-editar:disabled {
     background-color: #E5E7EB;
     border: 1px solid rgba(15, 23, 42, .12);
     color: rgba(15, 23, 42, .56);
