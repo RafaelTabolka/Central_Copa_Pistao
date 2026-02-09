@@ -36,4 +36,8 @@ export class EquipeService {
   modificarStatusEquipe(equipe: IEquipe): Observable<IEquipe> {
     return this.http.put<IEquipe>(`${this.baseUrl}/${equipe.id}`, equipe);
   }
+
+  modificarStatusInscricaoCopa(idEquipe: string, dadosStatusAlterado: IEquipeInscricao[]): Observable<IEquipe> {
+    return this.http.patch<IEquipe>(`${this.baseUrl}/${idEquipe}`, { inscricoes: dadosStatusAlterado });
+  }
 }

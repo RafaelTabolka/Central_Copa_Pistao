@@ -5,11 +5,9 @@ import { EquipeStatus } from '../../../../core/interfaces/models/equipe/equipe-s
 import { EquipeCategoria } from '../../../../core/interfaces/models/equipe/equipe-categoria.enum';
 import { EquipeService } from '../../../../core/services/equipe.service';
 import { DatePipe, NgClass } from '@angular/common';
-import { NgbModal, NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
-import { ICopa } from '../../../../core/interfaces/models/copa/copa';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ConfirmComponent } from '../../../../components/modal/confirm/confirm.component';
 import { CopaService } from '../../../../core/services/copa.service';
-import { ICopaInscricaoEquipe } from '../../../../core/interfaces/models/copa/copa-inscricao';
 import { CopaStatus } from '../../../../core/interfaces/models/copa/copa-status.enum';
 
 @Component({

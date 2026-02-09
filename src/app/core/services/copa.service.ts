@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ICopa } from '../interfaces/models/copa/copa';
 import { ICopaInscricaoEquipe } from '../interfaces/models/copa/copa-inscricao';
+import { CopaStatus } from '../interfaces/models/copa/copa-status.enum';
 
 @Injectable({
   providedIn: 'root'
@@ -22,5 +23,9 @@ export class CopaService {
 
   atualizarEquipesDaCopa(idCopa: string, equipes: ICopaInscricaoEquipe[]): Observable<ICopa> {
     return this.http.patch<ICopa>(`${this.baseUrl}/${idCopa}`, { equipes });
+  }
+
+  atualizarStatusCopa(idCopa: string, novoStatus: CopaStatus): Observable<ICopa> {
+    return this.http.patch<ICopa>(`${this.baseUrl}/${idCopa}`, { status: novoStatus })
   }
 }

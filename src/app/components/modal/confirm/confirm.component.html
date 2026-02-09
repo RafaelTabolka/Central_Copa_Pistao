@@ -13,7 +13,7 @@
 
             <div class="section-modal__buttom">
                 <button class="btn section-modal__btn-cancelar" (click)="cancelarInscricao()">
-                    <i class="bi bi-x-circle"></i> Confirmar
+                    <i [ngClass]="icone"></i> Confirmar
                 </button>
 
                 <button class="btn section-modal__btn-fechar" (click)="fecharModal()">
