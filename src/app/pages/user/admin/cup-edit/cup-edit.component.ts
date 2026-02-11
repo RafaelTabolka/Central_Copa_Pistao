@@ -8,6 +8,7 @@ import { firstValueFrom } from 'rxjs';
 import { EquipeService } from '../../../../core/services/equipe.service';
 import { IEquipeInscricao } from '../../../../core/interfaces/models/equipe/equipe-inscricao';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ICopaImagemLogo } from '../../../../core/interfaces/models/copa/copa-imagem-logo';
 
 @Component({
   selector: 'app-cup-edit',
@@ -34,7 +35,10 @@ export class CupEditComponent implements OnInit {
     id: '',
     nomeCopa: '',
     status: CopaStatus.InscricoesAbertas,
-    imagemLogo: '',
+    imagemLogo: {
+      nome: '',
+      caminho: ''
+    },
     dataInicio: '',
     dataTermino: '',
     descricao: '',
@@ -50,8 +54,7 @@ export class CupEditComponent implements OnInit {
     equipes: []
   }
 
-  nomeImagem: string = '';
-  mudouImagem: boolean = false;
+  imagens: ICopaImagemLogo[] = []
   habilitaBotao: boolean = false;
   idCopa: string = '';
 
@@ -82,65 +85,41 @@ export class CupEditComponent implements OnInit {
 
     this.copaService.buscarCopaPorId(this.idCopa).subscribe({
       next: (copa) => {
-        this.copa = copa;
+        this.copaService.listarImagens().subscribe({
+          next: (imagens) => {
+            this.imagens = imagens;
+            console.log(imagens)
+            this.copa = copa;
 
-        this.nomeImagem = copa.imagemLogo.split('/').pop() ?? '';
+            this.formEdit.patchValue({
+              nomeCopa: copa.nomeCopa,
+              status: copa.status,
+              logoCopa: copa.imagemLogo.caminho,
+              dataInicio: copa.dataInicio,
+              dataTermino: copa.dataTermino,
+              descricao: copa.descricao,
+              minimoIntegrantes: copa.preRequisito.minimoIntegrantes,
+              pontuacaoMinima: copa.preRequisito.pontuacaoMinima,
+              pontuacaoPrimeiroLugar: copa.pontosAdicionais.primeiroLugar,
+              pontuacaoSegundoLugar: copa.pontosAdicionais.segundoLugar,
+              pontuacaoTerceiroLugar: copa.pontosAdicionais.terceiroLugar,
+            });
 
-        this.formEdit.patchValue({
-          nomeCopa: copa.nomeCopa,
-          status: copa.status,
-          logoCopa: copa.imagemLogo,
-          dataInicio: copa.dataInicio,
-          dataTermino: copa.dataTermino,
-          descricao: copa.descricao,
-          minimoIntegrantes: copa.preRequisito.minimoIntegrantes,
-          pontuacaoMinima: copa.preRequisito.pontuacaoMinima,
-          pontuacaoPrimeiroLugar: copa.pontosAdicionais.primeiroLugar,
-          pontuacaoSegundoLugar: copa.pontosAdicionais.segundoLugar,
-          pontuacaoTerceiroLugar: copa.pontosAdicionais.terceiroLugar,
-        });
+            console.log(this.formEdit.controls.logoCopa.value)
 
-        const valorInicialForm = this.formEdit.getRawValue();
+            const valorInicialForm = this.formEdit.getRawValue();
 
-        this.formEdit.valueChanges.subscribe({
-          next: () => {
-            const valorAtualForm = this.formEdit.getRawValue();
+            this.formEdit.valueChanges.subscribe({
+              next: () => {
+                const valorAtualForm = this.formEdit.getRawValue();
 
-            this.habilitaBotao = this.temMudanca(valorInicialForm, valorAtualForm);
+                this.habilitaBotao = this.temMudanca(valorInicialForm, valorAtualForm);
+              }
+            })
           }
         })
       }
     })
-  }
-
-  aoMudarLogo(evento: Event): void {
-    this.mudouImagem = false;
-
-    const input = evento.target as HTMLInputElement; // Pega o evento atual do input file
-
-    if (!input.files) { // Verifica se tem imagem
-      return;
-    }
-
-    const arquivo = input.files[0]; // No array retornado, pega a primeira posição
-
-    this.nomeImagem = arquivo.name; // Acessado a primeira posição, pega o nome da imagem para que o botão fique com esse nome
-
-    this.mudouImagem = true;
-
-    const leitor = new FileReader(); // Cria um novo objeto leitor que contém as propriedades de FileReader()
-
-    // Função que define o que acontece quando a leitura acabar
-    leitor.onload = () => { // onload é assíncrono, por isso a lógica fica dentro dele
-      const base64 = leitor.result as string;
-      console.log('tamanho base64:', base64.length);
-      this.formEdit.controls.logoCopa.setValue(leitor.result as string); // Quando a leitura acabar, troca o valor do form para o resultado do leitor
-      // console.log(this.formEdit.controls.logoCopa.value)
-    };
-
-    // Aqui está dizendo o seguinte: leia a variável arquivo, converte para Data URL (base64 + prefixo) e quando terminar chama o leitor.onload
-    // Essa função dispara a leitura do arquivo
-    leitor.readAsDataURL(arquivo);
   }
 
   temMudanca(a: any, b: any): boolean {
@@ -155,8 +134,7 @@ export class CupEditComponent implements OnInit {
       a.pontuacaoMinima !== b.pontuacaoMinima ||
       a.pontuacaoPrimeiroLugar !== b.pontuacaoPrimeiroLugar ||
       a.pontuacaoSegundoLugar !== b.pontuacaoSegundoLugar ||
-      a.pontuacaoTerceiroLugar !== b.pontuacaoTerceiroLugar ||
-      this.mudouImagem
+      a.pontuacaoTerceiroLugar !== b.pontuacaoTerceiroLugar
     )
   }
 
@@ -165,11 +143,16 @@ export class CupEditComponent implements OnInit {
       return;
     }
 
+    const logoCopa = this.imagens.find((imagem) => imagem.caminho === this.formEdit.controls.logoCopa.value)!
+
     const novosValores: ICopa = {
       id: this.idCopa,
       nomeCopa: this.formEdit.controls.nomeCopa.value,
       status: this.formEdit.controls.status.value,
-      imagemLogo: this.formEdit.controls.logoCopa.value,
+      imagemLogo: {
+        nome: logoCopa.nome,
+        caminho: logoCopa.caminho
+      },
       dataInicio: this.formEdit.controls.dataInicio.value,
       dataTermino: this.formEdit.controls.dataTermino.value,
       descricao: this.formEdit.controls.descricao.value,

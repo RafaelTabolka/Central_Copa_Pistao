@@ -22,13 +22,13 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-12 col-md-5 mb-3 mb-md-0">
+                        <div class="col-12 col-md-4 mb-3">
                             <label for="nomeCopa" class="form-label">Nome da Copa*</label>
                             <input type="text" class="form-control" id="nomeCopa" formControlName="nomeCopa"
                                 placeholder="Ex: Catchau do relâmpago">
                         </div>
 
-                        <div class="col-12 col-md-3 mb-3 mb-md-0">
+                        <div class="col-12 col-md-4 mb-3">
                             <label for="status" class="form-label">Status*</label>
                             <select class="form-select" formControlName="status" id="status" aria-label="Default select example">
                                 <option selected disabled>Selecione...</option>
@@ -39,23 +39,13 @@
                             </select>
                         </div>
 
-                        <div class="col-12 col-md-4 campo-logo-copa mb-3">
-                            <label class="form-label">Logo da Copa*</label>
-                            <input type="file" class="form-control logo-copa" id="logoCopa" hidden (change)="aoMudarLogo($event)">
-
-                            <div>
-                                <label for="logoCopa" class="label-selecionar-imagem">
-                                    <span>                                        
-                                        @if (nomeImagem !== undefined) {
-                                            {{ nomeImagem }}
-                                        }
-                                        @else {                                        
-                                            Selecionar Imagem
-                                        }
-                                    </span>
-                                </label>
-                                <!-- <label>Nenhuma imagem </label> -->
-                            </div>
+                        <div class="col-12 col-md-4 mb-3">
+                            <label for="logoCopa" class="form-label">Logo da Copa*</label>
+                            <select class="form-select" formControlName="logoCopa" id="logoCopa" aria-label="Default select example">
+                                @for (imagem of imagens; track imagem) {
+                                    <option [ngValue]="imagem.caminho"> {{ imagem.nome }} </option>
+                                }
+                            </select>
                         </div>
 
                         <div class="col-12 col-md-6 mb-3">

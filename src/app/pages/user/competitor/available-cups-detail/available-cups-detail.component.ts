@@ -27,7 +27,10 @@ export class AvailableCupsDetailComponent implements OnInit {
     id: '',
     nomeCopa: '',
     status: CopaStatus.InscricoesAbertas,
-    imagemLogo: '',
+    imagemLogo: {
+      nome: '',
+      caminho: ''
+    },
     dataInicio: '',
     dataTermino: '',
     descricao: '',

@@ -40,7 +40,10 @@ export class SubscribeComponent implements OnInit {
     id: '',
     nomeCopa: '',
     status: CopaStatus.InscricoesAbertas,
-    imagemLogo: '',
+    imagemLogo: {
+      nome: '',
+      caminho: ''
+    },
     dataInicio: '',
     dataTermino: '',
     descricao: '',
@@ -88,7 +91,10 @@ export class SubscribeComponent implements OnInit {
       id: this.copa.id,
       nomeCopa: this.copa.nomeCopa,
       status: this.copa.status,
-      imagemLogo: this.copa.imagemLogo,
+      imagemLogo: {
+        nome: this.copa.imagemLogo.nome,
+        caminho: this.copa.imagemLogo.caminho 
+      },
       dataInicio: this.copa.dataInicio,
       dataTermino: this.copa.dataTermino,
       descricao: this.copa.descricao,

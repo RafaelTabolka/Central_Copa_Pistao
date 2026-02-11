@@ -4,7 +4,10 @@ export interface ICopa {
     id: string,
     nomeCopa: string,
     status: CopaStatus,
-    imagemLogo: string,
+    imagemLogo: {
+        nome: string,
+        caminho: string
+    },
     dataInicio: string,
     dataTermino: string,
     descricao: string,
