@@ -21,6 +21,10 @@ export class CopaService {
     return this.http.get<ICopa>(`${this.baseUrl}/${idCopa}`);
   }
 
+  atualizarCopa(idCopa: string, novosValores: ICopa): Observable<ICopa> {
+    return this.http.put<ICopa>(`${this.baseUrl}/${idCopa}`, novosValores);
+  }
+
   atualizarEquipesDaCopa(idCopa: string, equipes: ICopaInscricaoEquipe[]): Observable<ICopa> {
     return this.http.patch<ICopa>(`${this.baseUrl}/${idCopa}`, { equipes });
   }

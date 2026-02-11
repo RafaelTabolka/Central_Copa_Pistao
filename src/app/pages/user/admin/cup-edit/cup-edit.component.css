@@ -172,6 +172,12 @@
     height: 50px;
 }
 
+.label-selecionar-imagem span {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 12px;
+}
+
 .form-cadastrar .label-selecionar-imagem:hover {
     background-color: rgba(49, 165, 231, .75);
     border-color: rgba(49, 165, 231, .55);
