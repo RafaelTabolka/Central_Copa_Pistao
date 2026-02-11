@@ -33,18 +33,27 @@
                             <select class="form-select" formControlName="status" id="status" aria-label="Default select example">
                                 <option selected disabled>Selecione...</option>
                                 <option value="inscricoesAbertas">Inscrições Abertas</option>
-                                <option value="emAndamento">Em Andamento</option>
                                 <option value="inscricoesEncerradas">Inscrições Encerradas</option>
+                                <option value="emAndamento">Em Andamento</option>
                                 <option value="copaFinalizada">Copa Finalizada</option>
                             </select>
                         </div>
 
                         <div class="col-12 col-md-4 campo-logo-copa mb-3">
                             <label class="form-label">Logo da Copa*</label>
-                            <input type="file" class="form-control logo-copa" id="logoCopa" formControlName="logoCopa" hidden>
+                            <input type="file" class="form-control logo-copa" id="logoCopa" hidden (change)="aoMudarLogo($event)">
 
                             <div>
-                                <label for="logoCopa" class="label-selecionar-imagem">Selecionar Imagem</label>
+                                <label for="logoCopa" class="label-selecionar-imagem">
+                                    <span>                                        
+                                        @if (nomeImagem !== undefined) {
+                                            {{ nomeImagem }}
+                                        }
+                                        @else {                                        
+                                            Selecionar Imagem
+                                        }
+                                    </span>
+                                </label>
                                 <!-- <label>Nenhuma imagem </label> -->
                             </div>
                         </div>
@@ -73,8 +82,8 @@
 
                     <div class="row">
                         <div class="col-12 col-md-6 mb-3">
-                            <label for="minimoParticipantes" class="form-label">Mínimo de Participantes*</label>
-                            <input type="number" class="form-control" id="minimoParticipantes" formControlName="minimoParticipantes"
+                            <label for="minimoIntegrantes" class="form-label">Mínimo de Participantes*</label>
+                            <input type="number" class="form-control" id="minimoIntegrantes" formControlName="minimoIntegrantes"
                                 placeholder="Ex: 4">
                         </div>
 
@@ -129,7 +138,9 @@
                     </div>
 
                     <div class="btn-atualizar">
-                        <button class="btn mt-4 mb-2"><i class="bi bi-check2-circle"></i> Atualizar</button>
+                        <button class="btn mt-4 mb-2" [disabled]="!habilitaBotao || formEdit.invalid || formEdit.controls.status.value !== 'inscricoesAbertas'" (click)="atualizarCopa()">
+                            <i class="bi bi-check2-circle"></i> Atualizar
+                        </button>
                     </div>
                 </form>
             </section>
