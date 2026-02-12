@@ -10,6 +10,20 @@ import { IEquipeInscricao } from '../../../../core/interfaces/models/equipe/equi
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ICopaImagemLogo } from '../../../../core/interfaces/models/copa/copa-imagem-logo';
 
+type CupEditFormValue = {
+  nomeCopa: string;
+  status: CopaStatus;
+  logoCopa: string;
+  dataInicio: string;
+  dataTermino: string;
+  descricao: string;
+  minimoIntegrantes: number;
+  pontuacaoMinima: number;
+  pontuacaoPrimeiroLugar: number;
+  pontuacaoSegundoLugar: number;
+  pontuacaoTerceiroLugar: number;
+};
+
 @Component({
   selector: 'app-cup-edit',
   imports: [RouterLink, ReactiveFormsModule],
@@ -57,6 +71,7 @@ export class CupEditComponent implements OnInit {
   imagens: ICopaImagemLogo[] = []
   habilitaBotao: boolean = false;
   idCopa: string = '';
+  valorInicialForm!: CupEditFormValue;
 
   constructor(
     private copaService: CopaService,
@@ -72,7 +87,7 @@ export class CupEditComponent implements OnInit {
       dataInicio: ['', [Validators.required]],
       dataTermino: ['', [Validators.required]],
       descricao: ['', [Validators.required]],
-      minimoIntegrantes: [0, [Validators.required, Validators.min(3)]],
+      minimoIntegrantes: [3, [Validators.required, Validators.min(3)]],
       pontuacaoMinima: [0, [Validators.required, Validators.min(0)]],
       pontuacaoPrimeiroLugar: [0, [Validators.required, Validators.min(0)]],
       pontuacaoSegundoLugar: [0, [Validators.required, Validators.min(0)]],
@@ -107,13 +122,13 @@ export class CupEditComponent implements OnInit {
 
             console.log(this.formEdit.controls.logoCopa.value)
 
-            const valorInicialForm = this.formEdit.getRawValue();
+            this.valorInicialForm = this.formEdit.getRawValue() as CupEditFormValue;
 
             this.formEdit.valueChanges.subscribe({
               next: () => {
-                const valorAtualForm = this.formEdit.getRawValue();
+                const valorAtualForm = this.formEdit.getRawValue() as CupEditFormValue;
 
-                this.habilitaBotao = this.temMudanca(valorInicialForm, valorAtualForm);
+                this.habilitaBotao = this.temMudanca(this.valorInicialForm, valorAtualForm);
               }
             })
           }
@@ -122,7 +137,7 @@ export class CupEditComponent implements OnInit {
     })
   }
 
-  temMudanca(a: any, b: any): boolean {
+  temMudanca(a: CupEditFormValue, b: CupEditFormValue): boolean {
     return (
       a.nomeCopa !== b.nomeCopa ||
       a.status !== b.status ||
@@ -196,6 +211,9 @@ export class CupEditComponent implements OnInit {
         this.equipeService.atualizarInscricoesDasCopas(equipePorId.id, inscricoesAtualizadas)
       )
     }
+
+    this.habilitaBotao = false;
+    this.valorInicialForm = this.formEdit.getRawValue();
 
     this.ngOnInit();
   }

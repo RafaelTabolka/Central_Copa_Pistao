@@ -38,4 +38,8 @@ export class CopaService {
   atualizarStatusCopa(idCopa: string, novoStatus: CopaStatus): Observable<ICopa> {
     return this.http.patch<ICopa>(`${this.baseUrl}/${idCopa}`, { status: novoStatus })
   }
+
+  cadastrarCopa(dadosCopa: ICopa): Observable<ICopa> {
+    return this.http.post<ICopa>(this.baseUrl, dadosCopa);
+  }
 }

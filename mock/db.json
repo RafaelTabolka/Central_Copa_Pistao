@@ -106,8 +106,8 @@
           "nomeCopa": "Copa Pistão 2026",
           "status": "inscricoesAbertas",
           "imagemLogo": {
-            "nome": "Fúria Tropical",
-            "caminho": "/assets/img/cups/img_copas_disponiveis_furia_tropical.png"
+            "nome": "Copa Pistão",
+            "caminho": "/assets/img/cups/img_copas_disponiveis_copa_pistao.png"
           },
           "dataInicio": "2026-02-14",
           "dataTermino": "2026-02-16",
@@ -218,8 +218,8 @@
           "nomeCopa": "Copa Pistão 2026",
           "status": "inscricoesAbertas",
           "imagemLogo": {
-            "nome": "Fúria Tropical",
-            "caminho": "/assets/img/cups/img_copas_disponiveis_furia_tropical.png"
+            "nome": "Copa Pistão",
+            "caminho": "/assets/img/cups/img_copas_disponiveis_copa_pistao.png"
           },
           "dataInicio": "2026-02-14",
           "dataTermino": "2026-02-16",
@@ -405,8 +405,8 @@
           "nomeCopa": "Copa Pistão 2026",
           "status": "inscricoesAbertas",
           "imagemLogo": {
-            "nome": "Fúria Tropical",
-            "caminho": "/assets/img/cups/img_copas_disponiveis_furia_tropical.png"
+            "nome": "Copa Pistão",
+            "caminho": "/assets/img/cups/img_copas_disponiveis_copa_pistao.png"
           },
           "dataInicio": "2026-02-14",
           "dataTermino": "2026-02-16",
@@ -455,8 +455,8 @@
       "nomeCopa": "Copa Pistão 2026",
       "status": "inscricoesAbertas",
       "imagemLogo": {
-        "nome": "Fúria Tropical",
-        "caminho": "/assets/img/cups/img_copas_disponiveis_furia_tropical.png"
+        "nome": "Copa Pistão",
+        "caminho": "/assets/img/cups/img_copas_disponiveis_copa_pistao.png"
       },
       "dataInicio": "2026-02-14",
       "dataTermino": "2026-02-16",
@@ -640,35 +640,48 @@
   "logoCopas": [
     {
       "nome": "Desert Dash",
-      "caminho": "/assets/img/cups/img_copas_disponiveis_desert_dash.png"
+      "caminho": "/assets/img/cups/img_copas_disponiveis_desert_dash.png",
+      "id": "3fad"
     },
     {
       "nome": "Grand Prix",
-      "caminho": "/assets/img/cups/img_copas_disponiveis_grand_prix.png"
+      "caminho": "/assets/img/cups/img_copas_disponiveis_grand_prix.png",
+      "id": "8e14"
     },
     {
       "nome": "Night Run",
-      "caminho": "/assets/img/cups/img_copas_disponiveis_night_run.png"
+      "caminho": "/assets/img/cups/img_copas_disponiveis_night_run.png",
+      "id": "4dbb"
     },
     {
       "nome": "Radiator Springs",
-      "caminho": "/assets/img/cups/img_copas_disponiveis_radiator_springs.png"
+      "caminho": "/assets/img/cups/img_copas_disponiveis_radiator_springs.png",
+      "id": "279a"
     },
     {
       "nome": "Thunder Ridge",
-      "caminho": "/assets/img/cups/img_copas_disponiveis_thunder_ridge.png"
+      "caminho": "/assets/img/cups/img_copas_disponiveis_thunder_ridge.png",
+      "id": "16d4"
     },
     {
       "nome": "Fúria Tropical",
-      "caminho": "/assets/img/cups/img_copas_disponiveis_furia_tropical.png"
+      "caminho": "/assets/img/cups/img_copas_disponiveis_furia_tropical.png",
+      "id": "3969"
     },
     {
       "nome": "Acelera Noturna",
-      "caminho": "/assets/img/cups/img_copas_disponiveis_acelera_noturna.png"
+      "caminho": "/assets/img/cups/img_copas_disponiveis_acelera_noturna.png",
+      "id": "cd02"
     },
     {
       "nome": "Picos Nevados",
-      "caminho": "/assets/img/cups/img_copas_disponiveis_picos_nevados.png"
+      "caminho": "/assets/img/cups/img_copas_disponiveis_picos_nevados.png",
+      "id": "e3e6"
+    },
+    {
+      "nome": "Copa Pistão",
+      "caminho": "/assets/img/cups/img_copas_disponiveis_copa_pistao.png",
+      "id": "e3e6"
     }
   ]
 }
