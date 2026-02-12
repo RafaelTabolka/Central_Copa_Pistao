@@ -43,7 +43,7 @@
                             <label for="logoCopa" class="form-label">Logo da Copa*</label>
                             <select class="form-select" formControlName="logoCopa" id="logoCopa" aria-label="Default select example">
                                 @for (imagem of imagens; track imagem) {
-                                    <option [ngValue]="imagem.caminho"> {{ imagem.nome }} </option>
+                                    <option [value]="imagem.caminho"> {{ imagem.nome }} </option>
                                 }
                             </select>
                         </div>

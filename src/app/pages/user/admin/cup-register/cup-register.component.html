@@ -15,53 +15,53 @@
                 <h2>Cadastrar Copa</h2>
                 <p>Faça o cadastro da copa e defina suas regras</p>
 
-                <form class="form-cadastrar">
+                <form [formGroup]="formRegister" class="form-cadastrar">
                     <div class="section-form__etapa mt-4 mb-3">
                         <span>1ª Etapa</span>
                         <p>Dados da Copa</p>
                     </div>
 
                     <div class="row">
-                        <div class="col-12 col-md-5 mb-3 mb-md-0">
+                        <div class="col-12 col-md-4 mb-3">
                             <label for="nomeCopa" class="form-label">Nome da Copa*</label>
-                            <input type="text" class="form-control" id="nomeCopa" name="nomeCopa"
+                            <input type="text" class="form-control" id="nomeCopa" formControlName="nomeCopa"
                                 placeholder="Ex: Catchau do relâmpago">
                         </div>
 
-                        <div class="col-12 col-md-3 mb-3 mb-md-0">
+                        <div class="col-12 col-md-4 mb-3">
                             <label for="status" class="form-label">Status*</label>
-                            <select class="form-select" name="status" id="status" aria-label="Default select example">
+                            <select class="form-select" formControlName="status" id="status" aria-label="Default select example">
                                 <option selected disabled>Selecione...</option>
                                 <option value="inscricoesAbertas">Inscrições Abertas</option>
-                                <option value="emAndamento">Em Andamento</option>
                                 <option value="inscricoesEncerradas">Inscrições Encerradas</option>
+                                <option value="emAndamento">Em Andamento</option>
                                 <option value="copaFinalizada">Copa Finalizada</option>
                             </select>
                         </div>
 
-                        <div class="col-12 col-md-4 campo-logo-copa mb-3">
-                            <label class="form-label">Logo da Copa*</label>
-                            <input type="file" class="form-control logo-copa" id="logoCopa" name="logoCopa" hidden>
-
-                            <div>
-                                <label for="logoCopa" class="label-selecionar-imagem">Selecionar Imagem</label>
-                                <!-- <label>Nenhuma imagem </label> -->
-                            </div>
+                        <div class="col-12 col-md-4 mb-3">
+                            <label for="logoCopa" class="form-label">Logo da Copa*</label>
+                            <select class="form-select" formControlName="logoCopa" id="logoCopa" aria-label="Default select example">
+                                <option value="" disabled>Selecione...</option>
+                                @for (imagem of imagens; track imagem) {
+                                    <option [value]="imagem.caminho"> {{ imagem.nome }} </option>
+                                }
+                            </select>
                         </div>
 
                         <div class="col-12 col-md-6 mb-3">
                             <label for="dataInicio" class="form-label">Data Início*</label>
-                            <input type="date" class="form-control" id="dataInicio" name="dataInicio">
+                            <input type="date" class="form-control" id="dataInicio" formControlName="dataInicio">
                         </div>
 
                         <div class="col-12 col-md-6 mb-3">
                             <label for="dataTermino" class="form-label">Data Término*</label>
-                            <input type="date" class="form-control" id="dataTermino" name="dataTermino">
+                            <input type="date" class="form-control" id="dataTermino" formControlName="dataTermino">
                         </div>
 
                         <div class="col-12 mb-3">
                             <label for="descricao" class="form-label">Descrição</label>
-                            <textarea class="form-control" id="descricao" name="descricao" placeholder="Descreva a Copa" rows="3"></textarea>
+                            <textarea class="form-control" id="descricao" formControlName="descricao" placeholder="Descreva a Copa" rows="3"></textarea>
                         </div>
 
                     </div>
@@ -73,14 +73,14 @@
 
                     <div class="row">
                         <div class="col-12 col-md-6 mb-3">
-                            <label for="nomeCopa" class="form-label">Mínimo de Participantes*</label>
-                            <input type="number" class="form-control" id="nomeCopa" name="nomeCopa"
+                            <label for="minimoIntegrantes" class="form-label">Mínimo de Participantes*</label>
+                            <input type="number" class="form-control" id="minimoIntegrantes" formControlName="minimoIntegrantes"
                                 placeholder="Ex: 4">
                         </div>
 
                         <div class="col-12 col-md-6 mb-3">
-                            <label for="nomeCopa" class="form-label">Pontuação Mínima*</label>
-                            <input type="number" class="form-control" id="nomeCopa" name="nomeCopa"
+                            <label for="pontuacaoMinima" class="form-label">Pontuação Mínima*</label>
+                            <input type="number" class="form-control" id="pontuacaoMinima" formControlName="pontuacaoMinima"
                                 placeholder="Ex: 200">
                         </div>
                     </div>
@@ -92,44 +92,46 @@
 
                     <div class="row mb-3">
                         <div class="col-12 col-md-4">
-                            <label for="nomeCopa" class="form-label">
+                            <label for="pontuacaoPrimeiroLugar" class="form-label">
                                 <span class="form-cadastrar__primeiro-lugar">
                                     <i class="bi bi-trophy-fill"></i>
                                 </span> 
                                 1º Lugar
                             </label>
                             
-                            <input type="number" class="form-control" id="nomeCopa" name="nomeCopa"
+                            <input type="number" class="form-control" id="pontuacaoPrimeiroLugar" formControlName="pontuacaoPrimeiroLugar"
                                 placeholder="Ex: 200">
                         </div>
 
                         <div class="col-12 col-md-4">
-                            <label for="nomeCopa" class="form-label">
+                            <label for="pontuacaoSegundoLugar" class="form-label">
                                 <span class="form-cadastrar__segundo-lugar">
                                     <i class="bi bi-trophy-fill"></i>
                                 </span> 
                                 2º Lugar
                             </label>
                             
-                            <input type="number" class="form-control" id="nomeCopa" name="nomeCopa"
+                            <input type="number" class="form-control" id="pontuacaoSegundoLugar" formControlName="pontuacaoSegundoLugar"
                                 placeholder="Ex: 200">
                         </div>
 
                         <div class="col-12 col-md-4">
-                            <label for="nomeCopa" class="form-label">
+                            <label for="pontuacaoTerceiroLugar" class="form-label">
                                 <span class="form-cadastrar__terceiro-lugar">
                                     <i class="bi bi-trophy-fill"></i>
                                 </span> 
                                 3º Lugar
                             </label>
                             
-                            <input type="number" class="form-control" id="nomeCopa" name="nomeCopa"
+                            <input type="number" class="form-control" id="pontuacaoTerceiroLugar" formControlName="pontuacaoTerceiroLugar"
                                 placeholder="Ex: 200">
                         </div>
                     </div>
 
                     <div class="btn-atualizar">
-                        <button class="btn mt-4 mb-2"><i class="bi bi-person-fill-add"></i> Criar Copa</button>
+                        <button class="btn mt-4 mb-2" [disabled]="formRegister.invalid" (click)="cadastrarCopa()">
+                            <i class="bi bi-person-fill-add"></i> Criar Copa
+                        </button>
                     </div>
                 </form>
             </section>
