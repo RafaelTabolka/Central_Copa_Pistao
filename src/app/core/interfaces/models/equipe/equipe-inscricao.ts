@@ -4,6 +4,7 @@ export interface IEquipeInscricao {
     id: string,
     nomeCopa: string,
     status: CopaStatus,
+    pontuacaoLancada: boolean,
     imagemLogo: {
         nome: string,
         caminho: string

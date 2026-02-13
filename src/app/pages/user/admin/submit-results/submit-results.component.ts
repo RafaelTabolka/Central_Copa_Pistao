@@ -3,6 +3,13 @@ import { ICopa } from '../../../../core/interfaces/models/copa/copa';
 import { CopaStatus } from '../../../../core/interfaces/models/copa/copa-status.enum';
 import { CopaService } from '../../../../core/services/copa.service';
 import { DatePipe } from '@angular/common';
+import { firstValueFrom } from 'rxjs';
+import { EquipeService } from '../../../../core/services/equipe.service';
+
+type Equipe = {
+  idEquipe: string;
+  nomeEquipe: string;
+}
 
 @Component({
   selector: 'app-submit-results',
@@ -12,11 +19,12 @@ import { DatePipe } from '@angular/common';
 })
 export class SubmitResultsComponent implements OnInit {
   copas: ICopa[] = [];
-  
+
   copa: ICopa = {
     id: '',
     nomeCopa: '',
     status: CopaStatus.InscricoesAbertas,
+    pontuacaoLancada: false,
     imagemLogo: {
       nome: '',
       caminho: ''
@@ -35,11 +43,18 @@ export class SubmitResultsComponent implements OnInit {
     },
     equipes: []
   }
-  
+
   copaFoiSelecionada: boolean = false;
 
+  equipesFaltamPreencher: number = 0;
+  equipesPreenchidas: number = 0;
+
+  pontosPorEquipe: Record<string, number> = {};
+  posicaoPorEquipe: Record<string, number> = {};
+
   constructor(
-    private copaService: CopaService
+    private copaService: CopaService,
+    private equipeService: EquipeService
   ) { }
 
   ngOnInit(): void {
@@ -48,32 +63,85 @@ export class SubmitResultsComponent implements OnInit {
         copas.forEach((copa) => {
           if (copa.status === CopaStatus.CopaFinalizada) {
             this.copas.push(copa);
+            // console.log(copa.pontuacaoLancada)
           }
         })
 
-        console.log(this.copas)
+        // console.log(this.copas)
       }
     })
   }
 
   copaSelecionada(idCopa: string): void {
     const copa = this.copas.find((copa) => copa.id === idCopa)!;
-    
+
+    this.equipesFaltamPreencher = copa.equipes.length;
+
     this.copa = copa;
-    
+
     this.copaFoiSelecionada = true;
-    console.log(copa)
+    // console.log(copa)
   }
 
+  aoSelecionarPosicao(idEquipe: string, valorSelect: string): void {
+    const posicao = Number(valorSelect);
 
+    this.pontosPorEquipe[idEquipe] = this.calcularPontosPorPosciao(posicao);
 
+    this.posicaoPorEquipe[idEquipe] = posicao;
+  }
 
+  calcularPontosPorPosciao(posicao: number): number {
+    const base = 200 - (10 * posicao);
 
+    this.equipesPreenchidas++;
+    this.equipesFaltamPreencher--;
 
+    const posicoes: Record<number, number> = {
+      0: base + this.copa.pontosAdicionais.primeiroLugar,
+      1: base + this.copa.pontosAdicionais.segundoLugar,
+      2: base + this.copa.pontosAdicionais.terceiroLugar
+    }
 
+    if (posicoes[posicao]) {
+      return posicoes[posicao];
+    }
 
+    if (posicao >= 19) {
+      return 10
+    }
 
+    return base;
+  }
 
+  async lancarPontuacao(): Promise<void> {
+    this.copa.pontuacaoLancada = true;
 
+    const copaAtualizada = await firstValueFrom(this.copaService.atualizarCopa(this.copa.id, this.copa));
 
+    for (const equipe of copaAtualizada.equipes) {
+      const equipeId = await firstValueFrom(this.equipeService.buscarEquipePorId(equipe.idEquipe));
+
+      const pontuacaoEquipe = this.pontosPorEquipe[equipeId.id];
+
+      equipeId.pontuacaoTotal += pontuacaoEquipe;
+
+      const novosValores = equipeId.inscricoes.map((inscricao) => {
+        return inscricao.id === this.copa.id ? {
+          ...inscricao,
+          posicaoEquipe: this.posicaoPorEquipe[equipeId.id],
+          pontuacaoEquipe: pontuacaoEquipe
+        } : inscricao
+      })
+
+      await firstValueFrom(this.equipeService.atualizarInscricoesDasCopas(equipeId.id, novosValores));
+    }
+
+    this.ngOnInit();
+  }
+
+  encontraPosicao(posicao: number): number {
+    console.log(posicao)
+    return posicao;
+  }
 }

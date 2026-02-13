@@ -19,192 +19,158 @@
                 <div class="section-resultado__procura-copa mb-3">
                     <span><i class="bi bi-search"></i></span>
 
-                    <select #sel class="form-select" name="status" id="status" aria-label="Default select example" (change)="copaSelecionada(sel.value)">
+                    <select #sel class="form-select" name="status" id="status" aria-label="Default select example"
+                        (change)="copaSelecionada(sel.value)">
                         <option selected disabled>Selecione a Copa</option>
-                        
+
                         @for (copa of copas; track copa.id) {
-                            <option [value]="copa.id">{{ copa.nomeCopa }}</option>
+                        <option [value]="copa.id">{{ copa.nomeCopa }}</option>
                         }
                     </select>
                 </div>
 
                 @if (copaFoiSelecionada) {
-                    <div class="row section-resultado__cabecalho mb-3">
-                        <div class="col-12 col-sm-8 section-resultado__informacoes mb-3 mb-sm-0">
-                            <img class="section-resultado__img-fluid"
-                                [src]="copa.imagemLogo.caminho"
-                                alt="logo copa radiator springs">
-    
-                            <div class="ms-sm-4 section-resultado__titulo">
-                                <h2 class="mt-2">{{ copa.nomeCopa }}</h2>
-                                <p class="mt-2 mb-0 text-center">Copa Finalizada</p>
-                            </div>
-                        </div>
-    
-                        <div class="col-12 col-sm-4 section-resultado__datas">
-                            <p>
-                                <i class="bi bi-people me-1"></i> Equipes Inscritas: {{ copa.equipes.length }}
-                            </p>
-    
-                            <p>
-                                <i class="bi bi-calendar3 me-2"></i>
-                                <time>{{ copa.dataInicio | date: 'dd/MM/yyyy' }}</time> a
-                                <time>{{ copa.dataTermino | date: 'dd/MM/yyyy' }}</time>
-                            </p>
+                <div class="row section-resultado__cabecalho mb-3">
+                    <div class="col-12 col-sm-8 section-resultado__informacoes mb-3 mb-sm-0">
+                        <img class="section-resultado__img-fluid" [src]="copa.imagemLogo.caminho"
+                            alt="logo copa radiator springs">
+
+                        <div class="ms-sm-4 section-resultado__titulo">
+                            <h2 class="mt-2">{{ copa.nomeCopa }}</h2>
+                            <p class="mt-2 mb-0 text-center">Copa Finalizada</p>
                         </div>
                     </div>
-    
-                    <div class="row">
-                        <section class="section-table">
-                            <h3 class="section-table__dados-copa-h3 mt-2 mb-2">Resultado Final</h3>
-    
-                            <p>
-                                Selecione a colocação das equipes. Pontos serão calculados automaticamente iniciando em 50
-                                pontos e decrementando 5 pontos por colocação
-                            </p>
-    
-                            <!-- Tabela -->
-                            <table class="table mb-md-2">
-                                <thead class="table__thead align-middle text-center">
-                                    <tr>
-                                        <th scope="col">Equipe</th>
-                                        <th scope="col">Colocação</th>
-                                        <th class="table__esconde-no-mobile" scope="col">Pontos</th>
-                                        <th class="table__esconde-no-mobile" scope="col">Situação</th>
-                                        <th class="table__esconde-no-desktop" scope="col">Detalhes</th>
-                                    </tr>
-                                </thead>
-    
-                                <tbody class="table__body align-middle text-center">
-                                    <tr>
-                                        <td>Relâmpago Marquinhos</td>
-    
-                                        <td class="table__td-select">
-                                            <select class="form-select" name="status" id="status"
-                                                aria-label="Default select example">
-                                                <option selected disabled>N/A</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                                <option value="7">7</option>
-                                                <option value="8">8</option>
-                                                <option value="9">9</option>
-                                                <option value="10">10</option>
-                                            </select>
-                                        </td>
-    
-                                        <td class="table_td-pontos table__esconde-no-mobile">
-                                            <span>0</span>
-                                        </td>
-    
-                                        <td class="table__esconde-no-mobile">
-                                            <span class="table__situacao-pendente"><i class="bi bi-exclamation-circle"></i>
-                                                Pendente</span>
-                                        </td>
-    
-                                        <td class="table__esconde-no-desktop">
-                                            <button class="btn btn-seta-detalhes" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#detalhe-1" aria-expanded="false" aria-controls="detalhe-1">
-                                                <i class="bi bi-arrow-down"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-    
-                                    <tr class="table__esconde-no-desktop">
-                                        <td class="table__detalhes-td" colspan="5">
-                                            <div class="collapse table__detalhes" id="detalhe-1">
-                                                <p class="mb-2">Pontos: <span>0</span></p>
-    
-                                                <p>
-                                                    Situação:
+
+                    <div class="col-12 col-sm-4 section-resultado__datas">
+                        <p>
+                            <i class="bi bi-people me-1"></i> Equipes Inscritas: {{ copa.equipes.length }}
+                        </p>
+
+                        <p>
+                            <i class="bi bi-calendar3 me-2"></i>
+                            <time>{{ copa.dataInicio | date: 'dd/MM/yyyy' }}</time> a
+                            <time>{{ copa.dataTermino | date: 'dd/MM/yyyy' }}</time>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <section class="section-table">
+                        <h3 class="section-table__dados-copa-h3 mt-2 mb-2">Resultado Final</h3>
+
+                        <p>
+                            Selecione a colocação das equipes. Pontos serão calculados automaticamente iniciando em 50
+                            pontos e decrementando 5 pontos por colocação
+                        </p>
+
+                        <!-- Tabela -->
+                        <table class="table mb-md-2">
+                            <thead class="table__thead align-middle text-center">
+                                <tr>
+                                    <th scope="col">Equipe</th>
+                                    <th scope="col">Colocação</th>
+                                    <th class="table__esconde-no-mobile" scope="col">Pontos</th>
+                                    <th class="table__esconde-no-mobile" scope="col">Situação</th>
+                                    <th class="table__esconde-no-desktop" scope="col">Detalhes</th>
+                                </tr>
+                            </thead>
+
+                            <tbody class="table__body align-middle text-center">
+                                @for (equipe of copa.equipes; track equipe.idEquipe) {
+                                <tr>
+                                    <td>{{ equipe.nomeEquipe }}</td>
+
+                                    <td class="table__td-select">
+                                        <select #selPosicao class="form-select" name="status" id="status"
+                                            (change)="aoSelecionarPosicao(equipe.idEquipe, selPosicao.value)">
+                                            <option selected disabled>N/A</option>
+
+                                            @for(equipe of copa.equipes; track equipe.idEquipe) {
+                                            <option [value]="$index">{{ $index + 1 }}</option>
+                                            }
+                                        </select>
+                                    </td>
+
+                                    <td class="table_td-pontos table__esconde-no-mobile">
+                                        <span>{{ pontosPorEquipe[equipe.idEquipe] || 0 }}</span>
+                                    </td>
+
+                                    <td class="table__esconde-no-mobile">
+                                        @if (!pontosPorEquipe[equipe.idEquipe]) {
+                                            <span class="table__situacao-pendente">
+                                                <i class="bi bi-exclamation-circle"></i> Pendente
+                                            </span>
+                                        }
+
+                                        @else {
+                                            <span class="table__situacao-ok">
+                                                <i class="bi bi-check-circle"></i> Ok
+                                            </span>
+                                        }
+                                    </td>
+
+                                    <td class="table__esconde-no-desktop">
+                                        <button class="btn btn-seta-detalhes" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#detalhe-1" aria-expanded="false" aria-controls="detalhe-1">
+                                            <i class="bi bi-arrow-down"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr class="table__esconde-no-desktop">
+                                    <td class="table__detalhes-td" colspan="5">
+                                        <div class="collapse table__detalhes" id="detalhe-1">
+                                            <p class="mb-2">
+                                                Pontos: <span>{{ pontosPorEquipe[equipe.idEquipe] || 0 }}</span>
+                                            </p>
+
+                                            <p>
+                                                Situação:
+                                                @if (!pontosPorEquipe[equipe.idEquipe]) {
                                                     <span class="table__situacao-pendente">
                                                         <i class="bi bi-exclamation-circle"></i> Pendente
                                                     </span>
-                                                </p>
-                                            </div>
-                                        </td>
-                                    </tr>
-    
-                                    <tr>
-                                        <td>Relâmpago Marquinhos</td>
-    
-                                        <td class="table__td-select">
-                                            <select class="form-select" name="status" id="status"
-                                                aria-label="Default select example">
-                                                <option selected disabled>N/A</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                                <option value="7">7</option>
-                                                <option value="8">8</option>
-                                                <option value="9">9</option>
-                                                <option value="10">10</option>
-                                            </select>
-                                        </td>
-    
-                                        <td class="table_td-pontos table__esconde-no-mobile">
-                                            <span>0</span>
-                                        </td>
-    
-                                        <td class="table__esconde-no-mobile">
-                                            <span class="table__situacao-ok"><i class="bi bi-check-circle"></i> Ok</span>
-                                        </td>
-    
-                                        <td class="table__esconde-no-desktop">
-                                            <button class="btn btn-seta-detalhes" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#detalhe-2" aria-expanded="false" aria-controls="detalhe-2">
-                                                <i class="bi bi-arrow-down"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-    
-                                    <tr class="table__esconde-no-desktop">
-                                        <td class="table__detalhes-td" colspan="5">
-                                            <div class="collapse table__detalhes" id="detalhe-2">
-                                                <p class="mb-2">Pontos: <span>0</span></p>
-    
-                                                <p>
-                                                    Situação:
+                                                }
+
+                                                @else {
                                                     <span class="table__situacao-ok">
                                                         <i class="bi bi-check-circle"></i> Ok
                                                     </span>
-                                                </p>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-    
-                            <div class="section-table__container-footer mt-3 mb-4">
-                                <div class="section-table__dados-preenchidos">
-                                    <span>Equipes preenchidas: 1 / Faltam: 1</span>
-                                </div>
-    
-                                <nav class="paginacao-nav" aria-label="Paginação">
-                                    <ul class="pagination">
-                                        <li class="page-item"><a href="#" class="page-link">Previous</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                        <li class="page-item active">
-                                            <a class="page-link" href="#" aria-current="page">2</a>
-                                        </li>
-                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                                    </ul>
-                                </nav>
-    
+                                                }
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+
+                        <div class="section-table__container-footer mt-3 mb-4">
+                            <div class="section-table__dados-preenchidos">
+                                <span>Equipes preenchidas: {{ equipesPreenchidas }} / Faltam: {{ equipesFaltamPreencher }}</span>
                             </div>
-    
-                            <div class="btn-salvar mt-3">
-                                <button class="btn"><i class="bi bi-check2-circle me-2"></i> Finalizar e Salvar</button>
-                            </div>
-                        </section>
-                    </div>
+
+                            <!-- <nav class="paginacao-nav" aria-label="Paginação">
+                                <ul class="pagination">
+                                    <li class="page-item"><a href="#" class="page-link">Previous</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item active">
+                                        <a class="page-link" href="#" aria-current="page">2</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                </ul>
+                            </nav> -->
+
+                        </div>
+
+                        <div class="btn-salvar mt-3">
+                            <button class="btn" [disabled]="!(equipesFaltamPreencher === 0) || copa.pontuacaoLancada" (click)="lancarPontuacao()">
+                                <i class="bi bi-check2-circle me-2"></i> Finalizar e Salvar
+                            </button>
+                        </div>
+                    </section>
+                </div>
                 }
             </section>
         </div>
