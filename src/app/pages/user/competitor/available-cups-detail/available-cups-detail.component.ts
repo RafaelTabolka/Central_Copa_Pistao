@@ -27,6 +27,7 @@ export class AvailableCupsDetailComponent implements OnInit {
     id: '',
     nomeCopa: '',
     status: CopaStatus.InscricoesAbertas,
+    pontuacaoLancada: false,
     imagemLogo: {
       nome: '',
       caminho: ''
@@ -106,6 +107,7 @@ export class AvailableCupsDetailComponent implements OnInit {
       id: this.copa.id,
       nomeCopa: this.copa.nomeCopa,
       status: this.copa.status,
+      pontuacaoLancada: false,
       imagemLogo: this.copa.imagemLogo,
       dataInicio: this.copa.dataInicio,
       dataTermino: this.copa.dataTermino,

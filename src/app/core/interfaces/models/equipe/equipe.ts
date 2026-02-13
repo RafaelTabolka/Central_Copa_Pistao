@@ -21,6 +21,7 @@ export interface IEquipe {
         id: string,
         nomeCopa: string,
         status: CopaStatus,
+        pontuacaoLancada: false,
         imagemLogo: {
             nome: string,
             caminho: string

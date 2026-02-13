@@ -31,6 +31,7 @@ export class CupRegisterComponent implements OnInit {
     id: '',
     nomeCopa: '',
     status: CopaStatus.InscricoesAbertas,
+    pontuacaoLancada: false,
     imagemLogo: {
       nome: '',
       caminho: ''
@@ -91,6 +92,7 @@ export class CupRegisterComponent implements OnInit {
       id: crypto.randomUUID(),
       nomeCopa: this.formRegister.controls.nomeCopa.value,
       status: this.formRegister.controls.status.value,
+      pontuacaoLancada: false,
       imagemLogo: {
         nome: logoCopa.nome,
         caminho: logoCopa.caminho

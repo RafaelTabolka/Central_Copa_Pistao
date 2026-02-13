@@ -49,6 +49,7 @@ export class CupEditComponent implements OnInit {
     id: '',
     nomeCopa: '',
     status: CopaStatus.InscricoesAbertas,
+    pontuacaoLancada: false,
     imagemLogo: {
       nome: '',
       caminho: ''
@@ -164,6 +165,7 @@ export class CupEditComponent implements OnInit {
       id: this.idCopa,
       nomeCopa: this.formEdit.controls.nomeCopa.value,
       status: this.formEdit.controls.status.value,
+      pontuacaoLancada: false,
       imagemLogo: {
         nome: logoCopa.nome,
         caminho: logoCopa.caminho

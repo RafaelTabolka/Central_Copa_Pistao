@@ -40,6 +40,7 @@ export class SubscribeComponent implements OnInit {
     id: '',
     nomeCopa: '',
     status: CopaStatus.InscricoesAbertas,
+    pontuacaoLancada: false,
     imagemLogo: {
       nome: '',
       caminho: ''
@@ -91,6 +92,7 @@ export class SubscribeComponent implements OnInit {
       id: this.copa.id,
       nomeCopa: this.copa.nomeCopa,
       status: this.copa.status,
+      pontuacaoLancada: false,
       imagemLogo: {
         nome: this.copa.imagemLogo.nome,
         caminho: this.copa.imagemLogo.caminho 
