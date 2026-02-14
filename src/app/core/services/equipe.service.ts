@@ -29,6 +29,10 @@ export class EquipeService {
     return this.http.patch<IEquipe>(`${this.baseUrl}/${idEquipe}`, { inscricoes });
   }
 
+  atualizarPontuacaoEquipe(idEquipe: string, novaPontuacao: number): Observable<IEquipe> {
+    return this.http.patch<IEquipe>(`${this.baseUrl}/${idEquipe}`, { pontuacaoTotal: novaPontuacao });
+  }
+
   atualizarEquipe(idEquipe: string, dadosEquipe: IEquipeAtualizar): Observable<IEquipe> {
     return this.http.patch<IEquipe>(`${this.baseUrl}/${idEquipe}`, dadosEquipe);
   }

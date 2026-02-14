@@ -2,6 +2,8 @@ import { Routes } from '@angular/router';
 import { CompetitorComponent } from './layout/competitor/competitor.component';
 import { PublicComponent } from './layout/public/public.component';
 import { AdminComponent } from './layout/admin/admin.component';
+import { competitorGuard } from './core/guards/competitor.guard';
+import { adminGuard } from './core/guards/admin.guard';
 
 export const routes: Routes = [
     {
@@ -32,6 +34,7 @@ export const routes: Routes = [
     },
     {
         path: 'competitor',
+        canMatch: [competitorGuard],
         component: CompetitorComponent,
         children: [
             {
@@ -63,6 +66,7 @@ export const routes: Routes = [
     },
     {
         path: 'admin',
+        canMatch: [adminGuard],
         component: AdminComponent,
         children: [
             {
