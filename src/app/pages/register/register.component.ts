@@ -149,6 +149,7 @@ export class RegisterComponent {
         localStorage.setItem('nomeEquipe', equipe.nomeEquipe);
         localStorage.setItem('nomeUsuario', this.formCadastrar.controls.nomeUsuario.value);
         localStorage.setItem('idUsuario', equipe.idUsuario);
+        localStorage.setItem('perfil', usuario.perfil);
         // localStorage.setItem('accessToken', 'Tem Token aqui');
 
         // console.log('cadastrou')

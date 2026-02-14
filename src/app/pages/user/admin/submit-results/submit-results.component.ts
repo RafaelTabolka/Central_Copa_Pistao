@@ -5,6 +5,9 @@ import { CopaService } from '../../../../core/services/copa.service';
 import { DatePipe } from '@angular/common';
 import { firstValueFrom } from 'rxjs';
 import { EquipeService } from '../../../../core/services/equipe.service';
+import { IEquipe } from '../../../../core/interfaces/models/equipe/equipe';
+import { EquipeStatus } from '../../../../core/interfaces/models/equipe/equipe-status.enum';
+import { EquipeCategoria } from '../../../../core/interfaces/models/equipe/equipe-categoria.enum';
 
 type Equipe = {
   idEquipe: string;
@@ -45,6 +48,7 @@ export class SubmitResultsComponent implements OnInit {
   }
 
   copaFoiSelecionada: boolean = false;
+  temPosicaoRepetida: boolean = false;
 
   equipesFaltamPreencher: number = 0;
   equipesPreenchidas: number = 0;
@@ -61,7 +65,7 @@ export class SubmitResultsComponent implements OnInit {
     this.copaService.listarCopas().subscribe({
       next: (copas) => {
         copas.forEach((copa) => {
-          if (copa.status === CopaStatus.CopaFinalizada) {
+          if (copa.status === CopaStatus.CopaFinalizada && !copa.pontuacaoLancada) {
             this.copas.push(copa);
             // console.log(copa.pontuacaoLancada)
           }
@@ -85,17 +89,32 @@ export class SubmitResultsComponent implements OnInit {
 
   aoSelecionarPosicao(idEquipe: string, valorSelect: string): void {
     const posicao = Number(valorSelect);
+    this.temPosicaoRepetida = false;
+
+    const jaFoiContado = this.posicaoPorEquipe[idEquipe] !== undefined;
 
     this.pontosPorEquipe[idEquipe] = this.calcularPontosPorPosciao(posicao);
 
     this.posicaoPorEquipe[idEquipe] = posicao;
+
+    if (!jaFoiContado) {
+      this.equipesPreenchidas++;
+      this.equipesFaltamPreencher--;
+    }
+
+    // Object.values pega os valores do objeto posicaoPorEquipe que criamos e cria um array disso. Por exemplo [0, 1, 4, 2, 1]
+    const posicoes = Object.values(this.posicaoPorEquipe);
+    
+    // new Set cria um novo array com valores sem repetição
+    // Então estamos verificando se o tamanho do array criado sem repetições é diferente do array original de posições
+    // se for diferente, significa que há repetição
+    if (new Set(posicoes).size !== posicoes.length) {
+      this.temPosicaoRepetida = true;
+    }
   }
 
   calcularPontosPorPosciao(posicao: number): number {
     const base = 200 - (10 * posicao);
-
-    this.equipesPreenchidas++;
-    this.equipesFaltamPreencher--;
 
     const posicoes: Record<number, number> = {
       0: base + this.copa.pontosAdicionais.primeiroLugar,
@@ -124,24 +143,22 @@ export class SubmitResultsComponent implements OnInit {
 
       const pontuacaoEquipe = this.pontosPorEquipe[equipeId.id];
 
-      equipeId.pontuacaoTotal += pontuacaoEquipe;
+      const pontuacaoTotalEquipe = equipeId.pontuacaoTotal + pontuacaoEquipe;
 
-      const novosValores = equipeId.inscricoes.map((inscricao) => {
+      await firstValueFrom(this.equipeService.atualizarPontuacaoEquipe(equipeId.id, pontuacaoTotalEquipe));
+
+      const novosValoresInscricao = equipeId.inscricoes.map((inscricao) => {
         return inscricao.id === this.copa.id ? {
           ...inscricao,
-          posicaoEquipe: this.posicaoPorEquipe[equipeId.id],
+          posicaoEquipe: this.posicaoPorEquipe[equipeId.id] + 1,
           pontuacaoEquipe: pontuacaoEquipe
         } : inscricao
       })
 
-      await firstValueFrom(this.equipeService.atualizarInscricoesDasCopas(equipeId.id, novosValores));
+      await firstValueFrom(this.equipeService.atualizarInscricoesDasCopas(equipeId.id, novosValoresInscricao));
     }
 
     this.ngOnInit();
-  }
-
-  encontraPosicao(posicao: number): number {
-    console.log(posicao)
-    return posicao;
+    this.copaFoiSelecionada = false;
   }
 }

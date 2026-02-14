@@ -165,7 +165,7 @@
                         </div>
 
                         <div class="btn-salvar mt-3">
-                            <button class="btn" [disabled]="!(equipesFaltamPreencher === 0) || copa.pontuacaoLancada" (click)="lancarPontuacao()">
+                            <button class="btn" [disabled]="!(equipesFaltamPreencher === 0) || copa.pontuacaoLancada || temPosicaoRepetida" (click)="lancarPontuacao()">
                                 <i class="bi bi-check2-circle me-2"></i> Finalizar e Salvar
                             </button>
                         </div>

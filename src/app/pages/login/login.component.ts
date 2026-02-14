@@ -53,9 +53,10 @@ export class LoginComponent {
           localStorage.setItem('idEquipe', temCadastro.equipe!.id);
           localStorage.setItem('nomeEquipe', temCadastro.equipe!.nomeEquipe);
         }
-
+        
         localStorage.setItem('nomeUsuario', temCadastro.nomeUsuario);
-        localStorage.setItem('accessToken', 'Tem token de acesso');
+        // localStorage.setItem('accessToken', 'Tem token de acesso');
+        localStorage.setItem('perfil', temCadastro.perfil);
       }
     })
   }
