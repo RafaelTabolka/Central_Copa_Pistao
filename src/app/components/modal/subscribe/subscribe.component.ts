@@ -82,7 +82,6 @@ export class SubscribeComponent implements OnInit {
     this.copaService.buscarCopaPorId(this.copaId).subscribe({
       next: (copa) => {
         this.copa = copa;
-        // console.log(this.copa)
       }
     });
   };
@@ -95,7 +94,7 @@ export class SubscribeComponent implements OnInit {
       pontuacaoLancada: false,
       imagemLogo: {
         nome: this.copa.imagemLogo.nome,
-        caminho: this.copa.imagemLogo.caminho 
+        caminho: this.copa.imagemLogo.caminho
       },
       dataInicio: this.copa.dataInicio,
       dataTermino: this.copa.dataTermino,
@@ -129,7 +128,6 @@ export class SubscribeComponent implements OnInit {
 
     this.copaService.atualizarEquipesDaCopa(this.copa.id, novasEquipes).subscribe({
       next: () => {
-        // console.log(copa)
       }
     });
   };

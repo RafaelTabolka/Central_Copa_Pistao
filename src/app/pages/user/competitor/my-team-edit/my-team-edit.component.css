@@ -153,14 +153,8 @@
 .bi-trash {
   color: #E10811;
   font-size: 1.2rem;
-  /* cursor: pointer; */
   transition: .2s;
 }
-
-/* .bi-trash:hover {
-  filter:
-    drop-shadow(0 10px 16px rgba(225, 8, 17, .22)) drop-shadow(0 3px 8px rgba(0, 0, 0, .18)) drop-shadow(0 0 10px rgba(225, 8, 17, .18));
-} */
 
 .btn-adicionar-participante {
   background-color: rgba(246, 192, 27, .4);

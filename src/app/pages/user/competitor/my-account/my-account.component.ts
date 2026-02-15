@@ -54,7 +54,6 @@ export class MyAccountComponent implements OnInit {
 
         this.formEditInicial = this.formEdit.getRawValue();
         this.temMudancao = false;
-        // this.formEdit.markAsPristine();
 
         this.formEdit.valueChanges.subscribe({
           next: () => {
@@ -88,7 +87,6 @@ export class MyAccountComponent implements OnInit {
       next: () => {
         this.formEditInicial = this.formEdit.getRawValue();
         this.temMudancao = false;
-        // this.formEdit.markAsPristine()
       }
     })
   }

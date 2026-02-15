@@ -67,11 +67,8 @@ export class SubmitResultsComponent implements OnInit {
         copas.forEach((copa) => {
           if (copa.status === CopaStatus.CopaFinalizada && !copa.pontuacaoLancada) {
             this.copas.push(copa);
-            // console.log(copa.pontuacaoLancada)
           }
         })
-
-        // console.log(this.copas)
       }
     })
   }
@@ -84,7 +81,6 @@ export class SubmitResultsComponent implements OnInit {
     this.copa = copa;
 
     this.copaFoiSelecionada = true;
-    // console.log(copa)
   }
 
   aoSelecionarPosicao(idEquipe: string, valorSelect: string): void {

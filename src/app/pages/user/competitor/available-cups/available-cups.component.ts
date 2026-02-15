@@ -43,7 +43,6 @@ export class AvailableCupsComponent implements OnInit {
     this.copaService.listarCopas().subscribe({
       next: (copas) => {
         this.copas = copas;
-        // console.log(this.copas);
       }
     })
   };

@@ -95,13 +95,9 @@ export class RegisterComponent {
 
   cadastrarEquipe(): void {
     this.senhasDiferentes = false;
-    
-    console.log(this.formCadastrar.controls.senha);
-    console.log(this.formCadastrar.controls.confirmarSenha);
 
     if (this.formCadastrar.controls.senha.value !== this.formCadastrar.controls.confirmarSenha.value) {
       this.senhasDiferentes = true;
-      console.log('Entrou no if')
       return;
     }
     
@@ -150,9 +146,7 @@ export class RegisterComponent {
         localStorage.setItem('nomeUsuario', this.formCadastrar.controls.nomeUsuario.value);
         localStorage.setItem('idUsuario', equipe.idUsuario);
         localStorage.setItem('perfil', usuario.perfil);
-        // localStorage.setItem('accessToken', 'Tem Token aqui');
 
-        // console.log('cadastrou')
         this.router.navigateByUrl('/competitor/available-cups', {replaceUrl: true});
 
         this.usuarioService.cadastrarUsuario(usuario).subscribe({

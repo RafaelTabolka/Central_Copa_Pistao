@@ -38,8 +38,6 @@ export class LoginComponent {
 
         const temCadastro = usuarios.find((usuario) => usuario.email === email && usuario.senha === senha);
 
-        // console.log(temCadastro)
-
         if (temCadastro === undefined) {
           this.mensagemSemCadastro = true;
           return;
@@ -55,7 +53,6 @@ export class LoginComponent {
         }
         
         localStorage.setItem('nomeUsuario', temCadastro.nomeUsuario);
-        // localStorage.setItem('accessToken', 'Tem token de acesso');
         localStorage.setItem('perfil', temCadastro.perfil);
       }
     })
