@@ -49,7 +49,6 @@ export class HomeComponent implements OnInit {
         .filter((equipe) => equipe.status == 'ativo')
         .sort((primeiraEquipe, segundaEquipe) => segundaEquipe.pontuacaoTotal - primeiraEquipe.pontuacaoTotal)
         .slice(0, 3);
-        console.log(this.topTresEquipes);
       }
     });
   }

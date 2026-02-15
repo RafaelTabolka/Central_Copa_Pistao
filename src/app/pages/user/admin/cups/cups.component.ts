@@ -81,7 +81,6 @@ export class CupsComponent implements OnInit {
     }
 
     let proximoStatus: CopaStatus = valorStatus[++statusValor[status]];
-    // let querAlterarStatus: boolean = true;
 
     const ref = this.modal.open(ConfirmComponent, { centered: true, backdrop: 'static' });
 

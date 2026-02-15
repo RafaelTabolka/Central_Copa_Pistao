@@ -104,7 +104,6 @@ export class CupEditComponent implements OnInit {
         this.copaService.listarImagens().subscribe({
           next: (imagens) => {
             this.imagens = imagens;
-            console.log(imagens)
             this.copa = copa;
 
             this.formEdit.patchValue({
@@ -120,8 +119,6 @@ export class CupEditComponent implements OnInit {
               pontuacaoSegundoLugar: copa.pontosAdicionais.segundoLugar,
               pontuacaoTerceiroLugar: copa.pontosAdicionais.terceiroLugar,
             });
-
-            console.log(this.formEdit.controls.logoCopa.value)
 
             this.valorInicialForm = this.formEdit.getRawValue() as CupEditFormValue;
 

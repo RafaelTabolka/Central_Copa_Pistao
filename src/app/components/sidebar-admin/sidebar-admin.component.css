@@ -1,5 +1,4 @@
 .menu-hamburguer {
-    /* outline: 1px solid red; */
     position: fixed;
     right: 8px;
     top: 8px;
@@ -19,10 +18,8 @@
 }
 
 .menu-lateral {
-    /* display: grid; */
     height: 100vh;
     position: fixed;
-    /* outline: 1px solid red; */
     width: 250px;
     overflow-y: auto;
     background-color: #111827;
@@ -49,14 +46,10 @@
 
 .menu-lateral__figure {
     text-align: center;
-    /* margin: 0; */
-    /* padding: 0 12px; */
 }
 
 .menu-lateral__figure figure {
     margin: 0;
-    /* padding-bottom: 12px; */
-    /* border-bottom: 1px solid #D6A616; */
 }
 
 .menu-lateral__figure img {
@@ -67,11 +60,9 @@
     border-bottom: 1px solid #D6A616;
     width: 226px;
     margin: 16px auto;
-    /* height: 0; */
 }
 
 .menu-lateral__equipe {
-    /* outline: 1px solid red; */
     padding: 0 12px;
 }
 
@@ -83,72 +74,37 @@
 }
 
 .menu-lateral__article h3 {
-    /* outline: 1px solid red; */
     color: #fff;
     font-size: 1.5rem;
 }
 
 .menu-lateral__article p {
-    /* outline: 1px solid red; */
     color: rgba(255, 255, 255, .7);
     margin: 0;
 }
 
-/* .menu-lateral__span-ativo {
-    background-color: #16A34A;
-    border: 1px solid #15803D;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 0.9rem;
-    padding: 4px 8px;
-    border-radius: 8px;
-}
-
-.menu-lateral__span-pontuacao {
-    background-color: #FFD000;
-    border: 1px solid #F6C01B;
-    color: #78350F;
-    font-weight: bold;
-    font-size: 0.9rem;
-    padding: 4px 8px;
-    border-radius: 8px;
-} */
-
 .menu-lateral__navegacao {
-    /* outline: 1px solid red; */
     display: flex;
     justify-content: flex-end;
 }
 
-.menu-lateral__divisao-container {
-    /* outline: 1px solid red; */
-    /* padding: 0 12px;
-    height: 0; */
-}
-
 .menu-lateral__ul {
     list-style: none;
-    /* padding: 12px 0 0; */
     width: 230px;
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-/* .menu-lateral__ul li {
-}    */
-
 .menu-lateral__ul a {
     color: rgba(255, 255, 255, .82);
     text-decoration: none;
-    /* outline: 1px solid red; */
     display: block;
     padding: 8px 0 8px 8px;
     font-size: 1.1rem;
     transition: .2s;
     outline: none;
     border: none;
-    /* width: 100%; */
 }
 
 .menu-lateral__ul .active {
@@ -196,9 +152,7 @@
 
 .dropdown-toggle {
     padding: 0;
-    /* width: 200px; */
     text-overflow: ellipsis;
-    /* white-space: nowrap; */
     overflow: hidden;
     color: #fff;
 }

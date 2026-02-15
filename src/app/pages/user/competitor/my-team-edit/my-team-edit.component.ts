@@ -85,15 +85,12 @@ export class MyTeamEditComponent implements OnInit {
 
 
         const valorInicialFormEdit = this.formEdit.getRawValue();
-        // console.log(valorInicialFormEdit)
 
         this.formEdit.valueChanges.subscribe({
           next: () => {
             const valorAtualFormEdit = this.formEdit.getRawValue()
-            // console.log(valorAtualFormEdit)
 
             this.temMudanca = this.temMudancaNoFormulario(valorAtualFormEdit, valorInicialFormEdit);
-            console.log(this.temMudanca)
           }
         })
       }

@@ -89,7 +89,6 @@ export class AvailableCupsDetailComponent implements OnInit {
     this.copaService.buscarCopaPorId(idCopa).subscribe({
       next: (copa) => {
         this.copa = copa;
-        console.log(this.copa)
       }
     });
 
@@ -140,9 +139,7 @@ export class AvailableCupsDetailComponent implements OnInit {
     });
 
     this.copaService.atualizarEquipesDaCopa(this.copa.id, novasEquipes).subscribe({
-      next: (copa) => {
-        console.log(copa)
-      }
+      next: () => {}
     });
   };
 

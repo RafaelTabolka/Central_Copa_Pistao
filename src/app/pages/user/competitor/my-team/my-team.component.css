@@ -22,7 +22,6 @@
 }
 
 .container-fluid__buttons {
-    /* outline: 1px solid red; */
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -73,51 +72,6 @@
     color: #fff;
 }
 
-
-/* .container-fluid__header a {
-    color: #0F172A;
-    text-decoration: none;
-    font-size: 1.1rem;
-}
-
-.container-fluid__header a:hover {
-    text-decoration: underline;
-} */
-
-/* .container-fluid__header span,
-.section-cards__inscricoes span {
-    font-weight: bold;
-    padding: 4px 8px;
-    border-radius: 12px;
-    text-align: center;
-    display: inline-block;
-    margin-bottom: 12px;
-}
-
-.section-cards__span-abertas {
-    background-color: rgba(22, 163, 74, .16);
-    border: 1px solid rgba(22, 163, 74, .22);
-    color: #15803D;
-}
-
-.section-cards__span-andamento {
-    background-color: rgba(14, 165, 233, .16);
-    border: 1px solid rgba(14, 165, 233, .2);
-    color: #0369A1;
-}
-
-.section-cards__span-encerradas {
-    background-color: rgba(225, 29, 72, .14);
-    border: 1px solid rgba(225, 29, 72, .2);
-    color: #BE123C;
-}
-
-.section-cards__span-finalizadas {
-    background-color: rgba(255, 208, 0, .14);
-    border: 1px solid rgba(246, 192, 27, .2);
-    color: #78350F;
-} */
-
 .section-cards {
     background-color: #fff;
     border: 1px solid rgba(15, 23, 42, .2);
@@ -147,12 +101,6 @@
     .container-fluid__button-desativar {
         width: 150px;
     }
-
-    /* .container-fluid__inscricoes {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-    } */
 
     .section-cards {
         max-width: none;
@@ -234,7 +182,6 @@
     border-radius: 12px;
     text-align: center;
     display: inline-block;
-    /* margin-bottom: 12px; */
 }
 
 .table__span-ativo {
@@ -259,16 +206,9 @@
 }
 
 .section-cards__inscricoes {
-    /* outline: 1px solid red; */
     display: flex;
     flex-direction: column;
     align-items: start;
-    /* justify-content: space-between; */
-    /* flex-direction: column; */
-}
-
-.section-cards__inscricoes h3 {
-    /* font-size: 1.3rem; */
 }
 
 .section-cards__span-ativo,
@@ -291,38 +231,6 @@
     background-color: rgba(246, 192, 27, .2);
     border: 1px solid rgba(246, 192, 27, .22);
     color: #0F172A;
-}
-
-/* .section-cards__ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.section-cards__ul li {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    border-top: 1px solid rgba(15, 23, 42, .12);
-}
-
-.section-cards__ul span {
-    font-weight: bold;
-    padding: 4px 8px;
-    border-radius: 12px;
-    text-align: center;
-    display: inline-block;
-    margin: 4px 0 12px;
-    background-color: rgba(22, 163, 74, .16);
-    border: 1px solid rgba(22, 163, 74, .22);
-    color: #15803D;
-} */
-
-.section-cards__buttom {
-    /* display: flex; */
-    /* flex-direction: column;
-    margin-top: auto;
-    gap: 12px; */
 }
 
 .section-cards__btn-cancelar-inscricao {
@@ -356,22 +264,9 @@
 
 @media (width >=768px) {
     .section-cards__inscricoes {
-        /* outline: 1px solid red; */
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        /* flex-direction: column; */
     }
-
-    /* .section-cards__inscricoes {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-    }
-
-    .section-cards__inscricoes span {
-        margin-bottom: 0;
-    } */
 }

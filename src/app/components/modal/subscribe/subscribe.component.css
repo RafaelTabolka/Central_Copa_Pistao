@@ -2,7 +2,6 @@
     padding: 12px;
     border: 1px solid rgba(49, 165, 231, .22);
     border-radius: 8px;
-    /* box-shadow: 0 4px 4px 0 rgba(49, 165, 231, .25); */
 }
 
 .container h2,
@@ -23,7 +22,6 @@
 }
 
 .section-modal__data-status {
-    /* outline: 1px solid red; */
     display: flex;
     flex-direction: column;
 }
@@ -32,19 +30,12 @@
     width: 210px;
 }
 
-/* .section-modal__data-status h2 {
-    color: #0F172A;
-    font-weight: bold;
-} */
-
 .section-modal__span-abertas {
     font-weight: bold;
     padding: 4px 8px;
     border-radius: 12px;
     text-align: center;
-    /* display: inline; */
     width: 180px;
-    /* margin: 4px 0 12px; */
     background-color: rgba(22, 163, 74, .16);
     border: 1px solid rgba(22, 163, 74, .22);
     color: #15803D;
@@ -71,8 +62,6 @@
     border-top: 1px solid rgba(15, 23, 42, .12);
     font-weight: 500;
     color: #0F172A;
-    /* margin: 12px 0; */
-    /* outline: 1px solid red; */
     padding: 8px 0;
 }
 
@@ -84,7 +73,6 @@
     border-radius: 12px;
     text-align: center;
     display: inline-block;
-    /* margin-top: 8px; */
 }
 
 .section-modal__span-atendido {
@@ -116,7 +104,6 @@
 
 .section-modal__btn-inscrever {
     color: #0F172A;
-    /* width: 100%; */
     background-color: rgba(49, 165, 231, .2);
     border: 1px solid #31A5E7;
 }
@@ -146,7 +133,6 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        /* outline: 1px solid red; */
     }
 
     .section-modal__ul li {

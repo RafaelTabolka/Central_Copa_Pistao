@@ -139,35 +139,29 @@
 }
 
 .form-cadastrar .campo-logo-copa {
-    /* outline: 1px solid red; */
     display: flex;
     flex-direction: column;
 }
 
 .form-cadastrar .logo-copa {
-    /* outline: 1px solid red; */
     background-color: transparent;
     border: none;
     box-shadow: none;
 }
 
 .form-cadastrar .label-selecionar-imagem {
-    /* outline: 1px solid red; */
-    /* width: 200px; */
     font-size: 1.2rem;
     background-color: rgba(49, 165, 231, .4);
     border: 1px solid #31A5E7;
     color: #0F172A;
     font-weight: bold;
     border-radius: 12px;
-    /* padding: 4px; */
     height: 41px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     transition: .2s;
-    /* outline: 1px solid red; */
     width: 100%;
     height: 50px;
 }
@@ -183,46 +177,6 @@
     border-color: rgba(49, 165, 231, .55);
     box-shadow: 0 8px 18px rgba(49, 165, 231, .18);
 }
-
-/* .section-form__adicionar-participante {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: start;
-} */
-
-/* .bi-trash {
-  color: #E10811;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: .2s;
-} */
-
-/* .bi-trash:hover {
-  filter:
-    drop-shadow(0 10px 16px rgba(225, 8, 17, .22))
-    drop-shadow(0 3px 8px rgba(0, 0, 0, .18))
-    drop-shadow(0 0 10px rgba(225, 8, 17, .18));
-} */
-
-/* .btn-adicionar-participante {
-  background-color: rgba(246, 192, 27, .4);
-  border: 1px solid rgba(0, 0, 0, .4);
-  margin-top: 12px;
-  border-radius: 12px;
-  padding: 8px 12px;
-  font-size: 1rem;
-  font-weight: 500;
-  transition: .2s;
-  outline: none;
-} */
-
-/* .btn-adicionar-participante:hover,
-.btn-adicionar-participante:focus-visible {
-  background-color: rgba(246, 192, 27, .55);
-  border-color: rgba(0, 0, 0, .55);
-  box-shadow: 0 10px 18px rgba(246, 192, 27, .22);
-} */
 
 .form-cadastrar__primeiro-lugar {
     color: #FFD000;

@@ -28,7 +28,6 @@
 }
 
 .section-form__etapa {
-    /* outline: 1px solid red; */
     display: flex;
     align-items: center;
     gap: 8px;
@@ -75,7 +74,6 @@
     font-size: 1.1rem;
     background-color: rgba(49, 165, 231, .02);
     border: 1px solid rgba(49, 165, 231, .22);
-    /* outline: none; */
     box-shadow: 0 4px 4px 0 rgba(49, 165, 231, .25);
     height: 50px;
     border-radius: 12px;
@@ -97,7 +95,6 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: start;
-    /* justify-content: space-between; */
 }
 
 .btn-trash {
@@ -118,7 +115,6 @@
 .bi-trash {
     color: #E10811;
     font-size: 1.2rem;
-    /* cursor: pointer; */
     transition: .2s;
 }
 

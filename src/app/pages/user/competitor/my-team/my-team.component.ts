@@ -50,10 +50,8 @@ export class MyTeamComponent implements OnInit {
         this.inscricoesAtivas = 0;
 
         this.equipe = equipe;
-        // console.log(this.equipe);
 
         this.equipe.inscricoes.forEach((inscricao) => {
-          // console.log(inscricao)
           if (inscricao.status !== 'copaFinalizada') {
             this.inscricoesAtivas++;
           }
@@ -72,7 +70,6 @@ export class MyTeamComponent implements OnInit {
     ref.closed.subscribe((confirmou: boolean) => {
       if (confirmou) {
         const inscricoesRestantes = this.equipe.inscricoes.filter((inscricao) => inscricao.id !== idCopa);
-        // console.log(inscricoesRestantes)
 
         this.equipeService.atualizarInscricoesDasCopas(this.idEquipe, inscricoesRestantes).subscribe({
           next: () => {
